@@ -1,0 +1,13 @@
+{
+  "id": "legion_rifle",
+  "name": "Pulse Rifle",
+  "range": 24,
+  "attacks": 2,
+  "hit": 3,
+  "strength": 4,
+  "ap": 1,
+  "damage": 1,
+  "type": "ranged",
+  "tags": [],
+  "ap_semantics": "penalty"
+}

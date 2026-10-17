@@ -1,0 +1,178 @@
+{
+  "format_version": 1,
+  "id": "example_army:outpost",
+  "name": "Frontier Outpost",
+  "notes": "Expedition scouts test a field projector against a Legion patrol.",
+  "board": {
+    "width": 60,
+    "depth": 44
+  },
+  "coherency_distance": 2,
+  "deployment_zones": [
+    {
+      "id": "zone_a",
+      "shape": "rectangle",
+      "team": 0,
+      "name": "TEAM A DEPLOYMENT",
+      "center": [
+        0,
+        17.5
+      ],
+      "size": [
+        60,
+        9
+      ]
+    },
+    {
+      "id": "zone_b",
+      "shape": "rectangle",
+      "team": 1,
+      "name": "TEAM B DEPLOYMENT",
+      "center": [
+        0,
+        -17.5
+      ],
+      "size": [
+        60,
+        9
+      ]
+    }
+  ],
+  "terrain": [],
+  "objectives": [
+    {
+      "id": "marker",
+      "name": "Outpost Beacon",
+      "number": 1,
+      "radius": 3,
+      "position": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "armies": [
+    {
+      "id": "squad_0",
+      "name": "Outpost squad 0",
+      "team": 0,
+      "unit_id": "example_army:infantry",
+      "models": [
+        {
+          "id": "m_0_0",
+          "position": [
+            -3.4,
+            0,
+            6
+          ]
+        },
+        {
+          "id": "m_0_1",
+          "position": [
+            -1.7,
+            0,
+            6
+          ]
+        },
+        {
+          "id": "m_0_2",
+          "position": [
+            0.0,
+            0,
+            6
+          ]
+        },
+        {
+          "id": "m_0_3",
+          "position": [
+            1.7,
+            0,
+            6
+          ]
+        },
+        {
+          "id": "m_0_4",
+          "position": [
+            3.4,
+            0,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "squad_1",
+      "name": "Outpost squad 1",
+      "team": 0,
+      "unit_id": "example_army:heavy",
+      "models": [
+        {
+          "id": "m_1_0",
+          "position": [
+            0.0,
+            0,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "id": "squad_2",
+      "name": "Outpost squad 2",
+      "team": 1,
+      "unit_id": "grimtable:legion_trooper",
+      "models": [
+        {
+          "id": "m_2_0",
+          "position": [
+            -3.4,
+            0,
+            -6
+          ]
+        },
+        {
+          "id": "m_2_1",
+          "position": [
+            -1.7,
+            0,
+            -6
+          ]
+        },
+        {
+          "id": "m_2_2",
+          "position": [
+            0.0,
+            0,
+            -6
+          ]
+        },
+        {
+          "id": "m_2_3",
+          "position": [
+            1.7,
+            0,
+            -6
+          ]
+        },
+        {
+          "id": "m_2_4",
+          "position": [
+            3.4,
+            0,
+            -6
+          ]
+        }
+      ]
+    }
+  ],
+  "starting_state": {
+    "round": 1,
+    "phase": 0,
+    "team": 0,
+    "deployment": false
+  },
+  "scoring": {
+    "objective_points_per_round": 1
+  }
+}

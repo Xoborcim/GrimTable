@@ -1,0 +1,22 @@
+{
+  "id": "horde_gunner",
+  "name": "Horde Gunner",
+  "faction": "horde",
+  "movement": 6,
+  "defense": 3,
+  "toughness": 3,
+  "save": 5,
+  "wounds": 2,
+  "max_wounds": 2,
+  "base_mm": 32,
+  "model_scene": "res://assets/grimtable/models/horde_gunner.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 1.8,
+  "los_height": 1.4400000000000002,
+  "weapons": [
+    "scrap_gun",
+    "scrap_blades"
+  ],
+  "weapon": "res://resources/weapons/scrap_gun.json",
+  "fallback_model_scene": "res://assets/grimtable/models/horde_gunner.tscn"
+}

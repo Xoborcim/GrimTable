@@ -1,0 +1,410 @@
+{
+  "format_version": 1,
+  "id": "demo",
+  "name": "Demo Battle",
+  "notes": "Generic opposing squads. Deploy, then start the battle.",
+  "board": {
+    "width": 60,
+    "depth": 44
+  },
+  "coherency_distance": 2,
+  "deployment_zones": [
+    {
+      "id": "zone_a",
+      "shape": "rectangle",
+      "team": 0,
+      "name": "TEAM A DEPLOYMENT",
+      "center": [
+        0,
+        17.5
+      ],
+      "size": [
+        60,
+        9
+      ]
+    },
+    {
+      "id": "zone_b",
+      "shape": "rectangle",
+      "team": 1,
+      "name": "TEAM B DEPLOYMENT",
+      "center": [
+        0,
+        -17.5
+      ],
+      "size": [
+        60,
+        9
+      ]
+    }
+  ],
+  "terrain": [
+    {
+      "id": "west_long",
+      "title": "West ruin • long wall",
+      "position": [
+        -13,
+        0,
+        -5
+      ],
+      "size": [
+        9,
+        4,
+        0.8
+      ],
+      "tint": "#7a817c",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "west_return",
+      "title": "West ruin • return",
+      "position": [
+        -17,
+        0,
+        -2
+      ],
+      "size": [
+        0.8,
+        4,
+        6
+      ],
+      "tint": "#7a817c",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "east_long",
+      "title": "East ruin • long wall",
+      "position": [
+        13,
+        0,
+        5
+      ],
+      "size": [
+        9,
+        4,
+        0.8
+      ],
+      "tint": "#7a817c",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "east_return",
+      "title": "East ruin • return",
+      "position": [
+        17,
+        0,
+        2
+      ],
+      "size": [
+        0.8,
+        4,
+        6
+      ],
+      "tint": "#7a817c",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "north_wall",
+      "title": "North wall",
+      "position": [
+        8,
+        0,
+        -10
+      ],
+      "size": [
+        7,
+        2.5,
+        0.8
+      ],
+      "tint": "#7a817c",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "south_wall",
+      "title": "South wall",
+      "position": [
+        -8,
+        0,
+        10
+      ],
+      "size": [
+        7,
+        2.5,
+        0.8
+      ],
+      "tint": "#7a817c",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "crate_1",
+      "title": "Supply crate 1",
+      "position": [
+        -23,
+        0,
+        -2
+      ],
+      "size": [
+        2.2,
+        1.8,
+        2.2
+      ],
+      "tint": "#8b7854",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "crate_2",
+      "title": "Supply crate 2",
+      "position": [
+        -8,
+        0,
+        9
+      ],
+      "size": [
+        2.2,
+        1.8,
+        2.2
+      ],
+      "tint": "#8b7854",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "crate_3",
+      "title": "Supply crate 3",
+      "position": [
+        7,
+        0,
+        -2
+      ],
+      "size": [
+        2.2,
+        1.8,
+        2.2
+      ],
+      "tint": "#8b7854",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "crate_4",
+      "title": "Supply crate 4",
+      "position": [
+        22,
+        0,
+        9
+      ],
+      "size": [
+        2.2,
+        1.8,
+        2.2
+      ],
+      "tint": "#8b7854",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "barricade",
+      "title": "Low barricade",
+      "position": [
+        1,
+        0,
+        -5
+      ],
+      "size": [
+        5,
+        0.8,
+        0.7
+      ],
+      "tint": "#777f88",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "block",
+      "title": "Stone block",
+      "position": [
+        23,
+        0,
+        -10
+      ],
+      "size": [
+        3,
+        3.2,
+        4
+      ],
+      "tint": "#697477",
+      "kind": "box",
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    }
+  ],
+  "objectives": [
+    {
+      "id": "objective_1",
+      "number": 1,
+      "name": "Objective 1",
+      "radius": 3,
+      "position": [
+        -20,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "objective_2",
+      "number": 2,
+      "name": "Objective 2",
+      "radius": 3,
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "objective_3",
+      "number": 3,
+      "name": "Objective 3",
+      "radius": 3,
+      "position": [
+        20,
+        0,
+        0
+      ]
+    }
+  ],
+  "armies": [
+    {
+      "id": "AlphaSquad",
+      "name": "Alpha Squad",
+      "team": 0,
+      "profile": "res://resources/units/trooper.json",
+      "models": [
+        {
+          "id": "A1",
+          "position": [
+            -6,
+            0,
+            15
+          ]
+        },
+        {
+          "id": "A2",
+          "position": [
+            -3,
+            0,
+            15
+          ]
+        },
+        {
+          "id": "A3",
+          "position": [
+            0,
+            0,
+            15
+          ]
+        },
+        {
+          "id": "A4",
+          "position": [
+            3,
+            0,
+            15
+          ]
+        },
+        {
+          "id": "A5",
+          "position": [
+            6,
+            0,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BravoSquad",
+      "name": "Bravo Squad",
+      "team": 1,
+      "profile": "res://resources/units/trooper.json",
+      "models": [
+        {
+          "id": "B1",
+          "position": [
+            -6,
+            0,
+            -15
+          ]
+        },
+        {
+          "id": "B2",
+          "position": [
+            -3,
+            0,
+            -15
+          ]
+        },
+        {
+          "id": "B3",
+          "position": [
+            0,
+            0,
+            -15
+          ]
+        },
+        {
+          "id": "B4",
+          "position": [
+            3,
+            0,
+            -15
+          ]
+        },
+        {
+          "id": "B5",
+          "position": [
+            6,
+            0,
+            -15
+          ]
+        }
+      ]
+    }
+  ],
+  "starting_state": {
+    "round": 1,
+    "phase": 0,
+    "team": 0,
+    "deployment": true
+  }
+}

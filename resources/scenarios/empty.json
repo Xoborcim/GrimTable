@@ -1,0 +1,50 @@
+{
+  "format_version": 1,
+  "id": "empty",
+  "name": "Empty Battlefield",
+  "notes": "An empty board for custom scenarios.",
+  "board": {
+    "width": 60,
+    "depth": 44
+  },
+  "coherency_distance": 2,
+  "deployment_zones": [
+    {
+      "id": "zone_a",
+      "shape": "rectangle",
+      "team": 0,
+      "name": "TEAM A DEPLOYMENT",
+      "center": [
+        0,
+        17.5
+      ],
+      "size": [
+        60,
+        9
+      ]
+    },
+    {
+      "id": "zone_b",
+      "shape": "rectangle",
+      "team": 1,
+      "name": "TEAM B DEPLOYMENT",
+      "center": [
+        0,
+        -17.5
+      ],
+      "size": [
+        60,
+        9
+      ]
+    }
+  ],
+  "terrain": [],
+  "objectives": [],
+  "armies": [],
+  "starting_state": {
+    "round": 1,
+    "phase": 0,
+    "team": 0,
+    "deployment": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "id": "combat_blade",
+  "name": "Combat Blade",
+  "range": 1,
+  "attacks": 2,
+  "hit": 3,
+  "strength": 4,
+  "ap": 0,
+  "damage": 1,
+  "type": "melee",
+  "tags": [],
+  "ap_semantics": "penalty"
+}

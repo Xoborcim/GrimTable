@@ -1,0 +1,16 @@
+{
+  "id": "example_army:heavy",
+  "name": "Expedition Anchor",
+  "faction": "example_army:expedition",
+  "movement": 4,
+  "defense": 6,
+  "save": 4,
+  "wounds": 5,
+  "base_mm": 60,
+  "weapons": [
+    "example_army:cannon"
+  ],
+  "fallback_visual": "synthetic_destroyer",
+  "gameplay_height": 2.7,
+  "los_height": 2.1
+}

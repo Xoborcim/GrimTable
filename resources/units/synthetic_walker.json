@@ -1,0 +1,22 @@
+{
+  "id": "synthetic_walker",
+  "name": "Synthetic Walker",
+  "faction": "synthetics",
+  "movement": 5,
+  "defense": 8,
+  "toughness": 8,
+  "save": 2,
+  "wounds": 11,
+  "max_wounds": 11,
+  "base_mm": 80,
+  "model_scene": "res://assets/grimtable/models/synthetic_walker.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 3.8,
+  "los_height": 3.04,
+  "weapons": [
+    "synth_lance",
+    "combat_blade"
+  ],
+  "weapon": "res://resources/weapons/synth_lance.json",
+  "fallback_model_scene": "res://assets/grimtable/models/synthetic_walker.tscn"
+}

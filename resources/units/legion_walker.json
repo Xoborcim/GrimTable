@@ -1,0 +1,22 @@
+{
+  "id": "legion_walker",
+  "name": "Legion Walker",
+  "faction": "legion",
+  "movement": 6,
+  "defense": 7,
+  "toughness": 7,
+  "save": 3,
+  "wounds": 9,
+  "max_wounds": 9,
+  "base_mm": 80,
+  "model_scene": "res://assets/grimtable/models/legion_walker.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 3.8,
+  "los_height": 3.04,
+  "weapons": [
+    "legion_cannon",
+    "combat_blade"
+  ],
+  "weapon": "res://resources/weapons/legion_cannon.json",
+  "fallback_model_scene": "res://assets/grimtable/models/legion_walker.tscn"
+}

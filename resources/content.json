@@ -1,0 +1,78 @@
+{
+  "factions": {
+    "legion": {
+      "name": "The Legion",
+      "color": "#304c72",
+      "accent": "#93a8ba"
+    },
+    "horde": {
+      "name": "The Horde",
+      "color": "#9a5035",
+      "accent": "#b8a18a"
+    },
+    "swarm": {
+      "name": "The Swarm",
+      "color": "#774483",
+      "accent": "#ded0a4"
+    },
+    "synthetics": {
+      "name": "The Synthetics",
+      "color": "#26303a",
+      "accent": "#37dfcb"
+    }
+  },
+  "units": {
+    "legion_trooper": "res://resources/units/legion_trooper.json",
+    "legion_heavy": "res://resources/units/legion_heavy.json",
+    "legion_walker": "res://resources/units/legion_walker.json",
+    "legion_battle_tank": "res://resources/units/legion_battle_tank.json",
+    "horde_raider": "res://resources/units/horde_raider.json",
+    "horde_bruiser": "res://resources/units/horde_bruiser.json",
+    "horde_gunner": "res://resources/units/horde_gunner.json",
+    "horde_war_machine": "res://resources/units/horde_war_machine.json",
+    "swarm_crawler": "res://resources/units/swarm_crawler.json",
+    "swarm_hunter": "res://resources/units/swarm_hunter.json",
+    "swarm_brood_beast": "res://resources/units/swarm_brood_beast.json",
+    "swarm_winged_beast": "res://resources/units/swarm_winged_beast.json",
+    "synthetic_drone": "res://resources/units/synthetic_drone.json",
+    "synthetic_sentinel": "res://resources/units/synthetic_sentinel.json",
+    "synthetic_destroyer": "res://resources/units/synthetic_destroyer.json",
+    "synthetic_walker": "res://resources/units/synthetic_walker.json"
+  },
+  "weapons": {
+    "legion_rifle": "res://resources/weapons/legion_rifle.json",
+    "combat_blade": "res://resources/weapons/combat_blade.json",
+    "legion_cannon": "res://resources/weapons/legion_cannon.json",
+    "tank_cannon": "res://resources/weapons/tank_cannon.json",
+    "scrap_blades": "res://resources/weapons/scrap_blades.json",
+    "scrap_gun": "res://resources/weapons/scrap_gun.json",
+    "scrap_crusher": "res://resources/weapons/scrap_crusher.json",
+    "swarm_talons": "res://resources/weapons/swarm_talons.json",
+    "swarm_fangs": "res://resources/weapons/swarm_fangs.json",
+    "swarm_spines": "res://resources/weapons/swarm_spines.json",
+    "synth_beam": "res://resources/weapons/synth_beam.json",
+    "synth_lance": "res://resources/weapons/synth_lance.json"
+  },
+  "models": {
+    "legion_trooper_visual": "res://assets/grimtable/models/legion_trooper.tscn",
+    "legion_heavy_visual": "res://assets/grimtable/models/legion_heavy.tscn",
+    "legion_walker_visual": "res://assets/grimtable/models/legion_walker.tscn",
+    "legion_battle_tank_visual": "res://assets/grimtable/models/legion_battle_tank.tscn",
+    "horde_raider_visual": "res://assets/grimtable/models/horde_raider.tscn",
+    "horde_bruiser_visual": "res://assets/grimtable/models/horde_bruiser.tscn",
+    "horde_gunner_visual": "res://assets/grimtable/models/horde_gunner.tscn",
+    "horde_war_machine_visual": "res://assets/grimtable/models/horde_war_machine.tscn",
+    "swarm_crawler_visual": "res://assets/grimtable/models/swarm_crawler.tscn",
+    "swarm_hunter_visual": "res://assets/grimtable/models/swarm_hunter.tscn",
+    "swarm_brood_beast_visual": "res://assets/grimtable/models/swarm_brood_beast.tscn",
+    "swarm_winged_beast_visual": "res://assets/grimtable/models/swarm_winged_beast.tscn",
+    "synthetic_drone_visual": "res://assets/grimtable/models/synthetic_drone.tscn",
+    "synthetic_sentinel_visual": "res://assets/grimtable/models/synthetic_sentinel.tscn",
+    "synthetic_destroyer_visual": "res://assets/grimtable/models/synthetic_destroyer.tscn",
+    "synthetic_walker_visual": "res://assets/grimtable/models/synthetic_walker.tscn"
+  },
+  "scenarios": {
+    "legion_vs_swarm": "res://resources/scenarios/legion_vs_swarm.json",
+    "horde_vs_synthetics": "res://resources/scenarios/horde_vs_synthetics.json"
+  }
+}

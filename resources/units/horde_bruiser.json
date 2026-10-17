@@ -1,0 +1,21 @@
+{
+  "id": "horde_bruiser",
+  "name": "Horde Bruiser",
+  "faction": "horde",
+  "movement": 5,
+  "defense": 5,
+  "toughness": 5,
+  "save": 5,
+  "wounds": 4,
+  "max_wounds": 4,
+  "base_mm": 40,
+  "model_scene": "res://assets/grimtable/models/horde_bruiser.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 2.2,
+  "los_height": 1.7600000000000002,
+  "weapons": [
+    "scrap_crusher"
+  ],
+  "weapon": "res://resources/weapons/scrap_crusher.json",
+  "fallback_model_scene": "res://assets/grimtable/models/horde_bruiser.tscn"
+}

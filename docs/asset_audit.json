@@ -1,0 +1,2194 @@
+[
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/cables.glb",
+    "sha256": "f689e942aad71167bde86c559061aea03537bfb07f2851aeac9fb538fec72526",
+    "bytes": 42612,
+    "triangles": 400,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/corridor-corner.glb",
+    "sha256": "e0cb429b03abc641d6e5c5c2df039a0ef9c50a9a56a58c0542c3cbaeada49019",
+    "bytes": 100020,
+    "triangles": 1146,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/corridor-end.glb",
+    "sha256": "78bb37f3edf12d40eff699827fdbeb3fa70b3bf4099982588c28db7f34320437",
+    "bytes": 112528,
+    "triangles": 1288,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/corridor-intersection.glb",
+    "sha256": "128fef49b225e9394c52755128a1dc195b8c3776f58239daf0ec24ed512ba3d3",
+    "bytes": 25556,
+    "triangles": 236,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/corridor-junction.glb",
+    "sha256": "4900834dc046b6c2e147d8dbca3cbde58a0a45ee1a250c90ec0530b4fd86be14",
+    "bytes": 50652,
+    "triangles": 548,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/corridor-transition.glb",
+    "sha256": "3936c4becbf00c4c3be994d7cb2a0fbdd01a97bf88a408faede722cf606dd1a8",
+    "bytes": 179736,
+    "triangles": 2024,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/corridor-wide-corner.glb",
+    "sha256": "9691e1c3d2af8ec1bde1a17504a24fe61758a6efd2c453a74fae7a35403742b9",
+    "bytes": 174800,
+    "triangles": 2014,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/corridor-wide-end.glb",
+    "sha256": "9cba90488e8159f5bda09114ff0763fbfa0b47adeb033692c23c59f4761d377d",
+    "bytes": 305796,
+    "triangles": 3448,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/corridor-wide-intersection.glb",
+    "sha256": "61867258442de764a66f4af3a6d038284a321f05523de477b0d507bdd77fa513",
+    "bytes": 26808,
+    "triangles": 248,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/corridor-wide-junction.glb",
+    "sha256": "0affee135e827f3468ebccd3578bcb21ce3fb673ec862a75a846860754e8809a",
+    "bytes": 115912,
+    "triangles": 1276,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/corridor-wide.glb",
+    "sha256": "2033c7cc0da6c2fdb2d3df6799b746c01c72537661f04b6e369f79b04ed15fa8",
+    "bytes": 204896,
+    "triangles": 2304,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/corridor.glb",
+    "sha256": "6805b35312a2d51a7966459fc016e27ca788decc776ed40f584922e89f485f8b",
+    "bytes": 75632,
+    "triangles": 860,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/gate-door-window.glb",
+    "sha256": "3b881f23ef96ba51fd63b5f32ea095b8e26917b21f9b3908163b00234dc324fe",
+    "bytes": 147544,
+    "triangles": 1872,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/gate-door.glb",
+    "sha256": "53e943314ba317a20bf0021d9cd474809779d25124f677f082cf28bad653812a",
+    "bytes": 139124,
+    "triangles": 1752,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/gate-lasers.glb",
+    "sha256": "ea6e756b9f42c41ca3e6eda426806e2104b2d956480251fd2021216a59a6c3ca",
+    "bytes": 185616,
+    "triangles": 2156,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/gate.glb",
+    "sha256": "389440050ca22abb309ebbf9f3b3872d434132614b29430b66ea27b5b8f762fc",
+    "bytes": 54556,
+    "triangles": 764,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/room-corner.glb",
+    "sha256": "713ce4656c6f87045e70b987f3c4030bbef8ef5bd73dc72f75f2e98c87b202dd",
+    "bytes": 537432,
+    "triangles": 6234,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/room-large-variation.glb",
+    "sha256": "2a21fd3b7432c7add9fe73238a8f04f715e90e770cf9e6fda24b0f78d1675038",
+    "bytes": 850016,
+    "triangles": 9810,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/room-large.glb",
+    "sha256": "fc418d3747a037f8889a028a9ebcfc7f6d07007495e2d80fb515e1a380923533",
+    "bytes": 942712,
+    "triangles": 10880,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/room-small-variation.glb",
+    "sha256": "0fe104737f7faaa40f20aa0e5afa285a31ec26d247c075a823333c1e4809059f",
+    "bytes": 372640,
+    "triangles": 4276,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/room-small.glb",
+    "sha256": "b77a7d211401bda96f611ff2b0a10c8aff1a41cccb9d46add21f86a4feb029a7",
+    "bytes": 424016,
+    "triangles": 4876,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/room-wide-variation.glb",
+    "sha256": "0c4c2cd5b635771f8a5f8e312e3db0bbd2640eb6d372812672736c27e0ee3058",
+    "bytes": 864552,
+    "triangles": 9940,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/room-wide.glb",
+    "sha256": "4eca405df5cb74f232e6b06f73976f61ebf4197b6419e581d1341d4feb22f362",
+    "bytes": 755428,
+    "triangles": 8720,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/stairs-wide.glb",
+    "sha256": "4e5354a7d448bf918e6c6b403b3f71e34665f02f6a56c455061647449f2fa195",
+    "bytes": 266740,
+    "triangles": 3116,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/stairs.glb",
+    "sha256": "e35fe0dfaa73fce99aab56235f85a29840124fa8bbe21057d86145bad51f72b4",
+    "bytes": 265880,
+    "triangles": 3108,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-corner.glb",
+    "sha256": "4cb70961ecf0f24934070aa6751a363eb6ad947255ed6b1cdd9c22d66b185bf4",
+    "bytes": 94180,
+    "triangles": 1088,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-detail.glb",
+    "sha256": "31081df4606d6c75592ee561e911282855a74c23383512542a1f42e21db492f7",
+    "bytes": 33936,
+    "triangles": 368,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-floor-big.glb",
+    "sha256": "2d590204106785c1168150b6e730cf7c4113a3569428bdb9264cb7e30b632945",
+    "bytes": 35536,
+    "triangles": 384,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-floor-detail-a.glb",
+    "sha256": "f70e62bdcb5c70be6b08949b3739bbad8301ae2069d183c9d5ab9095dd0365b9",
+    "bytes": 2076,
+    "triangles": 4,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-floor-detail.glb",
+    "sha256": "18238711d56167a6e938e81c1e737ab9854250612088dae3fcdfdc85dbb581af",
+    "bytes": 4232,
+    "triangles": 24,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-floor-layer-hole.glb",
+    "sha256": "db1401579d7f666b4018882d14fe0c845eccd1200c274a10865f9cb73354ed80",
+    "bytes": 221732,
+    "triangles": 3024,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-floor-layer-raised.glb",
+    "sha256": "c72f7e0ae96925b26bb5f88b7417e0629e2e76311f3eaa5b3044eaf3d24c3456",
+    "bytes": 214128,
+    "triangles": 2916,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-floor-layer.glb",
+    "sha256": "5348c711f9540d015043888c2d14b0265b58b8d4caacb62eff896089e2a1ae84",
+    "bytes": 46292,
+    "triangles": 548,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-floor.glb",
+    "sha256": "a8d73df13986aff68927a872f46b121c13a1b1db0877c512e4415b02faced3e7",
+    "bytes": 2092,
+    "triangles": 4,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-wall-corner.glb",
+    "sha256": "9102860b0f75536786b607ccc77853a57885a7688277a21e849acc35410918ad",
+    "bytes": 7420,
+    "triangles": 58,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-wall-detail-a.glb",
+    "sha256": "9506622c3ef46acc0d8a3096eb637816f8eb45635c8ce65eb702275f8584d9fa",
+    "bytes": 84516,
+    "triangles": 960,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-wall-half.glb",
+    "sha256": "07cbcb4603635489698f30b66f748e7d13fb19d2303dc6468d787b73bf14976f",
+    "bytes": 10440,
+    "triangles": 92,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-wall-stairs.glb",
+    "sha256": "a7d12c0d8f1d852045f95893615470f04108ae66b6df114df029c89c50b07335",
+    "bytes": 22560,
+    "triangles": 252,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-wall-top.glb",
+    "sha256": "06ec7991181f1068c45abd1c6be69fd372dfc3137727dcc363a9f85fc655d58e",
+    "bytes": 31684,
+    "triangles": 368,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/template-wall.glb",
+    "sha256": "d12cfc5bebbabf8f71f5f8898548bd0af4dcaafa7edd386c9de5dacf280ade5f",
+    "bytes": 38472,
+    "triangles": 428,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/modular-space-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/balcony-floor-center.glb",
+    "sha256": "1e5ad21f42639f6cf89700960de21944c99516965ffb004a0450ec963f382bfd",
+    "bytes": 3512,
+    "triangles": 20,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/balcony-floor-corner.glb",
+    "sha256": "451fe081f094c757becaeebd5f249b17af71ab156c797ac55621f692c24cefa1",
+    "bytes": 4448,
+    "triangles": 32,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/balcony-floor.glb",
+    "sha256": "d181b5acaa17b73d7d24dd75932bae41b1c2f1ff931609d7cd41504591e92241",
+    "bytes": 5312,
+    "triangles": 44,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/balcony-rail-center.glb",
+    "sha256": "a0816c2cf3189bef602d5e5d4ec3eb8932432b6f35e946290c5ff63fdecc41d3",
+    "bytes": 5300,
+    "triangles": 44,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/balcony-rail-corner.glb",
+    "sha256": "e72c1fa4b87268e733f2e7358c27c9d79cdf915b9440d08b97d975a7d5e3f36d",
+    "bytes": 12912,
+    "triangles": 124,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/balcony-rail.glb",
+    "sha256": "8195227936b0b53047c1f813708a10f1ebc82e14b92baa4f47c8b36ec35d1cda",
+    "bytes": 21644,
+    "triangles": 214,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/bed-double-cover.glb",
+    "sha256": "7f2fd2e8b39aa07de8e538ff79239d7c2f6ba63b9a9b745fbc693df461dafbee",
+    "bytes": 5352,
+    "triangles": 44,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/bed-double.glb",
+    "sha256": "311047ed0eb49e5e13a5e43204ad24149ae9d931ebdcdab26c409b8a1ef76ae7",
+    "bytes": 7672,
+    "triangles": 68,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/bed-single-cover.glb",
+    "sha256": "1fd3738b10f71de374d8c3ac6fd69edf397866c822ce42bc805b7c929a7acee8",
+    "bytes": 5356,
+    "triangles": 44,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/bed-single.glb",
+    "sha256": "5eca54cb1f72da773380ded3a326e1c116e9353aebdf202b9353ed7ddc1cc6db",
+    "bytes": 6480,
+    "triangles": 56,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/chair-armrest-headrest.glb",
+    "sha256": "5f177776c26aac0cad6f90a128332e190f23958159ea6f62f78cdac54e4acd84",
+    "bytes": 14308,
+    "triangles": 142,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/chair-armrest.glb",
+    "sha256": "37d619c7c2e8551543407be0e06c5e66eba69354e627c44b73dd1e4ca5d23147",
+    "bytes": 10304,
+    "triangles": 98,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/chair-cushion-headrest.glb",
+    "sha256": "c0e6cdad402a48112bf125e0742b88b09522517783663bf5ea9a705debdff5a8",
+    "bytes": 11764,
+    "triangles": 118,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/chair-cushion.glb",
+    "sha256": "c46da13f8891d38331142972ec53275490cbad4ed3693af6565f974738af12cc",
+    "bytes": 7780,
+    "triangles": 74,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/chair-headrest.glb",
+    "sha256": "5161572587d11a1e6702885a05d42f4ebe3da951225af8dfd654bfa79218a77c",
+    "bytes": 10936,
+    "triangles": 106,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/chair.glb",
+    "sha256": "2c42449422dc33515cb894858d2e842d81125301df88b5a4b9dc8b73ae60a1c4",
+    "bytes": 6952,
+    "triangles": 62,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/computer-screen.glb",
+    "sha256": "dd2a95a9c46f430e6fd0d2af6c6a94b4542d0501dda2700504642cecc33369e3",
+    "bytes": 19584,
+    "triangles": 198,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/computer-system.glb",
+    "sha256": "87666d5211fdce8830d1abf55fab16bc21d67714d78f9525f1399c33c4cb54bb",
+    "bytes": 17552,
+    "triangles": 176,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/computer-wide.glb",
+    "sha256": "62420ce928f288f91ce85e2245e80e6c9efbee9b6e91b7ea9b83d0289fa647c4",
+    "bytes": 17136,
+    "triangles": 174,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/computer.glb",
+    "sha256": "dede29d81fd122c484af3e0dbf566f34893ed0f3c80182586feb19b23c33c0b7",
+    "bytes": 13804,
+    "triangles": 140,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/container-flat-open.glb",
+    "sha256": "b85823ea93a830fe515732e800e515f66432453369a2f3ff42597bdf3588d832",
+    "bytes": 13028,
+    "triangles": 132,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/container-flat.glb",
+    "sha256": "f76bdebf96ad858dd8a6be5cb71694616a63488cbac3f61d01485dccde99fd0c",
+    "bytes": 12196,
+    "triangles": 116,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/container-tall.glb",
+    "sha256": "e790f12cdab2e50d266d54e1bbb8a05a1cd77629a065254be3734a67b6053358",
+    "bytes": 13052,
+    "triangles": 116,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/container-wide.glb",
+    "sha256": "3bed318d187ce26b816b7f84b706ecb57cffef94ab1bb8266ca91aa35073e6f0",
+    "bytes": 12212,
+    "triangles": 116,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/container.glb",
+    "sha256": "719b77f62979e9e02047489fcc1e86432be300ac35ed02fe496a2dfc6a3fcdd6",
+    "bytes": 9716,
+    "triangles": 88,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/display-wall-wide.glb",
+    "sha256": "27b9b2cddd27ac6c5590d98af6ff71e5bb23fb621f171974cbdb661b4b54f1d0",
+    "bytes": 9780,
+    "triangles": 96,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/display-wall.glb",
+    "sha256": "64eb414b4ae9c665b8ef95711d8bade6285b0a7f6dfb8f1f8bd51a67ab4dec89",
+    "bytes": 8776,
+    "triangles": 86,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/door-double-closed.glb",
+    "sha256": "131dcf41b0a37c25974261a510b1d20950e27ecf17ce25232a4e37573fd988ca",
+    "bytes": 6984,
+    "triangles": 52,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/door-double-half.glb",
+    "sha256": "ae76af7119b9760c074fafa860ca6ac28f8c8fd9b147ac77d8a861c70531150e",
+    "bytes": 4764,
+    "triangles": 40,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/door-double.glb",
+    "sha256": "708642ab37f6c924200ebe61bc5feb3e4ce8614f7cb2af39546e97f1e7aaa3ae",
+    "bytes": 5376,
+    "triangles": 52,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/door-single-closed.glb",
+    "sha256": "ef12008071c51503a0ba79d029430baacbd6466c9ce7ec20979f477b315cf45e",
+    "bytes": 6984,
+    "triangles": 52,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/door-single-half.glb",
+    "sha256": "645349723f841d0f0f6d2b7502d4f6fb9420d9e2e417991d2b8dc41a63f55a63",
+    "bytes": 4764,
+    "triangles": 40,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/door-single.glb",
+    "sha256": "85f80cd0ef327f322694b46bebb4d07996ceccaaf10b14fd0ccc6585d252c8c3",
+    "bytes": 5376,
+    "triangles": 52,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/floor-corner.glb",
+    "sha256": "bdde5c66f5d1c39662dce1dbc0cb378018d412c9341d78a1b9821c3fb977cadd",
+    "bytes": 3156,
+    "triangles": 16,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/floor-detail.glb",
+    "sha256": "68e95e80989494e7a28407ddecfa4a45cd22cb269772a29e72c07676d00ce92c",
+    "bytes": 5452,
+    "triangles": 44,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/floor-panel-corner.glb",
+    "sha256": "d1af5db603dbcbd709f5fb19c6e0f5577d6e14bd6b75789cae1affdab4384efa",
+    "bytes": 5916,
+    "triangles": 52,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/floor-panel-end.glb",
+    "sha256": "a64edc5d000510b1ec19a339e900edc92ef41b09c4da1bf68cc546a3b2e39043",
+    "bytes": 6508,
+    "triangles": 60,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/floor-panel-straight.glb",
+    "sha256": "dd7ebd5d75d4ee396afb91a2fd5d64ff4798549569579d0730b675136f781df0",
+    "bytes": 6488,
+    "triangles": 60,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/floor-panel.glb",
+    "sha256": "5b9f1689347a1c490b8ddbf79f8741a6fcab1140ebcf62eb5853b36fbbdab53e",
+    "bytes": 8900,
+    "triangles": 92,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/floor.glb",
+    "sha256": "bf61eafc5c4159e1103d88a2973664f55b9e1531a0b3451d90b42d3387132449",
+    "bytes": 2836,
+    "triangles": 12,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/pipe-bend-diagonal.glb",
+    "sha256": "43cf3783d91df2d6d7353fef9cf5d972edeb925602d37587737759eccc5a351d",
+    "bytes": 5704,
+    "triangles": 40,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/pipe-bend.glb",
+    "sha256": "dcbb380dde0687af80f74a84c8fbd22efbb5dc007b822a6522577fba0fd0e676",
+    "bytes": 6544,
+    "triangles": 48,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/pipe-end-colored.glb",
+    "sha256": "dc114061b60a441df6b32696481ba32e135a6c3d58f4ebfc3a7f9945d9ae23aa",
+    "bytes": 5064,
+    "triangles": 36,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/pipe-end.glb",
+    "sha256": "f2fded89b58d981a88f793d85ed260169307261aa92a00dba0c31ff25bf98b66",
+    "bytes": 5040,
+    "triangles": 36,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/pipe-ring-colored.glb",
+    "sha256": "037a65be81225b9a59d4bc51fb53e047b336d710ef2d5c950b9e3768f072eb45",
+    "bytes": 5368,
+    "triangles": 40,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/pipe-ring.glb",
+    "sha256": "5e5821b9e9579c60c1200414eece3d8ad3c5ffaa3488e9c3a172eb49700f64f8",
+    "bytes": 5344,
+    "triangles": 40,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/pipe.glb",
+    "sha256": "b33fe37fee9d1dfe92dc75d5af7e54877199b9d865cb988afa25f40b7bed49ef",
+    "bytes": 3536,
+    "triangles": 20,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/rail-narrow.glb",
+    "sha256": "92bfc582b5d1cc35f0ffaeffe5a2866a0bc23093b361c24a82763a6371af79fa",
+    "bytes": 9716,
+    "triangles": 96,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/rail.glb",
+    "sha256": "fda7cd2ab910db8e251345a9b488a41bd55da2f55627ad4344653c9d6d5c088f",
+    "bytes": 9692,
+    "triangles": 96,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/rocks.glb",
+    "sha256": "cdad530e15972f1f3cdf4dec1d1ca2d3b9406b46c2bbd67bb67abf3bbf173aa3",
+    "bytes": 9308,
+    "triangles": 80,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/skip-rocks.glb",
+    "sha256": "2cdb4a670d18dc9ddf8fd8edfbd24e2541bf12cd89d4a3c758a312036cd95167",
+    "bytes": 13516,
+    "triangles": 138,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/skip.glb",
+    "sha256": "1187ffe3baa86b27733760bd4fb4a022dbe565cee8b681039ad485da46716b18",
+    "bytes": 8788,
+    "triangles": 88,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-corner-inner.glb",
+    "sha256": "26094770b295c9b3868cfb58d0591481c25602040d9c3196b3edbff7be22f8cf",
+    "bytes": 7184,
+    "triangles": 72,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-corner.glb",
+    "sha256": "d05cd62f354fd462b89c3f013d8d68213667f41ae66076480ba351d338c79fc9",
+    "bytes": 8856,
+    "triangles": 96,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-handrail-single.glb",
+    "sha256": "0aba72c06dca971fff539a098451921d1b1649a7557f9539520061ae138ce87c",
+    "bytes": 5156,
+    "triangles": 36,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-handrail.glb",
+    "sha256": "aaa2631a43af0ea376f519b825ca4ac299dbd13c9573074f98f3b057ecb1dd49",
+    "bytes": 8484,
+    "triangles": 72,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-ramp.glb",
+    "sha256": "20447d16cd23b537b46811b7fe52e4c70aa3b9ddfd99bc4d1d82ef4681af124a",
+    "bytes": 6740,
+    "triangles": 60,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-small-center.glb",
+    "sha256": "1f9287927bab991c99f9f0013e75aa1d8a2a24b13b4b1a043d11dac08e195b48",
+    "bytes": 4112,
+    "triangles": 28,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-small-corner-inner.glb",
+    "sha256": "f302a463376dcf9630991bcb3649b91bf2b2b864e428be176d8f27aa908d0b39",
+    "bytes": 4764,
+    "triangles": 36,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-small-corner.glb",
+    "sha256": "24e5c3ea2a6e15a38663d275775d05d4a36aef5ece602d52f7d98b56c18a2ac7",
+    "bytes": 5756,
+    "triangles": 52,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-small-edge-handrail.glb",
+    "sha256": "3b81089045e2cac339aac83206ad166e6e26d4a954abdd2eafc96c5832221cc4",
+    "bytes": 9204,
+    "triangles": 82,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-small-edge.glb",
+    "sha256": "60bcdeae71b406ba2131d69850d90dbb42c22d67279f0e36349bd7c7635eced6",
+    "bytes": 5196,
+    "triangles": 38,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-small-edges-handrail.glb",
+    "sha256": "4eda8c348ecf3130060aba270b39f18641acf80dad967ded2cc20707fbf85fd3",
+    "bytes": 14268,
+    "triangles": 136,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs-small-edges.glb",
+    "sha256": "40d80a3d1257dbe053b6fe5fef0458fa26d57c14313216101cd75f79e4601119",
+    "bytes": 6288,
+    "triangles": 48,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/stairs.glb",
+    "sha256": "c288069628036c179f030e8669e020a94d40efa932bf8610a08dc81fec6b9e60",
+    "bytes": 5832,
+    "triangles": 52,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/structure-barrier-high.glb",
+    "sha256": "7c2c9a3ec930baa18200ebf72ae2995f63bbc30d457c199e49ede20c6743871e",
+    "bytes": 44348,
+    "triangles": 256,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/structure-barrier.glb",
+    "sha256": "5b5998fe395032812d58fb8936b10d76f57ef2880d83d54a14a83e7f9643d923",
+    "bytes": 44356,
+    "triangles": 256,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/structure-panel.glb",
+    "sha256": "4544540913ac40e9a4363b8866a926e8a57d48cbadf92020491f20aa7817f641",
+    "bytes": 12516,
+    "triangles": 124,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/structure.glb",
+    "sha256": "ef12f1eaec019116ece1aebb0c512ce19a5cbc385f7a393c62d9f32f129cf088",
+    "bytes": 29828,
+    "triangles": 144,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/table-display-planet.glb",
+    "sha256": "55f4055020546163a7bc4b025d150b128917a046f903def087a9cc52767fa68a",
+    "bytes": 16740,
+    "triangles": 140,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/table-display-small.glb",
+    "sha256": "cb896c1f0ef4535b5209d40cb0a74fc1dd78874a00c10b99b25621ebadc7b197",
+    "bytes": 29116,
+    "triangles": 272,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/table-display.glb",
+    "sha256": "6a078d92a273a95f82c2017038c15cf1fb534c0d5dbf4800ea014e63fed3edd3",
+    "bytes": 24344,
+    "triangles": 240,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/table-inset-small.glb",
+    "sha256": "2853d905c00b2a84fb7afad89ec697b37c4d739dc5dd38f6a233c332475013ec",
+    "bytes": 12260,
+    "triangles": 122,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/table-inset.glb",
+    "sha256": "37d7aa8d45994313f7bb417dddf6b651201f42445a143ff1333ccca4de2dec6b",
+    "bytes": 12240,
+    "triangles": 122,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/table-large.glb",
+    "sha256": "ea32e4fa45beb7841995e9c2ae5f1208566247ce06ffb3ca8d06a55055e3337e",
+    "bytes": 9828,
+    "triangles": 104,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/table.glb",
+    "sha256": "c0670a41634afe2ad3fc8236371afbcd26f97ae9d5cb8971bd773fbad30f4f0c",
+    "bytes": 9808,
+    "triangles": 104,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-banner.glb",
+    "sha256": "8fbaa4721ebf83124e7e413b30a315df40a72e2c160ace346ecfaaa739bd0011",
+    "bytes": 5876,
+    "triangles": 52,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-corner-banner.glb",
+    "sha256": "f498a7b588f2cebb80928e1fb36516c036f386bf950501a02b559580107f9b08",
+    "bytes": 10744,
+    "triangles": 108,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-corner-round-banner.glb",
+    "sha256": "84f2c296c688295cccbf8b2a584ebac26397b0711e9e8181dd9b5fde2a365b53",
+    "bytes": 18556,
+    "triangles": 192,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-corner-round.glb",
+    "sha256": "041f4f6758f978cf493a969bcfb47572b6c7e9957649d5116552d5d6897ede68",
+    "bytes": 15872,
+    "triangles": 164,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-corner.glb",
+    "sha256": "95dffaca238fbb3bc59a7209ef24fb624aa03998ccf9091e9df1c5cd907a22be",
+    "bytes": 9332,
+    "triangles": 92,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-detail.glb",
+    "sha256": "7cee7abe1ea412acdf182da770bd3920bf023ecd165d5c9b3db3a60a0d7ae7d8",
+    "bytes": 15096,
+    "triangles": 120,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-door-banner.glb",
+    "sha256": "9c16bfcb9496edb0986ab4c35b435b0393e616876fa9301a5a8a7fab613c2e3d",
+    "bytes": 10908,
+    "triangles": 110,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-door-center.glb",
+    "sha256": "f0549ba2346d3400cce85212910117d915911f90bf8552432417e6eaec944fea",
+    "bytes": 3692,
+    "triangles": 20,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-door-edge-banner.glb",
+    "sha256": "0f1972185a4e84d467f37133c60b2396c47d48dd0c28b82563709738db75042f",
+    "bytes": 7608,
+    "triangles": 68,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-door-edge.glb",
+    "sha256": "7280f5bb4bb891c067fce26015455904719c8d934cf0c94ebfa043aad7d57739",
+    "bytes": 7092,
+    "triangles": 62,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-door-wide-banner.glb",
+    "sha256": "be35dbb37e6ccaacd2769a7ab11b7d433181840d9fd3c556da8c9d94d6df8721",
+    "bytes": 10924,
+    "triangles": 110,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-door-wide.glb",
+    "sha256": "7a4d64e24032ce0419b751b47c9677222798d22a6efc32973a2c05d2c1b18a56",
+    "bytes": 9904,
+    "triangles": 98,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-door.glb",
+    "sha256": "e1692da0f0a0ebd2dfd36787dbe9a47748141d82bbbb12b0381919d52e271603",
+    "bytes": 9892,
+    "triangles": 98,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-pillar-banner.glb",
+    "sha256": "988f5952a705e7ccedd1eb47eff3fa0f74ff60bb1082581639f784a375fbf3fb",
+    "bytes": 16256,
+    "triangles": 156,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-pillar.glb",
+    "sha256": "aa87480d88da5feffff04a654d78059e59882cf7fcfbb9c0cd37ce4183728014",
+    "bytes": 9224,
+    "triangles": 88,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-switch.glb",
+    "sha256": "2b297783053aa9b091972f31f5fc3892b7cb7572d017dd37fc22af9ac2640c20",
+    "bytes": 3192,
+    "triangles": 18,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-window-banner.glb",
+    "sha256": "330d4b2653bf5224149e91acaef2d493e2085e984e25315610d4afa11bd7bcfe",
+    "bytes": 10532,
+    "triangles": 112,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-window-frame.glb",
+    "sha256": "b9750b0975c7a06c757ce493bb0e75c27197c83247f1d98f798b92946122a623",
+    "bytes": 4548,
+    "triangles": 36,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-window-shutters.glb",
+    "sha256": "ba607af511db91c8ec6768550962cfb05fb7fcf3d6b834bf953ac25945abbb49",
+    "bytes": 5352,
+    "triangles": 44,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall-window.glb",
+    "sha256": "55053731040bad9e0a02cd5cbef4d6ce4516f40019d41488eb36a5bdebcda6f3",
+    "bytes": 9720,
+    "triangles": 104,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  },
+  {
+    "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/wall.glb",
+    "sha256": "561253375e765f825899d13031e52c07b84304d394e1d69579e0749e23fba42f",
+    "bytes": 5252,
+    "triangles": 44,
+    "materials": 1,
+    "images": 1,
+    "textures": [
+      {
+        "mime_type": "external",
+        "path": "assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/Textures/colormap.png",
+        "width": 512,
+        "height": 512
+      }
+    ]
+  }
+]

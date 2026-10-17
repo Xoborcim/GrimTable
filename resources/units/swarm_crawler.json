@@ -1,0 +1,21 @@
+{
+  "id": "swarm_crawler",
+  "name": "Swarm Crawler",
+  "faction": "swarm",
+  "movement": 8,
+  "defense": 3,
+  "toughness": 3,
+  "save": 6,
+  "wounds": 1,
+  "max_wounds": 1,
+  "base_mm": 25,
+  "model_scene": "res://assets/grimtable/models/swarm_crawler.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 0.9,
+  "los_height": 0.7200000000000001,
+  "weapons": [
+    "swarm_talons"
+  ],
+  "weapon": "res://resources/weapons/swarm_talons.json",
+  "fallback_model_scene": "res://assets/grimtable/models/swarm_crawler.tscn"
+}

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/demo_visual.gd" id="1"]
+
+[node name="MiniatureVisual" type="Node3D"]
+script = ExtResource("1")
+kind = "robot"
+faction = "synthetics"
+height = 2
+tint = Color(0.1, 0.15, 0.17, 1)
+accent = Color(0.24, 0.66, 0.61, 1)

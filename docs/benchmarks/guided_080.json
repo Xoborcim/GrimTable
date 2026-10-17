@@ -1,0 +1,42 @@
+{
+	"cpu": "AMD Ryzen 5 2600 Six-Core Processor",
+	"display": "Windows",
+	"frames_per_mode": 90,
+	"godot": "4.6.1-stable (official)",
+	"gpu": "NVIDIA GeForce GTX 1660 Ti",
+	"label": "guided_080",
+	"logical_cpus": 12,
+	"resolution": [
+		1280,
+		800
+	],
+	"results": [
+		{
+			"attack_preview_ms": 0.09559000000000001,
+			"draw_calls": 3767.0,
+			"fps": 133.59874951570453,
+			"idle_frame_ms": 7.4851,
+			"load_ms": 1013.08,
+			"models": 100,
+			"move_validation_ms": 0.5657000000000001,
+			"movement_frame_ms": 7.802,
+			"selection_ms": 0.9873099999999999,
+			"static_memory_mb": 124.32866764068604,
+			"targeting_frame_ms": 7.760777777777777
+		},
+		{
+			"attack_preview_ms": 0.09453,
+			"draw_calls": 7187.0,
+			"fps": 73.17846601673347,
+			"idle_frame_ms": 13.665222222222223,
+			"load_ms": 674.651,
+			"models": 200,
+			"move_validation_ms": 1.0180666666666667,
+			"movement_frame_ms": 13.987488888888889,
+			"selection_ms": 0.93502,
+			"static_memory_mb": 149.6140489578247,
+			"targeting_frame_ms": 14.002855555555556
+		}
+	],
+	"vsync": false
+}

@@ -1,0 +1,13 @@
+{
+  "id": "scrap_crusher",
+  "name": "Scrap Crusher",
+  "range": 1,
+  "attacks": 5,
+  "hit": 4,
+  "strength": 7,
+  "ap": 1,
+  "damage": 2,
+  "type": "melee",
+  "tags": [],
+  "ap_semantics": "penalty"
+}

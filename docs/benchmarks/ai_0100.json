@@ -1,0 +1,34 @@
+{
+	"cpu": "AMD Ryzen 5 2600 Six-Core Processor",
+	"godot": "4.6.1-stable (official)",
+	"mode": "headless, Normal, no presentation delays; includes physics waits",
+	"results": [
+		{
+			"average_decision_ms": 5.73185714285714,
+			"decisions": 7,
+			"finished": false,
+			"full_turn_no_presentation_ms": 110.681,
+			"models": 10,
+			"steps": 8,
+			"worst_decision_ms": 39.138
+		},
+		{
+			"average_decision_ms": 73.0035625,
+			"decisions": 16,
+			"finished": false,
+			"full_turn_no_presentation_ms": 1409.792,
+			"models": 40,
+			"steps": 20,
+			"worst_decision_ms": 368.151
+		},
+		{
+			"average_decision_ms": 215.818451612903,
+			"decisions": 31,
+			"finished": false,
+			"full_turn_no_presentation_ms": 7905.846,
+			"models": 100,
+			"steps": 43,
+			"worst_decision_ms": 952.45
+		}
+	]
+}

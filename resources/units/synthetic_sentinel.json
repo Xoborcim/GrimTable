@@ -1,0 +1,22 @@
+{
+  "id": "synthetic_sentinel",
+  "name": "Synthetic Sentinel",
+  "faction": "synthetics",
+  "movement": 4,
+  "defense": 5,
+  "toughness": 5,
+  "save": 3,
+  "wounds": 3,
+  "max_wounds": 3,
+  "base_mm": 40,
+  "model_scene": "res://assets/grimtable/models/synthetic_sentinel.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 2,
+  "los_height": 1.6,
+  "weapons": [
+    "synth_beam",
+    "combat_blade"
+  ],
+  "weapon": "res://resources/weapons/synth_beam.json",
+  "fallback_model_scene": "res://assets/grimtable/models/synthetic_sentinel.tscn"
+}

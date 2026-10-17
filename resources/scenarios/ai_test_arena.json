@@ -1,0 +1,218 @@
+{
+  "format_version": 1,
+  "id": "ai_test_arena",
+  "name": "AI Test Arena",
+  "notes": "Deterministic developer arena: cover, a clear shooting lane, close combat and an objective. Launch with the AI test tools.",
+  "board": {
+    "width": 30,
+    "depth": 24,
+    "theme": "industrial"
+  },
+  "coherency_distance": 2,
+  "deployment_zones": [
+    {
+      "id": "zone_a",
+      "shape": "rectangle",
+      "team": 0,
+      "name": "Team A",
+      "center": [
+        0,
+        9
+      ],
+      "size": [
+        30,
+        6
+      ]
+    },
+    {
+      "id": "zone_b",
+      "shape": "rectangle",
+      "team": 1,
+      "name": "Team B",
+      "center": [
+        0,
+        -9
+      ],
+      "size": [
+        30,
+        6
+      ]
+    }
+  ],
+  "terrain": [
+    {
+      "id": "arena_cover",
+      "title": "Cover Platform",
+      "kind": "box",
+      "size": [
+        5,
+        0.15,
+        4
+      ],
+      "position": [
+        -7,
+        0,
+        0
+      ],
+      "rotation": 0,
+      "blocks_movement": false,
+      "blocks_los": false,
+      "cover_bonus": 1
+    },
+    {
+      "id": "arena_wall",
+      "title": "Sight Barrier",
+      "kind": "box",
+      "size": [
+        4,
+        2,
+        1
+      ],
+      "position": [
+        7,
+        0,
+        0
+      ],
+      "rotation": 0,
+      "blocks_movement": true,
+      "blocks_los": true
+    }
+  ],
+  "objectives": [
+    {
+      "id": "arena_relay",
+      "name": "Arena Relay",
+      "number": 1,
+      "radius": 3,
+      "position": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "armies": [
+    {
+      "id": "arena_0_0",
+      "name": "Arena 0-0",
+      "team": 0,
+      "unit_id": "legion_trooper",
+      "models": [
+        {
+          "id": "arena_m_0_0_0",
+          "position": [
+            -3.0,
+            0,
+            5
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "arena_m_0_0_1",
+          "position": [
+            -1.4,
+            0,
+            5
+          ],
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "arena_0_1",
+      "name": "Arena 0-1",
+      "team": 0,
+      "unit_id": "swarm_hunter",
+      "models": [
+        {
+          "id": "arena_m_0_1_0",
+          "position": [
+            3.0,
+            0,
+            5
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "arena_m_0_1_1",
+          "position": [
+            4.6,
+            0,
+            5
+          ],
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "arena_1_0",
+      "name": "Arena 1-0",
+      "team": 1,
+      "unit_id": "legion_trooper",
+      "models": [
+        {
+          "id": "arena_m_1_0_0",
+          "position": [
+            -3.0,
+            0,
+            -5
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "arena_m_1_0_1",
+          "position": [
+            -1.4,
+            0,
+            -5
+          ],
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "arena_1_1",
+      "name": "Arena 1-1",
+      "team": 1,
+      "unit_id": "swarm_hunter",
+      "models": [
+        {
+          "id": "arena_m_1_1_0",
+          "position": [
+            3.0,
+            0,
+            -5
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "arena_m_1_1_1",
+          "position": [
+            4.6,
+            0,
+            -5
+          ],
+          "rotation": 0
+        }
+      ]
+    }
+  ],
+  "starting_state": {
+    "round": 1,
+    "phase": 1,
+    "team": 0,
+    "deployment": false
+  },
+  "scoring": {
+    "objective_points_per_round": 1
+  },
+  "rules": {
+    "difficult_ground_penalty": 2,
+    "charge": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 0,
+      "engagement_range": 1
+    }
+  }
+}

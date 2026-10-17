@@ -1,0 +1,13 @@
+{
+  "id": "synth_beam",
+  "name": "Arc Beam",
+  "range": 24,
+  "attacks": 2,
+  "hit": 3,
+  "strength": 5,
+  "ap": 1,
+  "damage": 1,
+  "type": "ranged",
+  "tags": [],
+  "ap_semantics": "penalty"
+}

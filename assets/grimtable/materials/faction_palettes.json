@@ -1,0 +1,6 @@
+{
+  "legion": {"armor":"#3c5c70","trim":"#9aacae","energy":"#65bfb7","roughness":0.55,"metallic":0.16},
+  "horde": {"armor":"#704730","trim":"#a68745","energy":"#d68c49","roughness":0.67,"metallic":0.24},
+  "swarm": {"armor":"#392638","trim":"#b1a086","energy":"#97b99c","roughness":0.66,"metallic":0.04},
+  "synthetics": {"armor":"#273638","trim":"#9badaa","energy":"#65bfb7","roughness":0.48,"metallic":0.32}
+}

@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/content/imported_visual.gd" id="1_775mu"]
+
+[node name="normalized_cargo" type="Node3D" unique_id=1422142693]
+script = ExtResource("1_775mu")
+source = "res://assets/third_party/kenney/terrain/space-station-kit/Models/GLB format/container-wide.glb"
+artist_scale = Vector3(2.5714285, 2.5714285, 2.5714285)

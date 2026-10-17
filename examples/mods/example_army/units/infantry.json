@@ -1,0 +1,16 @@
+{
+  "id": "example_army:infantry",
+  "name": "Expedition Scout",
+  "faction": "example_army:expedition",
+  "movement": 7,
+  "defense": 3,
+  "save": 4,
+  "wounds": 2,
+  "base_mm": 32,
+  "weapons": [
+    "example_army:rifle"
+  ],
+  "fallback_visual": "legion_trooper",
+  "gameplay_height": 1.7,
+  "los_height": 1.35
+}

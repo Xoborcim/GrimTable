@@ -1,0 +1,21 @@
+{
+  "id": "synthetic_destroyer",
+  "name": "Synthetic Destroyer",
+  "faction": "synthetics",
+  "movement": 4,
+  "defense": 6,
+  "toughness": 6,
+  "save": 2,
+  "wounds": 6,
+  "max_wounds": 6,
+  "base_mm": 60,
+  "model_scene": "res://assets/grimtable/models/synthetic_destroyer.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 2.7,
+  "los_height": 2.16,
+  "weapons": [
+    "synth_lance"
+  ],
+  "weapon": "res://resources/weapons/synth_lance.json",
+  "fallback_model_scene": "res://assets/grimtable/models/synthetic_destroyer.tscn"
+}

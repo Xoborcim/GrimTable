@@ -1,0 +1,46 @@
+[
+	{
+		"actions": {
+			"allocate": 8,
+			"attack": 14,
+			"charge": 5,
+			"end_phase": 23,
+			"finished": 1,
+			"move": 9
+		},
+		"elapsed_ms": 1447.361,
+		"seed": 7,
+		"steps": 60
+	},
+	{
+		"actions": {
+			"allocate": 9,
+			"attack": 9,
+			"charge": 1,
+			"end_phase": 23,
+			"finished": 1,
+			"move": 7
+		},
+		"elapsed_ms": 1134.604,
+		"seed": 31,
+		"steps": 50
+	},
+	{
+		"actions": {
+			"allocate": 9,
+			"attack": 12,
+			"charge": 4,
+			"end_phase": 23,
+			"finished": 1,
+			"move": 8
+		},
+		"elapsed_ms": 1313.202,
+		"seed": 77,
+		"steps": 57
+	},
+	{
+		"average_ms": 12.3994057971015,
+		"planning_samples": 138,
+		"worst_ms": 174.87
+	}
+]

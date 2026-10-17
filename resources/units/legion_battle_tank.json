@@ -1,0 +1,21 @@
+{
+  "id": "legion_battle_tank",
+  "name": "Legion Battle Tank",
+  "faction": "legion",
+  "movement": 7,
+  "defense": 8,
+  "toughness": 8,
+  "save": 2,
+  "wounds": 12,
+  "max_wounds": 12,
+  "base_mm": 100,
+  "model_scene": "res://assets/grimtable/models/legion_battle_tank.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 2.6,
+  "los_height": 2.08,
+  "weapons": [
+    "tank_cannon"
+  ],
+  "weapon": "res://resources/weapons/tank_cannon.json",
+  "fallback_model_scene": "res://assets/grimtable/models/legion_battle_tank.tscn"
+}

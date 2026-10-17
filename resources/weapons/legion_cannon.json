@@ -1,0 +1,13 @@
+{
+  "id": "legion_cannon",
+  "name": "Breach Cannon",
+  "range": 30,
+  "attacks": 3,
+  "hit": 4,
+  "strength": 7,
+  "ap": 2,
+  "damage": 2,
+  "type": "ranged",
+  "tags": [],
+  "ap_semantics": "penalty"
+}

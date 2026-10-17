@@ -1,0 +1,10 @@
+{
+  "id": "example_army",
+  "name": "Frontier Expedition",
+  "version": "1.0.0",
+  "grimtable_version": ">=0.4.0",
+  "author": "GrimTable Example",
+  "license": "MIT",
+  "description": "A data-only original expedition force using built-in fallback art.",
+  "dependencies": []
+}

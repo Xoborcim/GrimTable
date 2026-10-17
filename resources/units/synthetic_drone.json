@@ -1,0 +1,21 @@
+{
+  "id": "synthetic_drone",
+  "name": "Synthetic Drone",
+  "faction": "synthetics",
+  "movement": 4,
+  "defense": 4,
+  "toughness": 4,
+  "save": 3,
+  "wounds": 2,
+  "max_wounds": 2,
+  "base_mm": 32,
+  "model_scene": "res://assets/grimtable/models/synthetic_drone.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 1.5,
+  "los_height": 1.2000000000000002,
+  "weapons": [
+    "synth_beam"
+  ],
+  "weapon": "res://resources/weapons/synth_beam.json",
+  "fallback_model_scene": "res://assets/grimtable/models/synthetic_drone.tscn"
+}

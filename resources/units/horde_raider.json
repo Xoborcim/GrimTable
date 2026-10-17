@@ -1,0 +1,22 @@
+{
+  "id": "horde_raider",
+  "name": "Horde Raider",
+  "faction": "horde",
+  "movement": 6,
+  "defense": 3,
+  "toughness": 3,
+  "save": 5,
+  "wounds": 1,
+  "max_wounds": 1,
+  "base_mm": 25,
+  "model_scene": "res://assets/grimtable/models/horde_raider.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 1.6,
+  "los_height": 1.2800000000000002,
+  "weapons": [
+    "scrap_blades",
+    "scrap_gun"
+  ],
+  "weapon": "res://resources/weapons/scrap_blades.json",
+  "fallback_model_scene": "res://assets/grimtable/models/horde_raider.tscn"
+}

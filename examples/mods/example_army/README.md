@@ -1,0 +1,1 @@
+Copy this entire example_army folder into user://mods/, then Main Menu ? Mods ? Reload Mods. See docs/MODDING.md in the repository for the full schema. This example uses original built-in fallback art only; project licensing remains undecided.

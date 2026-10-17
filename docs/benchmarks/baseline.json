@@ -1,0 +1,81 @@
+{
+	"cpu": "AMD Ryzen 5 2600 Six-Core Processor",
+	"display": "Windows",
+	"frames_per_mode": 90,
+	"godot": "4.6.1-stable (official)",
+	"gpu": "NVIDIA GeForce GTX 1660 Ti",
+	"label": "baseline",
+	"logical_cpus": 12,
+	"resolution": [
+		1280,
+		800
+	],
+	"results": [
+		{
+			"attack_preview_ms": 0.09518,
+			"draw_calls": 1256.0,
+			"fps": 255.23805202318695,
+			"idle_frame_ms": 3.917911111111111,
+			"load_ms": 480.952,
+			"models": 25,
+			"move_validation_ms": 0.17909999999999998,
+			"movement_frame_ms": 3.2001444444444447,
+			"selection_ms": 0.6834,
+			"static_memory_mb": 80.3948278427124,
+			"targeting_frame_ms": 2.877788888888889
+		},
+		{
+			"attack_preview_ms": 0.09387000000000001,
+			"draw_calls": 2066.0,
+			"fps": 286.64702603710487,
+			"idle_frame_ms": 3.488611111111111,
+			"load_ms": 179.622,
+			"models": 50,
+			"move_validation_ms": 0.2899,
+			"movement_frame_ms": 4.411877777777778,
+			"selection_ms": 0.7605299999999999,
+			"static_memory_mb": 85.24798107147217,
+			"targeting_frame_ms": 4.105644444444444
+		},
+		{
+			"attack_preview_ms": 0.09687,
+			"draw_calls": 3686.0,
+			"fps": 163.27537662186873,
+			"idle_frame_ms": 6.124622222222222,
+			"load_ms": 283.467,
+			"models": 100,
+			"move_validation_ms": 0.5011,
+			"movement_frame_ms": 6.9334444444444445,
+			"selection_ms": 0.693,
+			"static_memory_mb": 95.95395946502686,
+			"targeting_frame_ms": 6.518611111111111
+		},
+		{
+			"attack_preview_ms": 0.09570999999999999,
+			"draw_calls": 6926.0,
+			"fps": 92.30740828489759,
+			"idle_frame_ms": 10.833366666666667,
+			"load_ms": 497.546,
+			"models": 200,
+			"move_validation_ms": 0.9301,
+			"movement_frame_ms": 12.239955555555555,
+			"selection_ms": 0.68943,
+			"static_memory_mb": 116.10350704193115,
+			"targeting_frame_ms": 11.37358888888889
+		},
+		{
+			"attack_preview_ms": 0.09652,
+			"draw_calls": 10600.0,
+			"fps": 61.45005748994267,
+			"idle_frame_ms": 16.273377777777778,
+			"load_ms": 702.141,
+			"models": 300,
+			"move_validation_ms": 1.3800666666666666,
+			"movement_frame_ms": 17.14752222222222,
+			"selection_ms": 0.70021,
+			"static_memory_mb": 137.94353771209717,
+			"targeting_frame_ms": 16.592322222222222
+		}
+	],
+	"vsync": false
+}

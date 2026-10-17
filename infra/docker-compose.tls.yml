@@ -1,0 +1,6 @@
+# Optional overlay: install TURN certificate files under infra/certs/turn/.
+# Set TURN_TLS=true and include turns: URLs in infra/.env.
+services:
+  coturn:
+    volumes:
+      - ./certs/turn:/run/turn-certs:ro

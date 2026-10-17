@@ -1,0 +1,18 @@
+[
+  {
+    "source": "https://quaternius.com/packs/animatedmech.html",
+    "status": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "source": "https://quaternius.com/packs/animatedtanks.html",
+    "status": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "source": "https://quaternius.com/packs/ultimatemonsters.html",
+    "status": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  },
+  {
+    "source": "https://quaternius.com/packs/ultimatespacekit.html",
+    "status": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+  }
+]

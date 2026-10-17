@@ -1,0 +1,22 @@
+{
+  "id": "swarm_brood_beast",
+  "name": "Swarm Brood Beast",
+  "faction": "swarm",
+  "movement": 6,
+  "defense": 7,
+  "toughness": 7,
+  "save": 4,
+  "wounds": 10,
+  "max_wounds": 10,
+  "base_mm": 80,
+  "model_scene": "res://assets/grimtable/models/swarm_brood_beast.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 3.4,
+  "los_height": 2.72,
+  "weapons": [
+    "swarm_fangs",
+    "swarm_spines"
+  ],
+  "weapon": "res://resources/weapons/swarm_fangs.json",
+  "fallback_model_scene": "res://assets/grimtable/models/swarm_brood_beast.tscn"
+}

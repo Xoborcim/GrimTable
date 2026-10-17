@@ -1,0 +1,6 @@
+# Use an already provisioned valid certificate; no automated ACME provisioning.
+# Replace the hostname and install readable certificate files on the VPS.
+signal.example.com {
+    tls /etc/grimtable/signal/fullchain.pem /etc/grimtable/signal/privkey.pem
+    reverse_proxy 127.0.0.1:8080
+}

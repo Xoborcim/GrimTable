@@ -1,0 +1,12 @@
+{
+  "id": "example_army:rifle",
+  "name": "Expedition Carbine",
+  "range": 20,
+  "attacks": 2,
+  "hit": 3,
+  "strength": 4,
+  "ap": 1,
+  "damage": 1,
+  "type": "ranged",
+  "tags": []
+}

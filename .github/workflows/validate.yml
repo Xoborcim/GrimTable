@@ -1,0 +1,48 @@
+name: Validate GrimTable
+on: [push, pull_request]
+jobs:
+  signaling:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: server/signaling/package-lock.json
+      - run: npm ci --ignore-scripts && npm test
+        working-directory: server/signaling
+      - run: docker compose --env-file infra/.env.example -f infra/docker-compose.yml config --quiet
+      - run: docker compose --env-file infra/.env.example -f infra/docker-compose.yml -f infra/docker-compose.tls.yml config --quiet
+      - run: sh -n infra/coturn/start.sh
+      - run: docker build -t grimtable-signaling:test server/signaling
+      - name: Coturn allocation and actual credential expiry (private loopback fixture)
+        env:
+          TURN_SHARED_SECRET: ci-only-not-a-production-secret-1234567890
+          TURN_TTL_SECONDS: '60'
+          TURN_URLS: turn:127.0.0.1:3478?transport=udp,turn:127.0.0.1:3478?transport=tcp
+          STUN_URLS: stun:127.0.0.1:3478
+        run: |
+          docker run -d --name grimtable-ci-turn --network host coturn/coturn:4.18.0-r0 -n \
+            --listening-ip=127.0.0.1 --relay-ip=127.0.0.1 --listening-port=3478 \
+            --min-port=49160 --max-port=49260 --realm=ci.grimtable.invalid \
+            --use-auth-secret --static-auth-secret="$TURN_SHARED_SECRET" \
+            --allow-loopback-peers --cli-password=ci-only-unused --no-tls --log-file=stdout
+          node server/signaling/src/index.js &
+          backend_pid=$!
+          trap 'kill "$backend_pid"; docker rm -f grimtable-ci-turn' EXIT
+          for attempt in $(seq 1 20); do
+            curl -fsS http://127.0.0.1:8080/health && break || sleep 1
+          done
+          node tools/probe_backend.mjs --check-expiry
+  godot:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Godot 4.6.1
+        run: |
+          curl -fL https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_linux.x86_64.zip -o /tmp/godot.zip
+          unzip /tmp/godot.zip -d /tmp/godot
+          chmod +x /tmp/godot/Godot_v4.6.1-stable_linux.x86_64
+      - run: /tmp/godot/Godot_v4.6.1-stable_linux.x86_64 --headless --path . --editor --quit
+      - run: /tmp/godot/Godot_v4.6.1-stable_linux.x86_64 --headless --path . --script res://tools/run_checks.gd

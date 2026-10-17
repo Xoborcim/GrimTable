@@ -1,0 +1,13 @@
+{
+  "id": "swarm_spines",
+  "name": "Spine Volley",
+  "range": 12,
+  "attacks": 2,
+  "hit": 4,
+  "strength": 4,
+  "ap": 0,
+  "damage": 1,
+  "type": "ranged",
+  "tags": [],
+  "ap_semantics": "penalty"
+}

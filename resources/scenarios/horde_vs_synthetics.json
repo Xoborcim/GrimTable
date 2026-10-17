@@ -1,0 +1,343 @@
+{
+  "format_version": 1,
+  "id": "horde_vs_synthetics",
+  "name": "Horde vs Synthetics",
+  "notes": "Secure the three supply markers. Living models within a control radius count for their team; ties are neutral. Each controlled objective awards one point at the end of a full round.",
+  "board": {
+    "width": 60,
+    "depth": 44,
+    "theme": "desert"
+  },
+  "coherency_distance": 2,
+  "deployment_zones": [
+    {
+      "id": "zone_a",
+      "shape": "rectangle",
+      "team": 0,
+      "name": "TEAM A DEPLOYMENT",
+      "center": [
+        0,
+        17.5
+      ],
+      "size": [
+        60,
+        9
+      ]
+    },
+    {
+      "id": "zone_b",
+      "shape": "rectangle",
+      "team": 1,
+      "name": "TEAM B DEPLOYMENT",
+      "center": [
+        0,
+        -17.5
+      ],
+      "size": [
+        60,
+        9
+      ]
+    }
+  ],
+  "terrain": [
+    {
+      "id": "center_wall",
+      "title": "Industrial Barrier",
+      "kind": "box",
+      "size": [
+        5,
+        2.5,
+        1
+      ],
+      "position": [
+        0,
+        0,
+        2.5
+      ],
+      "rotation": 0,
+      "tint": "#697784",
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "cargo_supply",
+      "title": "Supply Container",
+      "kind": "box",
+      "size": [
+        2.2,
+        1.8,
+        2.2
+      ],
+      "position": [
+        15,
+        0,
+        3
+      ],
+      "rotation": 0,
+      "tint": "#727b87",
+      "blocks_movement": true,
+      "blocks_los": true,
+      "visual_scene": "res://assets/grimtable/models/normalized_cargo.tscn"
+    }
+  ],
+  "objectives": [
+    {
+      "id": "objective_1",
+      "number": 1,
+      "name": "Objective 1",
+      "radius": 3,
+      "position": [
+        -20,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "objective_2",
+      "number": 2,
+      "name": "Objective 2",
+      "radius": 3,
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "objective_3",
+      "number": 3,
+      "name": "Objective 3",
+      "radius": 3,
+      "position": [
+        20,
+        0,
+        0
+      ]
+    }
+  ],
+  "armies": [
+    {
+      "id": "horde_raider_squad",
+      "name": "Horde Raider Squad",
+      "team": 0,
+      "unit_id": "horde_raider",
+      "profile": "res://resources/units/horde_raider.json",
+      "models": [
+        {
+          "id": "horde_raider_0",
+          "label": "1",
+          "position": [
+            -12.968503937007874,
+            0,
+            8
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "horde_raider_1",
+          "label": "2",
+          "position": [
+            -11.484251968503937,
+            0,
+            8
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "horde_raider_2",
+          "label": "3",
+          "position": [
+            -10.0,
+            0,
+            8
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "horde_raider_3",
+          "label": "4",
+          "position": [
+            -8.515748031496063,
+            0,
+            8
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "horde_raider_4",
+          "label": "5",
+          "position": [
+            -7.031496062992126,
+            0,
+            8
+          ],
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "horde_gunner_squad",
+      "name": "Horde Gunner Squad",
+      "team": 0,
+      "unit_id": "horde_gunner",
+      "profile": "res://resources/units/horde_gunner.json",
+      "models": [
+        {
+          "id": "horde_gunner_0",
+          "label": "1",
+          "position": [
+            -0.8799212598425197,
+            0,
+            8
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "horde_gunner_1",
+          "label": "2",
+          "position": [
+            0.8799212598425197,
+            0,
+            8
+          ],
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "horde_war_machine_squad",
+      "name": "Horde War Machine Squad",
+      "team": 0,
+      "unit_id": "horde_war_machine",
+      "profile": "res://resources/units/horde_war_machine.json",
+      "models": [
+        {
+          "id": "horde_war_machine_0",
+          "label": "1",
+          "position": [
+            10.0,
+            0,
+            8
+          ],
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "synthetic_drone_squad",
+      "name": "Synthetic Drone Squad",
+      "team": 1,
+      "unit_id": "synthetic_drone",
+      "profile": "res://resources/units/synthetic_drone.json",
+      "models": [
+        {
+          "id": "synthetic_drone_0",
+          "label": "1",
+          "position": [
+            -13.519685039370078,
+            0,
+            -8
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "synthetic_drone_1",
+          "label": "2",
+          "position": [
+            -11.759842519685039,
+            0,
+            -8
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "synthetic_drone_2",
+          "label": "3",
+          "position": [
+            -10.0,
+            0,
+            -8
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "synthetic_drone_3",
+          "label": "4",
+          "position": [
+            -8.240157480314961,
+            0,
+            -8
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "synthetic_drone_4",
+          "label": "5",
+          "position": [
+            -6.480314960629921,
+            0,
+            -8
+          ],
+          "rotation": 180
+        }
+      ]
+    },
+    {
+      "id": "synthetic_destroyer_squad",
+      "name": "Synthetic Destroyer Squad",
+      "team": 1,
+      "unit_id": "synthetic_destroyer",
+      "profile": "res://resources/units/synthetic_destroyer.json",
+      "models": [
+        {
+          "id": "synthetic_destroyer_0",
+          "label": "1",
+          "position": [
+            -1.4311023622047245,
+            0,
+            -8
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "synthetic_destroyer_1",
+          "label": "2",
+          "position": [
+            1.4311023622047245,
+            0,
+            -8
+          ],
+          "rotation": 180
+        }
+      ]
+    },
+    {
+      "id": "synthetic_walker_squad",
+      "name": "Synthetic Walker Squad",
+      "team": 1,
+      "unit_id": "synthetic_walker",
+      "profile": "res://resources/units/synthetic_walker.json",
+      "models": [
+        {
+          "id": "synthetic_walker_0",
+          "label": "1",
+          "position": [
+            10.0,
+            0,
+            -8
+          ],
+          "rotation": 180
+        }
+      ]
+    }
+  ],
+  "starting_state": {
+    "round": 1,
+    "phase": 0,
+    "team": 0,
+    "deployment": false
+  },
+  "scoring": {
+    "objective_points_per_round": 1
+  }
+}

@@ -1,0 +1,343 @@
+{
+  "format_version": 1,
+  "id": "legion_vs_swarm",
+  "name": "Legion vs Swarm",
+  "notes": "Secure the three supply markers. Living models within a control radius count for their team; ties are neutral. Each controlled objective awards one point at the end of a full round.",
+  "board": {
+    "width": 60,
+    "depth": 44,
+    "theme": "alien"
+  },
+  "coherency_distance": 2,
+  "deployment_zones": [
+    {
+      "id": "zone_a",
+      "shape": "rectangle",
+      "team": 0,
+      "name": "TEAM A DEPLOYMENT",
+      "center": [
+        0,
+        17.5
+      ],
+      "size": [
+        60,
+        9
+      ]
+    },
+    {
+      "id": "zone_b",
+      "shape": "rectangle",
+      "team": 1,
+      "name": "TEAM B DEPLOYMENT",
+      "center": [
+        0,
+        -17.5
+      ],
+      "size": [
+        60,
+        9
+      ]
+    }
+  ],
+  "terrain": [
+    {
+      "id": "center_wall",
+      "title": "Industrial Barrier",
+      "kind": "box",
+      "size": [
+        5,
+        2.5,
+        1
+      ],
+      "position": [
+        0,
+        0,
+        2.5
+      ],
+      "rotation": 0,
+      "tint": "#697784",
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "cargo_supply",
+      "title": "Supply Container",
+      "kind": "box",
+      "size": [
+        2.2,
+        1.8,
+        2.2
+      ],
+      "position": [
+        15,
+        0,
+        3
+      ],
+      "rotation": 0,
+      "tint": "#727b87",
+      "blocks_movement": true,
+      "blocks_los": true,
+      "visual_scene": "res://assets/grimtable/models/normalized_cargo.tscn"
+    }
+  ],
+  "objectives": [
+    {
+      "id": "objective_1",
+      "number": 1,
+      "name": "Objective 1",
+      "radius": 3,
+      "position": [
+        -20,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "objective_2",
+      "number": 2,
+      "name": "Objective 2",
+      "radius": 3,
+      "position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "objective_3",
+      "number": 3,
+      "name": "Objective 3",
+      "radius": 3,
+      "position": [
+        20,
+        0,
+        0
+      ]
+    }
+  ],
+  "armies": [
+    {
+      "id": "legion_trooper_squad",
+      "name": "Legion Trooper Squad",
+      "team": 0,
+      "unit_id": "legion_trooper",
+      "profile": "res://resources/units/legion_trooper.json",
+      "models": [
+        {
+          "id": "legion_trooper_0",
+          "label": "1",
+          "position": [
+            -13.519685039370078,
+            0,
+            8
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "legion_trooper_1",
+          "label": "2",
+          "position": [
+            -11.759842519685039,
+            0,
+            8
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "legion_trooper_2",
+          "label": "3",
+          "position": [
+            -10.0,
+            0,
+            8
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "legion_trooper_3",
+          "label": "4",
+          "position": [
+            -8.240157480314961,
+            0,
+            8
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "legion_trooper_4",
+          "label": "5",
+          "position": [
+            -6.480314960629921,
+            0,
+            8
+          ],
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "legion_heavy_squad",
+      "name": "Legion Heavy Squad",
+      "team": 0,
+      "unit_id": "legion_heavy",
+      "profile": "res://resources/units/legion_heavy.json",
+      "models": [
+        {
+          "id": "legion_heavy_0",
+          "label": "1",
+          "position": [
+            -1.0374015748031495,
+            0,
+            8
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "legion_heavy_1",
+          "label": "2",
+          "position": [
+            1.0374015748031495,
+            0,
+            8
+          ],
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "legion_walker_squad",
+      "name": "Legion Walker Squad",
+      "team": 0,
+      "unit_id": "legion_walker",
+      "profile": "res://resources/units/legion_walker.json",
+      "models": [
+        {
+          "id": "legion_walker_0",
+          "label": "1",
+          "position": [
+            10.0,
+            0,
+            8
+          ],
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "swarm_crawler_squad",
+      "name": "Swarm Crawler Squad",
+      "team": 1,
+      "unit_id": "swarm_crawler",
+      "profile": "res://resources/units/swarm_crawler.json",
+      "models": [
+        {
+          "id": "swarm_crawler_0",
+          "label": "1",
+          "position": [
+            -12.968503937007874,
+            0,
+            -8
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "swarm_crawler_1",
+          "label": "2",
+          "position": [
+            -11.484251968503937,
+            0,
+            -8
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "swarm_crawler_2",
+          "label": "3",
+          "position": [
+            -10.0,
+            0,
+            -8
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "swarm_crawler_3",
+          "label": "4",
+          "position": [
+            -8.515748031496063,
+            0,
+            -8
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "swarm_crawler_4",
+          "label": "5",
+          "position": [
+            -7.031496062992126,
+            0,
+            -8
+          ],
+          "rotation": 180
+        }
+      ]
+    },
+    {
+      "id": "swarm_hunter_squad",
+      "name": "Swarm Hunter Squad",
+      "team": 1,
+      "unit_id": "swarm_hunter",
+      "profile": "res://resources/units/swarm_hunter.json",
+      "models": [
+        {
+          "id": "swarm_hunter_0",
+          "label": "1",
+          "position": [
+            -1.0374015748031495,
+            0,
+            -8
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "swarm_hunter_1",
+          "label": "2",
+          "position": [
+            1.0374015748031495,
+            0,
+            -8
+          ],
+          "rotation": 180
+        }
+      ]
+    },
+    {
+      "id": "swarm_brood_beast_squad",
+      "name": "Swarm Brood Beast Squad",
+      "team": 1,
+      "unit_id": "swarm_brood_beast",
+      "profile": "res://resources/units/swarm_brood_beast.json",
+      "models": [
+        {
+          "id": "swarm_brood_beast_0",
+          "label": "1",
+          "position": [
+            10.0,
+            0,
+            -8
+          ],
+          "rotation": 180
+        }
+      ]
+    }
+  ],
+  "starting_state": {
+    "round": 1,
+    "phase": 0,
+    "team": 0,
+    "deployment": false
+  },
+  "scoring": {
+    "objective_points_per_round": 1
+  }
+}

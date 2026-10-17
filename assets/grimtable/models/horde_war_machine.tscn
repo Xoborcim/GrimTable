@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/content/demo_visual.gd" id="1"]
+
+[node name="MiniatureVisual" type="Node3D"]
+script = ExtResource("1")
+kind = "walker"
+faction = "horde"
+height = 3.6
+tint = Color(0.36, 0.2, 0.13, 1)
+accent = Color(0.59, 0.47, 0.27, 1)

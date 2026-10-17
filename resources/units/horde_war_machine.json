@@ -1,0 +1,22 @@
+{
+  "id": "horde_war_machine",
+  "name": "Horde War Machine",
+  "faction": "horde",
+  "movement": 6,
+  "defense": 7,
+  "toughness": 7,
+  "save": 4,
+  "wounds": 10,
+  "max_wounds": 10,
+  "base_mm": 80,
+  "model_scene": "res://assets/grimtable/models/horde_war_machine.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 3.6,
+  "los_height": 2.8800000000000003,
+  "weapons": [
+    "scrap_gun",
+    "scrap_crusher"
+  ],
+  "weapon": "res://resources/weapons/scrap_gun.json",
+  "fallback_model_scene": "res://assets/grimtable/models/horde_war_machine.tscn"
+}

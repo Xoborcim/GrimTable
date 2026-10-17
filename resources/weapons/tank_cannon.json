@@ -1,0 +1,13 @@
+{
+  "id": "tank_cannon",
+  "name": "Siege Projector",
+  "range": 36,
+  "attacks": 4,
+  "hit": 4,
+  "strength": 8,
+  "ap": 2,
+  "damage": 3,
+  "type": "ranged",
+  "tags": [],
+  "ap_semantics": "penalty"
+}

@@ -1,0 +1,44 @@
+services:
+  signaling:
+    build: ../server/signaling
+    restart: unless-stopped
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8080
+      STUN_URLS: ${STUN_URLS:-}
+      TURN_URLS: ${TURN_URLS:-}
+      TURN_SHARED_SECRET: ${TURN_SHARED_SECRET:?Set a private TURN_SHARED_SECRET}
+      TURN_TTL_SECONDS: ${TURN_TTL_SECONDS:-7200}
+      ROOM_TTL_SECONDS: ${ROOM_TTL_SECONDS:-1800}
+      MATCH_TTL_SECONDS: ${MATCH_TTL_SECONDS:-43200}
+      METRICS_ENABLED: ${METRICS_ENABLED:-false}
+      TRUST_PROXY: "false"
+    ports:
+      - "127.0.0.1:8080:8080"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    init: true
+  coturn:
+    image: coturn/coturn:4.18.0-r0
+    restart: unless-stopped
+    # Linux VPS: host networking preserves relay addresses and avoids thousands
+    # of Docker port mappings. This service is not a Docker Desktop recipe.
+    network_mode: host
+    environment:
+      TURN_SHARED_SECRET: ${TURN_SHARED_SECRET:?Set a private TURN_SHARED_SECRET}
+      TURN_EXTERNAL_IP: ${TURN_EXTERNAL_IP:?Set VPS public IPv4 address}
+      TURN_REALM: ${TURN_REALM:-turn.example.com}
+      TURN_LISTENING_IP: ${TURN_LISTENING_IP:-0.0.0.0}
+      TURN_RELAY_IP: ${TURN_RELAY_IP:-}
+      TURN_MIN_PORT: ${TURN_MIN_PORT:-49160}
+      TURN_MAX_PORT: ${TURN_MAX_PORT:-49260}
+      TURN_TLS: ${TURN_TLS:-false}
+    entrypoint: [/bin/sh, /etc/coturn/start.sh]
+    volumes:
+      - ./coturn/turnserver.conf.example:/etc/coturn/turnserver.conf:ro
+      - ./coturn/start.sh:/etc/coturn/start.sh:ro
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]

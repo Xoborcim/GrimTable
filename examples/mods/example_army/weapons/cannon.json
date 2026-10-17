@@ -1,0 +1,12 @@
+{
+  "id": "example_army:cannon",
+  "name": "Field Projector",
+  "range": 28,
+  "attacks": 3,
+  "hit": 3,
+  "strength": 6,
+  "ap": 2,
+  "damage": 2,
+  "type": "ranged",
+  "tags": []
+}
