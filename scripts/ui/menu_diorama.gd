@@ -22,8 +22,9 @@ func _ready() -> void:
 	viewport.add_child(world)
 	BattlefieldPresentation.lighting(world,settings)
 	var board := Battlefield.new()
-	board.scenario = ScenarioLibrary.read(ScenarioLibrary.BUILTINS[4]).data
+	board.scenario = ScenarioLibrary.read(ScenarioLibrary.FLAGSHIP).data
 	world.add_child(board)
+	BattlefieldPresentation.apply_theme(world,board.scenario.board)
 	# A photograph-like display, never a second active game or picking surface.
 	for node in board.find_children("*","",true,false):
 		for group in ["miniatures","units","terrain","objectives"]: node.remove_from_group(group)
@@ -40,5 +41,5 @@ func _process(delta: float) -> void:
 	_update_camera()
 
 func _update_camera() -> void:
-	camera.position = Vector3(15+sin(time*.035)*4,25,39+cos(time*.035)*2)
-	camera.look_at(Vector3(-3,0,0))
+	camera.position = Vector3(18+sin(time*.035)*3,30,43+cos(time*.035)*2)
+	camera.look_at(Vector3(0,1,-3))

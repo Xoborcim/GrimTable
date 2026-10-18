@@ -1,0 +1,22 @@
+{
+  "native_renderer": "Godot 4.6.1 Compatibility / Medium",
+  "resolution": [
+    1440,
+    900
+  ],
+  "matched_camera": {
+    "distance": 58,
+    "pitch": 0.82,
+    "heading": 0.08,
+    "destination": [
+      0,
+      0.5,
+      -2
+    ]
+  },
+  "comparisons": "Original pixels placed side by side; no color, crop, scale, lighting or geometry edits to screenshots. Labels added outside the renders.",
+  "maps": [
+    "hollow_basilica",
+    "ashfall_station"
+  ]
+}

@@ -1,0 +1,32 @@
+Full regression executions: 1
+Full run: 1678 checks, five failures in assumptions about indexed meshes / explicit terrain visuals.
+
+GRIMTABLE: 275 checks, 0 failures
+GRIMTABLE SQUADS/COMBAT: 76 checks, 0 failures
+GRIMTABLE SCENARIOS/REPLAY: 48 checks, 0 failures
+GRIMTABLE APPLICATION: 236 checks, 0 failures
+GRIMTABLE NETWORK CHECKS 48 · PASS
+GRIMTABLE INTERNET READINESS: 67 checks, 0 failures
+GRIMTABLE NETWORK FAILURE: 3 checks, 0 failures
+GRIMTABLE CONTENT: 252 checks, 0 failures
+GRIMTABLE MODS: 54 checks, 0 failures
+GRIMTABLE PERFORMANCE CACHES: 10 checks, 0 failures
+GRIMTABLE EXPERIENCE CHECKS: 49 passed / 0 failed
+GRIMTABLE ASSISTANCE: 90 checks, 0 failures
+GRIMTABLE GUIDED: 42 checks, 0 failures
+GRIMTABLE VISUAL: 17 checks, 2 failures
+GRIMTABLE LIVING CHECKS: 22; failures: 0
+GRIMTABLE AI CHECKS: 54; failures: 0
+GRIMTABLE CINEMATIC: 45 checks / 0 failures
+GRIMTABLE IMPORT: 26 checks / 0 failures
+GRIMTABLE MONUMENTAL: 190 checks / 3 failures
+GRIMTABLE ART 0120: 74 checks / 0 failures
+
+Visual follow-up
+GRIMTABLE VISUAL: 17 checks, 0 failures
+
+Terrain follow-up
+GRIMTABLE MONUMENTAL: 190 checks / 0 failures
+
+Both affected suites pass after updating their assertions. No second full run.
+Final aggregate: all 1678 regression checks resolved.

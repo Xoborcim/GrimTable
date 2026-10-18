@@ -1,0 +1,12 @@
+{
+  "asset": "heavy_walker",
+  "source": "art/blender/heavy_walker.blend",
+  "export": "assets/miniatures/legion/heavy_walker.glb",
+  "triangles": 56822,
+  "vertices": 28682,
+  "materials": 1,
+  "height_inches": 3.7795279026031494,
+  "normalization": 1.0020876547326791,
+  "animations": [],
+  "blender": "5.0.1"
+}

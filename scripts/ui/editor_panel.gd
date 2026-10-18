@@ -20,6 +20,17 @@ var fields: Dictionary = {}
 var save_dialog: ConfirmationDialog
 var save_name: LineEdit
 var placement_count: SpinBox
+var theme_choice: OptionButton
+var lighting_choice: OptionButton
+var atmosphere: SpinBox
+var clutter_choice: OptionButton
+var weather_choice: OptionButton
+var surround_choice: OptionButton
+var environment_enabled: CheckBox
+var terrain_choice: OptionButton
+var terrain_preview: TerrainPalettePreview
+var terrain_category: OptionButton
+var surface_choice: OptionButton
 
 func _ready() -> void:
 	layer = 5
@@ -49,8 +60,15 @@ func _ready() -> void:
 	for i in 6:
 		AppUI.button(grid, ["Select / Move", "Place Terrain", "Place Objective", "Place Unit", "Deployment Zone", "Delete"][i], func(): editor.set_tool(i))
 	AppUI.label(column, "TERRAIN PALETTE", 13)
-	var terrain := AppUI.choices(column, ["Wall", "Ruin", "Crates", "Barricade", "Block"])
-	terrain.item_selected.connect(func(index: int): editor.terrain_index = index; editor.set_tool(1))
+	terrain_category=AppUI.choices(column,["All","Gothic","Industrial","Battlefield","Scatter","Centerpieces","Decorative","Objectives","Clusters"])
+	terrain_choice=OptionButton.new();column.add_child(terrain_choice)
+	terrain_preview=TerrainPalettePreview.new();column.add_child(terrain_preview)
+	terrain_category.item_selected.connect(func(_index: int): filter_terrain())
+	terrain_choice.item_selected.connect(func(index: int):
+		editor.terrain_index=int(terrain_choice.get_item_metadata(index));editor.set_tool(1)
+		terrain_preview.show_piece(ScenarioEditor.TERRAIN[editor.terrain_index]))
+	filter_terrain()
+	AppUI.label(column,"Preview is cosmetic. Ghost shows the legal footprint.",11)
 	AppUI.label(column, "UNIT PALETTE", 13)
 	var labels: Array[String] = []
 	for path in ScenarioEditor.PROFILES:
@@ -68,6 +86,11 @@ func _ready() -> void:
 	teams.item_selected.connect(func(index: int): editor.team = index)
 	AppUI.button(column, "R / Shift+Wheel: rotate 15°", func(): editor.rotate_selection(15))
 	AppUI.button(column, "Delete Selected", editor.delete_selected)
+	AppUI.button(column, "Duplicate Selected", editor.duplicate_selected)
+	var grid_snap := CheckBox.new()
+	grid_snap.text="Snap placement to 1-inch grid"
+	grid_snap.toggled.connect(func(value: bool): editor.grid_snap=value)
+	column.add_child(grid_snap)
 	properties = VBoxContainer.new()
 	column.add_child(properties)
 	column.add_child(HSeparator.new())
@@ -80,6 +103,27 @@ func _ready() -> void:
 	column.add_child(notes)
 	board_width = AppUI.spin(column, "Board width (in)", editor.document.board.width, 12, 120)
 	board_depth = AppUI.spin(column, "Board depth (in)", editor.document.board.depth, 12, 120)
+	AppUI.label(column,"Battlefield theme")
+	theme_choice = AppUI.choices(column,["industrial","desert","alien","ashfall","cathedral","toxic"],maxi(0,["industrial","desert","alien","ashfall","cathedral","toxic"].find(editor.document.board.get("theme","industrial"))))
+	lighting_choice = AppUI.choices(column,["Dusk","Day","Night"],maxi(0,["Dusk","Day","Night"].find(editor.document.board.get("lighting","Dusk"))))
+	atmosphere = AppUI.spin(column,"Atmosphere density",float(editor.document.board.get("atmosphere",.5)),0,1,.1)
+	AppUI.label(column,"Environment preset")
+	var presets:=AppUI.choices(column,["Custom","Ashen Basilica","Manufactorum","Toxic Forge","Siege Wasteland"])
+	presets.item_selected.connect(func(index: int):
+		if index==0:return
+		theme_choice.select([0,4,3,5,1][index]);lighting_choice.select(0)
+		atmosphere.value=.55;environment_enabled.button_pressed=true
+		weather_choice.select(2 if index in [1,4] else 3)
+		clutter_choice.select(2);surround_choice.select(0))
+	environment_enabled=CheckBox.new();environment_enabled.text="Composed ground and terrain wear";environment_enabled.button_pressed=editor.document.board.get("environment_art",false);column.add_child(environment_enabled)
+	AppUI.label(column,"Clutter / rubble density")
+	clutter_choice=AppUI.choices(column,["None","Sparse","Composed","Dense"],maxi(0,["None","Sparse","Composed","Dense"].find(editor.document.board.get("clutter","Composed"))))
+	AppUI.label(column,"Atmosphere preset")
+	weather_choice=AppUI.choices(column,["Theme","Clear","Dust","Vapor"],maxi(0,["Theme","Clear","Dust","Vapor"].find(editor.document.board.get("weather","Theme"))))
+	AppUI.label(column,"Table surround")
+	surround_choice=AppUI.choices(column,["Obsidian","Brass"],maxi(0,["Obsidian","Brass"].find(editor.document.board.get("surround","Obsidian"))))
+	AppUI.label(column,"Location floor layout")
+	surface_choice=AppUI.choices(column,["Legacy","Sanctum","Transport"],maxi(0,["Legacy","Sanctum","Transport"].find(editor.document.board.get("surface_layout","Legacy"))))
 	starting_round = AppUI.spin(column, "Starting round", editor.document.starting_state.round, 1, 10000)
 	starting_phase = AppUI.choices(column, GameManager.PHASES, int(editor.document.starting_state.phase))
 	starting_team = AppUI.choices(column, ["Start: Team A", "Start: Team B"], int(editor.document.starting_state.team))
@@ -135,9 +179,26 @@ func apply_metadata() -> bool:
 	var data := ScenarioFactory.capture(editor.game)
 	data.name = scenario_name.text.strip_edges()
 	data.notes = notes.text
-	data.board = {"width": board_width.value, "depth": board_depth.value}
+	data.board.merge({"width": board_width.value, "depth": board_depth.value,"theme":["industrial","desert","alien","ashfall","cathedral","toxic"][theme_choice.selected],"lighting":["Dusk","Day","Night"][lighting_choice.selected],"atmosphere":atmosphere.value,"environment_art":environment_enabled.button_pressed,"clutter":["None","Sparse","Composed","Dense"][clutter_choice.selected],"weather":["Theme","Clear","Dust","Vapor"][weather_choice.selected],"surround":["Obsidian","Brass"][surround_choice.selected]},true)
 	data.starting_state = {"round": int(starting_round.value), "phase": starting_phase.selected, "team": starting_team.selected, "deployment": start_deployment.button_pressed}
+	data.board.surface_layout=["Legacy","Sanctum","Transport"][surface_choice.selected]
 	return editor.commit(data)
+
+func filter_terrain() -> void:
+	terrain_choice.clear()
+	var category:=terrain_category.get_item_text(terrain_category.selected)
+	for index in ScenarioEditor.TERRAIN.size():
+		var label: String=ScenarioEditor.TERRAIN[index].name
+		var group:=label.get_slice(" / ",0)
+		if group in ["Gothic Ruins","Gothic"]:group="Gothic"
+		if group=="Crates":group="Scatter"
+		if not " / " in label and group!="Scatter":group="Battlefield"
+		if category!="All" and group!=category:continue
+		var row:=terrain_choice.item_count;terrain_choice.add_item(label);terrain_choice.set_item_metadata(row,index)
+	if terrain_choice.item_count>0:
+		terrain_choice.select(0);editor.terrain_index=int(terrain_choice.get_item_metadata(0))
+		terrain_preview.show_piece(ScenarioEditor.TERRAIN[editor.terrain_index])
+		if editor.tool==ScenarioEditor.Tool.TERRAIN:editor._build_preview()
 
 func refresh() -> void:
 	title.text = "EDITOR · " + ["SELECT", "TERRAIN", "OBJECTIVE", "UNIT", "ZONE", "DELETE"][editor.tool] + (" *" if editor.dirty else "")
@@ -167,6 +228,9 @@ func refresh() -> void:
 	if editor.selected_kind == "terrain":
 		fields["height"] = AppUI.spin(properties, 'Height (in)', record.size[1], 0.1, 30, 0.1)
 		fields["rotation"] = AppUI.spin(properties, "Rotation (degrees)", record.rotation, -36000, 36000, 15)
+		if str(record.get("visual_scene","")).begins_with(EnvironmentArt.ROOT):
+			for key in ["width","height","depth"]:(fields[key] as SpinBox).editable=false
+			AppUI.label(properties,"Authored footprint fixed; move, rotate or duplicate.",11)
 		for key in ["blocks_movement", "blocks_los"]:
 			var check := CheckBox.new()
 			check.text = key.replace("_", " ").capitalize()

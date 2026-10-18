@@ -28,7 +28,7 @@ func run() -> void:
 		print("\n".join(output))
 		quit(1)
 		return
-	for suite in ["prototype_test", "squad_combat_test", "scenario_replay_test", "application_test", "network_test", "internet_readiness_test", "network_failure_test", "content_test", "mod_test", "performance_cache_test", "experience_test", "assistance_test", "guided_test", "visual_test", "living_test", "ai_test"]:
+	for suite in ["prototype_test", "squad_combat_test", "scenario_replay_test", "application_test", "network_test", "internet_readiness_test", "network_failure_test", "content_test", "mod_test", "performance_cache_test", "experience_test", "assistance_test", "guided_test", "visual_test", "living_test", "ai_test", "cinematic_test", "miniature_import_test", "monumental_test", "art_test", "environment_test", "composition_test", "baked_material_test"]:
 		output.clear()
 		var result := OS.execute(OS.get_executable_path(), ["--headless", "--path", target, "--script", "res://tests/" + suite + ".gd"], output, true)
 		for line in "\n".join(output).split("\n"):

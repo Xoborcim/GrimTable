@@ -60,6 +60,7 @@ func stage(title: String, rolls: Array, threshold: int, successes: int) -> void:
 	text.text += "\n[b]%s[/b] · %d successes / %d dice · %d+\n" % [title,successes,rolls.size(),threshold]
 	ribbon.show()
 	ribbon.add_group(title,rolls,threshold)
+	if game.settings.combat_resolution == "Manual": game.dice_tray.enqueue(title, rolls, threshold)
 
 func on_combat() -> void:
 	if game.combat.current == null:
@@ -82,6 +83,11 @@ func on_combat() -> void:
 		var b := current.target
 		if a != null and b != null and not a.living_models().is_empty() and not b.living_models().is_empty():
 			game.camera_rig.focus((a.living_models()[0].global_position + b.living_models()[0].global_position) / 2)
+	if game.settings.cinematic_dice != "Off" and game.settings.combat_resolution != "Manual":
+		game.dice_tray.enqueue("HIT ROLL",result.hit_rolls,int(result.hit_target))
+		game.dice_tray.enqueue("WOUND ROLL",result.wound_rolls,int(result.wound_target))
+		game.dice_tray.enqueue("ARMOR SAVES",result.save_rolls,int(result.save_target))
+		game.dice_tray.damage_summary(int(result.damage),int(result.failed_saves))
 	if not game.settings.combat_summary: return
 	card.show()
 	GrimTheme.enter(card,game.settings.reduce_motion)
@@ -121,7 +127,7 @@ func impact(result: Dictionary) -> void:
 	if a == null or b == null or a.living_models().is_empty() or b.living_models().is_empty(): return
 	effect = Node3D.new()
 	game.add_child(effect)
-	var from := a.living_models()[0].eye()
+	var from := a.living_models()[0].cosmetic_muzzle()
 	var to := b.living_models()[0].eye()
 	var energy: bool = "pulse" in str(result.weapon.name).to_lower() or "synthetic" in str(result.weapon.get("id",""))
 	var color := GrimTheme.PLAYER if energy else GrimTheme.IVORY

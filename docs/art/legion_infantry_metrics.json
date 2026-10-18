@@ -1,0 +1,12 @@
+{
+  "asset": "legion_infantry",
+  "source": "art/blender/legion_infantry.blend",
+  "export": "assets/miniatures/legion/legion_infantry.glb",
+  "triangles": 54344,
+  "vertices": 27682,
+  "materials": 1,
+  "height_inches": 1.692913293838501,
+  "normalization": 1.000712051927377,
+  "animations": [],
+  "blender": "5.0.1"
+}

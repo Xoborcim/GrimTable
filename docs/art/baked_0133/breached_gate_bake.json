@@ -1,0 +1,70 @@
+{
+  "asset": "breached_gate",
+  "kind": "stone",
+  "source": "art/blender/environment/0131/breached_gate.blend",
+  "source_sha256": "e90dda1a48d8789bb88d5a1e5721a82fa50e3e201659dc0bd9f0f3079dfa8394",
+  "derived_source": "art/blender/baked_0133/breached_gate.blend",
+  "export": "assets/terrain/environment/0131/breached_gate.glb",
+  "triangles": 53508,
+  "resolution": 1024,
+  "bake_samples": 12,
+  "bake_margin": 4,
+  "uv": "Unique BakeUV, Smart Project 50 degrees, fractional margin .003; exported as TEXCOORD_0",
+  "normal_basis": "MikkTSpace / X+ Y+ Z+ / triangulated before baking",
+  "high_vertices": 161462,
+  "max_relief_inches": 0.009,
+  "maps": [
+    {
+      "map": "pigment",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 715227,
+      "space": "sRGB",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "normal",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 826315,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "orm",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 583088,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "finish",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 741185,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "elapsed_seconds": 15.08,
+  "glb_bytes": 9816592,
+  "glb_sha256": "d9253b311b3070e7d705b09f1764fee1afbfa3f876d57d82ad353a67f7c83e84",
+  "tangent_guard": {
+    "fallback_vertices": 0,
+    "affected_surface_fraction": 0.0,
+    "method": "Orthogonal fallback only for numerically degenerate, subpixel bevel slivers; no geometry removed"
+  }
+}

@@ -2,18 +2,29 @@ class_name BattlefieldPresentation
 extends RefCounted
 
 const THEMES := {
+	"ashfall": [Color("596269"),Color("8b9090")],
+	"cathedral": [Color("60686a"),Color("a0a49b")],
+	"toxic": [Color("525e54"),Color("7e8c65")],
 	"industrial": [Color("303b43"), Color("647a85")],
 	"desert": [Color("897057"), Color("b49b72")],
 	"alien": [Color("413c59"), Color("779184")]
 }
 
-static func ground(theme: String) -> ShaderMaterial:
+static func ground(theme: String,appearance: Dictionary={}) -> ShaderMaterial:
 	var palette: Array = THEMES.get(theme, THEMES.industrial)
 	var material := ShaderMaterial.new()
 	material.shader = preload("res://assets/grimtable/materials/battlefield.gdshader")
 	material.set_shader_parameter("ground", palette[0])
 	material.set_shader_parameter("seam", palette[1])
-	material.set_shader_parameter("industrial", 1.0 if theme == "industrial" else 0.0)
+	material.set_shader_parameter("industrial", 1.0 if theme in ["industrial","ashfall","toxic","cathedral"] else 0.0)
+	material.set_shader_parameter("environment_theme",{"cathedral":0,"ashfall":1,"industrial":1,"toxic":2,"desert":3}.get(theme,-1))
+	var layout: String=appearance.get("surface_layout","Legacy")
+	if layout!="Legacy":
+		material.set_shader_parameter("location_ground",true)
+		material.set_shader_parameter("location_industrial",layout=="Transport")
+		material.set_shader_parameter("layout_mask",load(LocationComposition.MATERIALS+layout.to_lower()+"_layout_mask.png"))
+		material.set_shader_parameter("relief_normal",load(LocationComposition.MATERIALS+"fractured_normal.png"))
+		material.set_shader_parameter("relief_ao",load(LocationComposition.MATERIALS+"fractured_ao.png"))
 	return material
 
 static func lighting(parent: Node3D, settings: AppSettings) -> void:
@@ -81,7 +92,10 @@ static func apply_quality(parent: Node3D, settings: AppSettings) -> void:
 
 static func decorate(board: Battlefield) -> void:
 	table_surround(board)
-	if board.scenario.id != "ashfall_station": return
+	if board.scenario.board.get("environment_art",false):
+		EnvironmentArt.decorate(board)
+		return
+	if board.scenario.id not in ["ashfall_station","ashen_basilica","ashfall_manufactorum","toxic_forge"]: return
 	var art: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://assets/grimtable/materials/decorative_props.json"))
 	var folder: String = art.source_directory
 	var placements := [
@@ -143,8 +157,14 @@ static func table_surround(board: Battlefield) -> void:
 		for x in [-width/2,width/2]:
 			var screw := TableVisuals.cylinder(board.visuals,.08,.025,Vector3(x,-.3,side*(depth/2+1.5)),Color("8f9691"))
 			screw.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	if board.scenario.board.get("environment_art",false):
+		var finish: String=board.scenario.board.get("surround","Obsidian")
+		for side in [-1,1]:
+			var rail:=TableVisuals.box(board.visuals,Vector3(.26,.20,depth+1),Vector3(side*(width/2+.55),-.04,0),Color("242b2b") if finish=="Obsidian" else Color("5c584d"))
+			rail.material_override=EnvironmentArt.material("iron" if finish=="Obsidian" else "brass")
+		return
 	# Sparse seeded-looking dressing uses fixed arithmetic, never gameplay RNG.
-	if board.scenario.id != "ashfall_station": return
+	if board.scenario.id not in ["ashfall_station","ashen_basilica","ashfall_manufactorum","toxic_forge"]: return
 	for i in 14:
 		var x := -25 + (i*17 % 50)
 		var z := -17 + (i*13 % 34)
@@ -159,3 +179,19 @@ static func table_surround(board: Battlefield) -> void:
 		var crate := TableVisuals.box(board.visuals,Vector3(.7,.6,.7),point+Vector3(0,.3,0),Color("514c3e"))
 		crate.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		TableVisuals.box(board.visuals,Vector3(.74,.07,.74),point+Vector3(0,.57,0),Color("293a40"))
+
+static func apply_theme(parent: Node3D, board: Dictionary) -> void:
+	var world := parent.get_node_or_null("TableEnvironment") as WorldEnvironment
+	if world == null: return
+	var theme_name: String = board.get("theme","industrial")
+	world.environment.fog_light_color = Color("4a5844") if theme_name == "toxic" else Color("5b5147") if theme_name == "cathedral" else Color("35414b")
+	world.environment.fog_density = .001 + float(board.get("atmosphere",.5))*.003
+	if board.get("environment_art",false):
+		world.environment.ambient_light_energy=.42
+		world.environment.ambient_light_color=Color("b4c6d4") if theme_name=="cathedral" else Color("bec6a6") if theme_name=="toxic" else Color("a8c5d4")
+		world.environment.background_color=Color("151c23")
+		world.environment.fog_density=0.0 if board.get("weather","Theme")=="Clear" else .001+float(board.get("atmosphere",.5))*.0018
+	var sun := parent.get_node_or_null("KeyLight") as DirectionalLight3D
+	if sun != null:
+		sun.light_energy = {"Day":1.3,"Dusk":1.05,"Night":.65}.get(board.get("lighting","Dusk"),1.05)
+		sun.light_color = Color("e4c6a0") if theme_name == "cathedral" else Color("c7d6bd") if theme_name == "toxic" else Color("f0d1ac")

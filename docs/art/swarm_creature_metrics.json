@@ -1,0 +1,12 @@
+{
+  "asset": "swarm_creature",
+  "source": "art/blender/swarm_creature.blend",
+  "export": "assets/miniatures/swarm/swarm_creature.glb",
+  "triangles": 90764,
+  "vertices": 45704,
+  "materials": 1,
+  "height_inches": 1.802943229675293,
+  "normalization": 1.0775088583121255,
+  "animations": [],
+  "blender": "5.0.1"
+}

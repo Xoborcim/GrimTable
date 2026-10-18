@@ -1,0 +1,33 @@
+{
+  "full_runs": 1,
+  "suites": 22,
+  "checks": 2211,
+  "initial_failures": 1,
+  "initial_result": "One obsolete LivingAtmosphere node-name assertion failed; all other suites passed.",
+  "focused_correction": "living_test: 27 checks, zero failures after asserting authored refinery machinery and active sparse vapor. No full rerun.",
+  "unresolved_failures": 0,
+  "suite_digest": [
+    "GRIMTABLE: 275 checks, 0 failures",
+    "GRIMTABLE SQUADS/COMBAT: 76 checks, 0 failures",
+    "GRIMTABLE SCENARIOS/REPLAY: 48 checks, 0 failures",
+    "GRIMTABLE APPLICATION: 307 checks, 0 failures",
+    "GRIMTABLE NETWORK CHECKS 48 \u00c2\u00b7 PASS",
+    "GRIMTABLE INTERNET READINESS: 67 checks, 0 failures",
+    "GRIMTABLE NETWORK FAILURE: 3 checks, 0 failures",
+    "GRIMTABLE CONTENT: 252 checks, 0 failures",
+    "GRIMTABLE MODS: 54 checks, 0 failures",
+    "GRIMTABLE PERFORMANCE CACHES: 10 checks, 0 failures",
+    "GRIMTABLE EXPERIENCE CHECKS: 49 passed / 0 failed",
+    "GRIMTABLE ASSISTANCE: 90 checks, 0 failures",
+    "GRIMTABLE GUIDED: 42 checks, 0 failures",
+    "GRIMTABLE VISUAL: 17 checks, 0 failures",
+    "GRIMTABLE LIVING CHECKS: 27; failures: 1",
+    "GRIMTABLE AI CHECKS: 54; failures: 0",
+    "GRIMTABLE CINEMATIC: 45 checks / 0 failures",
+    "GRIMTABLE IMPORT: 26 checks / 0 failures",
+    "GRIMTABLE MONUMENTAL: 239 checks / 0 failures",
+    "GRIMTABLE ART 0120: 74 checks / 0 failures",
+    "GRIMTABLE ENVIRONMENT: 257 checks / 0 failures",
+    "GRIMTABLE COMPOSITION 0131: 151 checks / 0 failures"
+  ]
+}

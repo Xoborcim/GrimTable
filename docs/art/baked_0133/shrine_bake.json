@@ -1,0 +1,70 @@
+{
+  "asset": "shrine",
+  "kind": "stone",
+  "source": "art/blender/environment/0131/shrine.blend",
+  "source_sha256": "2dd39b3c67549de8ef729aae4a3ee0be43081676fd24b1c0eb8e35cb6dad7ce6",
+  "derived_source": "art/blender/baked_0133/shrine.blend",
+  "export": "assets/terrain/environment/0131/shrine.glb",
+  "triangles": 21474,
+  "resolution": 512,
+  "bake_samples": 12,
+  "bake_margin": 4,
+  "uv": "Unique BakeUV, Smart Project 50 degrees, fractional margin .003; exported as TEXCOORD_0",
+  "normal_basis": "MikkTSpace / X+ Y+ Z+ / triangulated before baking",
+  "high_vertices": 64764,
+  "max_relief_inches": 0.009,
+  "maps": [
+    {
+      "map": "pigment",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 245744,
+      "space": "sRGB",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "normal",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 308430,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "orm",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 233106,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "finish",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 284404,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "elapsed_seconds": 6.36,
+  "glb_bytes": 3750032,
+  "glb_sha256": "ccee21087e87ba77e8e27de50883a8ee2ca0fa0f04fcc6e4b6e56f00932fc9f5",
+  "tangent_guard": {
+    "fallback_vertices": 21,
+    "affected_surface_fraction": 3.5915166545404144e-09,
+    "method": "Orthogonal fallback only for numerically degenerate, subpixel bevel slivers; no geometry removed"
+  }
+}

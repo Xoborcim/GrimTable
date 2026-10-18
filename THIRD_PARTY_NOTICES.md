@@ -73,3 +73,64 @@ files with any desktop build containing those components. The Windows bundle
 uses a `licenses/` folder for component notices. Keep the native WebRTC DLL beside
 the executable. Externally installed content packs retain their authors' licenses
 and are not automatically covered by MIT.
+
+## 0.11.0 original visual additions and private imports
+
+`MonumentalTerrain`, `CinematicDie`, the dice impact synthesis, weathered surface
+shader and all new scenario compositions are original GrimTable work under MIT.
+No additional third-party archive or protected commercial miniature asset was
+added for 0.11.0. Existing Kenney assets and font notices above still apply.
+See [0.11.0 provenance](docs/ASSET_PROVENANCE_0110.md) for investigated sources.
+
+The local Miniature Library does not grant redistribution rights. Its optional
+creator/source/license/notes fields are user records, not license verification.
+Private imported models remain in `user://miniatures/`; mod export does not
+include that directory and multiplayer never sends those meshes.
+
+## 0.12.0 original Blender art
+
+The four source sculpts in `art/blender/`, their game-ready exports under
+`assets/miniatures/` and `assets/terrain/gothic/`, original pigment/PBR atlases,
+and the art tooling are original GrimTable work under MIT. No third-party mesh
+foundation, scan, extracted game asset or protected faction icon was used.
+Blender 5.0.1 and Godot 4.6.1 were used as creation/integration tools; they are not
+redistributed as part of these source assets. Existing engine, Kenney, font and
+WebRTC notices continue to apply. See `docs/MINIATURE_ART_0120.md` for provenance,
+source organization and the limitations of the painted-style treatment.
+
+## 0.13.0 original environment art
+
+The eight editable sources under `art/blender/environment/`, their GLB exports
+under `assets/terrain/environment/`, new ground/surface/vapor/wear shaders,
+curated showcase layouts and environment authoring tools are original GrimTable
+work under MIT. They reuse the original GrimTable pigment/PBR atlases. No new
+third-party meshes, texture scans, restricted iconography or downloads were
+introduced. Existing Kenney CC0, font, engine and WebRTC notices still apply.
+See `docs/ENVIRONMENT_0130.md` and `art/ENVIRONMENT.md`.
+
+## 0.13.1 original composition art
+
+The nine editable cluster sources and surface-bake source under
+`art/blender/environment/0131/`, their self-contained GLBs, original pigment/ORM
+atlases, Cycles-baked normal/AO maps, authored floor/damage masks and map layouts
+are original GrimTable MIT artwork. No third-party geometry, scan, reference
+image, insignia or texture was copied into these assets. The physical diorama
+references in `docs/environment/0131/REFERENCE_STUDY.md` informed composition
+principles only. Existing engine, Kenney, font and WebRTC notices still apply.
+
+## 0.13.2 original approach refinements
+
+The authored approach records, shallow road-margin geometry and ground shader
+refinements are original GrimTable MIT work. They reuse existing materials,
+layout masks and surface bakes. No new third-party assets were introduced.
+
+## 0.13.3 original baked finish
+
+The derived Blender low/high sources in `art/blender/baked_0133/`, new unique
+bake UVs and surface maps in `assets/materials/baked_0133/`, paint-region data,
+finishing shaders and art tools are original GrimTable work under MIT. They
+derive exclusively from the existing original GrimTable sources and analytic
+surface recipes. No downloaded texture, scan, proprietary miniature, protected
+faction insignia or reference image was added. Existing engine, font, Kenney
+and WebRTC licenses remain applicable. Blender and Godot were creation tools;
+their executables are not included in these art-source files.

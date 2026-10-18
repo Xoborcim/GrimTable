@@ -1,0 +1,14 @@
+{
+	"checks": 27,
+	"failures": [],
+	"features": [
+		"new_meshes",
+		"scenic_bases",
+		"inspection",
+		"canonical_bases",
+		"AI_combat",
+		"save_load",
+		"replay"
+	],
+	"version": "0.12.0"
+}

@@ -1,0 +1,92 @@
+{
+  "asset": "legion_infantry",
+  "kind": "armor",
+  "source": "art/blender/legion_infantry.blend",
+  "source_sha256": "3e62fe060bc077bec35037d0812625b16a88950670047c53f29fbbd7ffeaec55",
+  "derived_source": "art/blender/baked_0133/legion_infantry.blend",
+  "export": "assets/miniatures/legion/legion_infantry.glb",
+  "triangles": 54344,
+  "resolution": 1024,
+  "bake_samples": 12,
+  "bake_margin": 4,
+  "uv": "Unique BakeUV, Smart Project 50 degrees, fractional margin .003; exported as TEXCOORD_0",
+  "normal_basis": "MikkTSpace / X+ Y+ Z+ / triangulated before baking",
+  "high_vertices": 163862,
+  "max_relief_inches": 0.0017979355045235667,
+  "maps": [
+    {
+      "map": "pigment",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 658067,
+      "space": "sRGB",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "normal",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 785080,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "orm",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 736814,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "finish",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 1411022,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "regions",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 132063,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "display_color",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 622544,
+      "space": "sRGB",
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "elapsed_seconds": 14.33,
+  "glb_bytes": 9071948,
+  "glb_sha256": "118eab1543b370929851a526ae5357a2078f336f8dbc57c6f907e6992ffa103b",
+  "tangent_guard": {
+    "fallback_vertices": 27,
+    "affected_surface_fraction": 5.329521978904036e-09,
+    "method": "Orthogonal fallback only for numerically degenerate, subpixel bevel slivers; no geometry removed"
+  }
+}

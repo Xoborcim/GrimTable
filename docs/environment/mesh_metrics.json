@@ -1,0 +1,98 @@
+[
+  {
+    "asset": "gatehouse",
+    "triangles": 27352,
+    "source": "art\\blender\\environment\\gatehouse.blend",
+    "export": "assets\\terrain\\environment\\gatehouse.glb",
+    "footprint": [
+      8,
+      12.4,
+      3
+    ],
+    "blender": "5.0.1"
+  },
+  {
+    "asset": "cloister",
+    "triangles": 23552,
+    "source": "art\\blender\\environment\\cloister.blend",
+    "export": "assets\\terrain\\environment\\cloister.glb",
+    "footprint": [
+      8,
+      6,
+      1.4
+    ],
+    "blender": "5.0.1"
+  },
+  {
+    "asset": "refinery_core",
+    "triangles": 16004,
+    "source": "art\\blender\\environment\\refinery_core.blend",
+    "export": "assets\\terrain\\environment\\refinery_core.glb",
+    "footprint": [
+      7,
+      11,
+      6
+    ],
+    "blender": "5.0.1"
+  },
+  {
+    "asset": "cooling_bank",
+    "triangles": 5456,
+    "source": "art\\blender\\environment\\cooling_bank.blend",
+    "export": "assets\\terrain\\environment\\cooling_bank.glb",
+    "footprint": [
+      6,
+      6,
+      4
+    ],
+    "blender": "5.0.1"
+  },
+  {
+    "asset": "breach_bunker",
+    "triangles": 9824,
+    "source": "art\\blender\\environment\\breach_bunker.blend",
+    "export": "assets\\terrain\\environment\\breach_bunker.glb",
+    "footprint": [
+      7,
+      3,
+      4
+    ],
+    "blender": "5.0.1"
+  },
+  {
+    "asset": "reliquary",
+    "triangles": 2544,
+    "source": "art\\blender\\environment\\reliquary.blend",
+    "export": "assets\\terrain\\environment\\reliquary.glb",
+    "footprint": [
+      3,
+      3.3,
+      3
+    ],
+    "blender": "5.0.1"
+  },
+  {
+    "asset": "hoist",
+    "triangles": 7068,
+    "source": "art\\blender\\environment\\hoist.blend",
+    "export": "assets\\terrain\\environment\\hoist.glb",
+    "footprint": [
+      7,
+      8,
+      4
+    ],
+    "blender": "5.0.1"
+  },
+  {
+    "asset": "trench",
+    "triangles": 4892,
+    "source": "art\\blender\\environment\\trench.blend",
+    "export": "assets\\terrain\\environment\\trench.glb",
+    "footprint": [
+      8,
+      0.7,
+      3
+    ],
+    "blender": "5.0.1"
+  }
+]

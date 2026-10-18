@@ -60,7 +60,7 @@ func build(data: Dictionary) -> void:
 	var surface := TableVisuals.box(visuals, Vector3(width, 0.2, depth), Vector3(0, -0.1, 0), Color.WHITE)
 	surface.name = "GroundSurface"
 	surface.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	surface.material_override = BattlefieldPresentation.ground(str(data.board.get("theme", "industrial")))
+	surface.material_override = BattlefieldPresentation.ground(str(data.board.get("theme", "industrial")),data.board)
 	for side in [-1, 1]:
 		TableVisuals.box(visuals, Vector3(width + 0.8, 0.16, 0.22), Vector3(0, 0, side * (depth / 2 + 0.25)), Color("74818b"))
 		TableVisuals.box(visuals, Vector3(0.22, 0.16, depth), Vector3(side * (width / 2 + 0.25), 0, 0), Color("74818b"))

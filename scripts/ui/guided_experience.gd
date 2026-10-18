@@ -91,6 +91,13 @@ func _ready() -> void:
 	var inspect_parent: VBoxContainer = hud.selected_info.get_parent()
 	unit_card = UnitCard.new()
 	unit_card.scale_factor = game.settings.ui_scale
+	unit_card.inspect_requested.connect(func():
+		var model: Miniature=game.selection.primary()
+		if model==null or game.get_node_or_null("MiniatureInspection")!=null: return
+		var inspector:=MiniatureInspector.new()
+		inspector.name="MiniatureInspection"
+		inspector.game=game; inspector.model=model
+		game.add_child(inspector))
 	inspect_parent.add_child(unit_card)
 	inspect_parent.move_child(unit_card,0)
 	label_layout = DioramaLabels.new()
@@ -249,7 +256,7 @@ func refresh() -> void:
 		done_button.hide()
 		hud.undo_button.hide()
 	var ground := game.battlefield.visuals.get_node_or_null("GroundSurface") as MeshInstance3D
-	if ground != null: (ground.material_override as ShaderMaterial).set_shader_parameter("grid_visibility", 1.0 if moving or game.interaction.mode == 2 else 0.0)
+	if ground != null: (ground.material_override as ShaderMaterial).set_shader_parameter("grid_visibility", 1.0 if moving or game.interaction.mode == 2 or game.editing or (game.life!=null and game.life.tactical) else 0.0)
 
 func update_hint(unit: TableUnit, moving: bool) -> void:
 	hint_card.hide()

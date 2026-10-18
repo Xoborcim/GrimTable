@@ -1,0 +1,59 @@
+{
+  "version": "0.13.3",
+  "renderer": "Godot 4.6.1 Compatibility OpenGL 3.3 / Medium",
+  "resolution": [
+    1440,
+    900
+  ],
+  "source_before": "0.13.2 captured before visual edits",
+  "after": "Exported Windows executable",
+  "processing": "None; gallery places original images side by side",
+  "cameras": {
+    "gameplay": {
+      "distance": 53,
+      "pitch": 0.92,
+      "heading": 0.08,
+      "target": [
+        0,
+        0.5,
+        -2
+      ]
+    },
+    "transition": {
+      "distance": 17,
+      "pitch": 0.78,
+      "heading": 0.08,
+      "target": [
+        -14,
+        0.4,
+        5
+      ]
+    },
+    "architecture": {
+      "distance": 23,
+      "pitch": 0.55,
+      "heading": 0.08,
+      "target": [
+        -14,
+        4,
+        -8
+      ]
+    },
+    "inspection": {
+      "yaw": "PI + .5",
+      "pitch": 0.2,
+      "distance": "0.72 * inspector default from unchanged sculpt bounds",
+      "sun": 1.15,
+      "ambient": 0.26
+    },
+    "bright": {
+      "sun": 1.65,
+      "ambient": 0.42
+    },
+    "dark": {
+      "sun": 0.55,
+      "ambient": 0.16
+    }
+  },
+  "required_views": 7
+}

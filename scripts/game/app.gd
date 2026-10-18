@@ -65,6 +65,20 @@ func _ready() -> void:
 	discard_dialog.confirmed.connect(show_main)
 	root.add_child(discard_dialog)
 	show_main()
+	if "--smoke-baked-0133" in OS.get_cmdline_user_args():
+		var baked_smoke:=BakedVisual133Smoke.new();add_child(baked_smoke);baked_smoke.call_deferred("run",self)
+	if "--smoke-composition-0131" in OS.get_cmdline_user_args():
+		var composition_smoke:=Composition131Smoke.new();add_child(composition_smoke);composition_smoke.call_deferred("run",self)
+	if "--smoke-environment" in OS.get_cmdline_user_args():
+		var environment_smoke:=EnvironmentSmoke.new();add_child(environment_smoke);environment_smoke.call_deferred("run",self)
+	if "--smoke-art" in OS.get_cmdline_user_args():
+		var art_smoke:=ArtSmoke.new()
+		add_child(art_smoke)
+		art_smoke.call_deferred("run",self)
+	if "--smoke-0110" in OS.get_cmdline_user_args():
+		var smoke := Visual0110Smoke.new()
+		add_child(smoke)
+		smoke.call_deferred("run",self)
 	if "--smoke-living" in OS.get_cmdline_user_args():
 		var smoke := LivingSmoke.new()
 		add_child(smoke)
@@ -143,12 +157,12 @@ func show_main() -> void:
 	menu.offset_bottom = 315
 	column.custom_minimum_size.x = 320
 	column.get_child(0).add_theme_font_size_override("font_size", 42)
-	AppUI.label(column,"ASHFALL STATION  /  LEGION vs SWARM",12).modulate = GrimTheme.IVORY
+	AppUI.label(column,"THE HOLLOW BASILICA  /  LEGION vs SWARM",12).modulate = GrimTheme.IVORY
 	var play := AppUI.button(column,"Play",show_local_play)
 	play.add_theme_stylebox_override("normal",GrimTheme.primary())
-	for action in [["Multiplayer",online_menu.show_menu],["Scenarios / Load",func(): show_browser(false)],["Scenario Editor",func(): show_browser(true)],["Mods",show_mods],["Replay",show_replays],["Settings",show_settings],["Quit",func(): get_tree().quit()]]:
+	for action in [["Multiplayer",online_menu.show_menu],["Scenarios / Load",func(): show_browser(false)],["Scenario Editor",func(): show_browser(true)],["Miniature Library",show_miniature_library],["Mods",show_mods],["Replay",show_replays],["Settings",show_settings],["Quit",func(): get_tree().quit()]]:
 		AppUI.button(column,action[0],action[1])
-	AppUI.label(column,"0.10.0   /   ORIGINAL SCI-FI TABLETOP",12).modulate = GrimTheme.MUTED
+	AppUI.label(column,str(ProjectSettings.get_setting("application/config/version"))+"   /   ORIGINAL SCI-FI TABLETOP",12).modulate = GrimTheme.MUTED
 
 func show_browser(edit: bool) -> void:
 	edit_browser = edit
@@ -349,6 +363,10 @@ func show_settings() -> void:
 	AppUI.label(column, "PRESENTATION", 19)
 	var quality := AppUI.choices(column, ["Low", "Medium", "High"], ["Low", "Medium", "High"].find(settings.quality))
 	quality.tooltip_text = "Low: no shadows or MSAA. Medium: shadows + 2x MSAA. High: shadows + 4x MSAA."
+	AppUI.label(column, "Cinematic Dice")
+	var dice_mode := AppUI.choices(column,["Off","Quick","Full"],["Off","Quick","Full"].find(settings.cinematic_dice))
+	var dice_style_choice := AppUI.choices(column,["Ivory","Steel"],["Ivory","Steel"].find(settings.dice_style))
+	var dice_volume_choice := AppUI.spin(column,"Dice sound volume",settings.dice_volume,0,1,.05)
 	AppUI.label(column, "Combat animation speed")
 	var speed := AppUI.choices(column, ["Fast", "Normal", "Detailed"], ["Fast", "Normal", "Detailed"].find(settings.combat_speed))
 	AppUI.label(column,"Movement animation speed")
@@ -371,6 +389,9 @@ func show_settings() -> void:
 	AppUI.button(column, "Apply and Save", func():
 		settings.combat_resolution = ["Fast", "Detailed", "Manual"][resolution_mode.selected]
 		if custom_changed.value: settings.assistance = "Custom"
+		settings.cinematic_dice = ["Off","Quick","Full"][dice_mode.selected]
+		settings.dice_style = ["Ivory","Steel"][dice_style_choice.selected]
+		settings.dice_volume = dice_volume_choice.value
 		settings.quality = ["Low", "Medium", "High"][quality.selected]
 		settings.combat_speed = ["Fast", "Normal", "Detailed"][speed.selected]
 		settings.movement_speed = ["Fast","Normal","Cinematic"][move_speed.selected]
@@ -478,3 +499,9 @@ func show_local_play() -> void:
 			pending_ai = {"teams":teams,"human_team":side.selected,"seed":int(Time.get_unix_time_from_system()) % 2147483647,"round_limit":6,"speed":settings.ai_speed}
 		launch_with_transition(items[scenario_choice.selected]))
 	AppUI.button(column,"Back",show_main)
+
+func show_miniature_library() -> void:
+	menu.hide()
+	var library := MiniatureLibraryPanel.new()
+	library.app = self
+	root.add_child(library)

@@ -1,0 +1,4 @@
+[gd_scene format=3]
+
+[node name="GroundRuleArea" type="Node3D"]
+metadata/purpose = "Area traits only; the map floor and cluster artwork supply its visual context."

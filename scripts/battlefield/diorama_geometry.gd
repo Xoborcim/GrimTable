@@ -28,6 +28,9 @@ static func box_mesh(size: Vector3) -> ArrayMesh:
 			var points := [Vector3(0, rings[level][0].y, 0), rings[level][i], rings[level][(i+1)%8]]
 			if level == 0: points.reverse()
 			face(builder, points)
+	# SurfaceTool batches also contain indexed PrimitiveMeshes. Supplying an
+	# unindexed box alongside them can leave its vertices out of the final indices.
+	builder.index()
 	boxes[size] = builder.commit()
 	return boxes[size]
 
@@ -66,4 +69,5 @@ static func tapered_curve(points: Array[Vector3], radius: float, sides: int = 7)
 				builder.set_normal(na if k in [0, 1] else nb)
 				builder.set_uv(Vector2(float(i)/sides, float(j)/points.size()))
 				builder.add_vertex(vertices[k])
+	builder.index()
 	return builder.commit()

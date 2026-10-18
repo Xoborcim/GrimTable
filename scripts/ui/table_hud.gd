@@ -18,6 +18,8 @@ var mode_label: Label
 var count_spin: SpinBox
 var dice_result: Label
 var dice_history: Label
+var private_roll: CheckBox
+var local_dice := DiceManager.new()
 var tools: Array[Button] = []
 var model_buttons: Array[Button] = []
 var dice_panel: PanelContainer
@@ -300,11 +302,14 @@ func _build_dice() -> void:
 	count_spin.custom_minimum_size.x = 75
 	row.add_child(count_spin)
 	_button(row, "+", func(): count_spin.value += 1)
-	_button(row, "ROLL", func(): dice.roll(int(count_spin.value)))
+	_button(row, "ROLL", func(): roll_manual(int(count_spin.value)))
+	private_roll = CheckBox.new()
+	private_roll.text = "Private / local only"
+	column.add_child(private_roll)
 	var shortcuts := HBoxContainer.new()
 	column.add_child(shortcuts)
-	_button(shortcuts, "1D6", func(): dice.roll(1))
-	_button(shortcuts, "2D6", func(): dice.roll(2))
+	_button(shortcuts, "1D6", func(): roll_manual(1))
+	_button(shortcuts, "2D6", func(): roll_manual(2))
 	dice_result = _label(column, "Roll to begin.", 17)
 	dice_result.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	dice_result.custom_minimum_size = Vector2(250, 90)
@@ -316,6 +321,12 @@ func _build_dice() -> void:
 	dice_history = _label(scroll, "—", 13)
 	dice_history.custom_minimum_size.x = 230
 	dice_history.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+
+func roll_manual(count: int) -> void:
+	if not private_roll.button_pressed: dice.roll(count); return
+	var result := local_dice.roll(count)
+	_show_roll(result)
+	get_parent().dice_tray.enqueue("PRIVATE LOCAL ROLL",result.values)
 
 func _build_help() -> void:
 	help_panel = _panel(-260, -270, 260, 270, Control.PRESET_CENTER)

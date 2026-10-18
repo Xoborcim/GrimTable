@@ -1,0 +1,70 @@
+{
+  "asset": "industrial_wreck",
+  "kind": "industrial",
+  "source": "art/blender/environment/0131/industrial_wreck.blend",
+  "source_sha256": "e5517365400f2188771c601886bd3b9d7756758982915b63074488be698c1dce",
+  "derived_source": "art/blender/baked_0133/industrial_wreck.blend",
+  "export": "assets/terrain/environment/0131/industrial_wreck.glb",
+  "triangles": 55692,
+  "resolution": 1024,
+  "bake_samples": 12,
+  "bake_margin": 4,
+  "uv": "Unique BakeUV, Smart Project 50 degrees, fractional margin .003; exported as TEXCOORD_0",
+  "normal_basis": "MikkTSpace / X+ Y+ Z+ / triangulated before baking",
+  "high_vertices": 167974,
+  "max_relief_inches": 0.00899999985128021,
+  "maps": [
+    {
+      "map": "pigment",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 671585,
+      "space": "sRGB",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "normal",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 747733,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "orm",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 609185,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "finish",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 770690,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "elapsed_seconds": 15.19,
+  "glb_bytes": 10152232,
+  "glb_sha256": "30096029369412990f4d454a883bd4c306052031fd718bc4786b580bb3173078",
+  "tangent_guard": {
+    "fallback_vertices": 62,
+    "affected_surface_fraction": 1.123292446358377e-06,
+    "method": "Orthogonal fallback only for numerically degenerate, subpixel bevel slivers; no geometry removed"
+  }
+}

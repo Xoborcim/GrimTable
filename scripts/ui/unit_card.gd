@@ -1,6 +1,8 @@
 class_name UnitCard
 extends VBoxContainer
 
+signal inspect_requested
+
 var scale_factor := 1.0
 var heading: Label
 var subtitle: Label
@@ -32,6 +34,7 @@ func _ready() -> void:
 	weapons.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	state = make_label(self, "", 12)
 	state.modulate = GrimTheme.PLAYER
+	AppUI.button(self,"Inspect Miniature",func(): inspect_requested.emit())
 
 func show_unit(unit: TableUnit, actions: Dictionary) -> void:
 	if unit == null: hide(); return

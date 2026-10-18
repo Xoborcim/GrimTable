@@ -25,6 +25,7 @@ var network_session: NetworkSession
 var menu_open := false
 var ai: AIController
 var life: BattlefieldLife
+var dice_tray: DiceTray
 var ai_config: Dictionary = {}
 var match_overlay: CanvasLayer
 
@@ -41,6 +42,7 @@ func _ready() -> void:
 		scenario = loaded.data
 	initial_scenario = ContentRegistry.freeze(scenario)
 	BattlefieldPresentation.lighting(self, settings)
+	BattlefieldPresentation.apply_theme(self,scenario.board)
 	battlefield = Battlefield.new()
 	battlefield.scenario = scenario
 	battlefield.name = "Battlefield"
@@ -48,9 +50,20 @@ func _ready() -> void:
 	camera_rig = TableCamera.new()
 	camera_rig.name = "CameraController"
 	add_child(camera_rig)
-	if scenario.id == "ashfall_station":
+	if scenario.board.get("environment_art",false):
+		camera_rig.distance=60
+		camera_rig.pitch=.86
+		camera_rig.destination=Vector3(0,1,-2)
+		camera_rig._update_camera(1)
+	if scenario.id == "ashfall_station" and scenario.board.get("surface_layout","Legacy")=="Legacy":
 		camera_rig.distance = 35
 		camera_rig.destination = Vector3(-3, 0, -1)
+		camera_rig._update_camera(1)
+	if scenario.board.get("surface_layout","Legacy")!="Legacy":
+		camera_rig.distance=53
+		camera_rig.pitch=.92
+		camera_rig.heading=.08
+		camera_rig.destination=Vector3(0,.5,-2)
 		camera_rig._update_camera(1)
 	camera_rig.reduce_motion = settings.reduce_motion
 	camera_rig.sensitivity = settings.camera_sensitivity
@@ -88,6 +101,11 @@ func _ready() -> void:
 	hud.history = history
 	hud.combat = combat
 	add_child(hud)
+	if not MiniatureLibrary.warnings.is_empty(): hud.set_status("Some local miniature files are missing. Authored GrimTable models are being used.")
+	dice_tray = DiceTray.new()
+	dice_tray.settings = settings
+	add_child(dice_tray)
+	dice.rolled.connect(func(result: Dictionary): dice_tray.enqueue("MANUAL ROLL", result.values))
 	var presentation := CombatPresentation.new()
 	presentation.game = self
 	add_child(presentation)
@@ -140,6 +158,7 @@ func _ready() -> void:
 	battle_log.changed.connect(schedule_autosave)
 
 func apply_scenario(data: Dictionary) -> void:
+	if is_instance_valid(dice_tray): dice_tray.cancel()
 	if is_instance_valid(match_overlay): match_overlay.queue_free()
 	replay_supported = true
 	interaction.set_mode(0)
@@ -151,6 +170,7 @@ func apply_scenario(data: Dictionary) -> void:
 	scenario = data.duplicate(true)
 	initial_scenario = ContentRegistry.freeze(scenario)
 	battlefield.build(data)
+	BattlefieldPresentation.apply_theme(self,data.board)
 	deployment.load_zones(data)
 	manager.restore(data.starting_state)
 	camera_rig.bounds = Vector2(battlefield.width, battlefield.depth) / 2

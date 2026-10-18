@@ -1,0 +1,12 @@
+{
+  "checks": 46,
+  "failures": [],
+  "maps": [
+    "hollow_basilica",
+    "ashfall_station"
+  ],
+  "version": "0.13.1",
+  "packaged_smoke_executions": 2,
+  "pre_correction_checks": 46,
+  "repeat_reason": "Final close-up exposed incorrect footing rotation pivots. Corrected source origins, regenerated/validated GLBs and refreshed Windows export; focused packaged revalidation required. Full regression not repeated."
+}

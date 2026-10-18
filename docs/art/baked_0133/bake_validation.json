@@ -1,0 +1,729 @@
+{
+  "assets": [
+    {
+      "asset": "legion_infantry",
+      "triangles": 54344,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 1024,
+      "uv_coverage": 0.22174930572509766,
+      "uv_interior_overlap_fraction": 0.0,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.14288038581588738,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 658067,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "normal",
+          "bytes": 785080,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "orm",
+          "bytes": 736814,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "finish",
+          "bytes": 1411022,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "regions",
+          "bytes": 132063,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "display_color",
+          "bytes": 622544,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        }
+      ]
+    },
+    {
+      "asset": "heavy_walker",
+      "triangles": 56822,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 1024,
+      "uv_coverage": 0.23258399963378906,
+      "uv_interior_overlap_fraction": 0.0,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.09243895602259412,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 2198220,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        },
+        {
+          "map": "normal",
+          "bytes": 1521622,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        },
+        {
+          "map": "orm",
+          "bytes": 2219376,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        },
+        {
+          "map": "finish",
+          "bytes": 4568765,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        },
+        {
+          "map": "regions",
+          "bytes": 350006,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        },
+        {
+          "map": "display_color",
+          "bytes": 2099558,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        }
+      ]
+    },
+    {
+      "asset": "swarm_creature",
+      "triangles": 90764,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 1024,
+      "uv_coverage": 0.21222782135009766,
+      "uv_interior_overlap_fraction": 0.00013031540822425034,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.10585840989890623,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 468793,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "normal",
+          "bytes": 1181086,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "orm",
+          "bytes": 685834,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "finish",
+          "bytes": 757234,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        }
+      ]
+    },
+    {
+      "asset": "sanctum",
+      "triangles": 95282,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 1024,
+      "uv_coverage": 0.1281423568725586,
+      "uv_interior_overlap_fraction": 7.442303541792255e-06,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.1279001835052449,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 2294552,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        },
+        {
+          "map": "normal",
+          "bytes": 2062969,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        },
+        {
+          "map": "orm",
+          "bytes": 1891651,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        },
+        {
+          "map": "finish",
+          "bytes": 2078676,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        }
+      ]
+    },
+    {
+      "asset": "transept",
+      "triangles": 74232,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 1024,
+      "uv_coverage": 0.1503438949584961,
+      "uv_interior_overlap_fraction": 0.0,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.12459106114093545,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 762376,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "normal",
+          "bytes": 740322,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "orm",
+          "bytes": 593159,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "finish",
+          "bytes": 805864,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        }
+      ]
+    },
+    {
+      "asset": "breached_gate",
+      "triangles": 53508,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 1024,
+      "uv_coverage": 0.1803569793701172,
+      "uv_interior_overlap_fraction": 0.0,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.13454714902703985,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 715227,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "normal",
+          "bytes": 826315,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "orm",
+          "bytes": 583088,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "finish",
+          "bytes": 741185,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        }
+      ]
+    },
+    {
+      "asset": "shrine",
+      "triangles": 21474,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 512,
+      "uv_coverage": 0.3420982360839844,
+      "uv_interior_overlap_fraction": 0.0,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.1709659928001378,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 245744,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "normal",
+          "bytes": 308430,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "orm",
+          "bytes": 233106,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "finish",
+          "bytes": 284404,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        }
+      ]
+    },
+    {
+      "asset": "industrial_wreck",
+      "triangles": 55692,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 1024,
+      "uv_coverage": 0.18052101135253906,
+      "uv_interior_overlap_fraction": 5.282899255111205e-06,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.13126847627937208,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 671585,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "normal",
+          "bytes": 747733,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "orm",
+          "bytes": 609185,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "finish",
+          "bytes": 770690,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        }
+      ]
+    },
+    {
+      "asset": "checkpoint",
+      "triangles": 31846,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 1024,
+      "uv_coverage": 0.27899646759033203,
+      "uv_interior_overlap_fraction": 0.0,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.14656073712640405,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 657173,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "normal",
+          "bytes": 719738,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "orm",
+          "bytes": 571109,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "finish",
+          "bytes": 726858,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        }
+      ]
+    },
+    {
+      "asset": "pipeline",
+      "triangles": 28442,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 512,
+      "uv_coverage": 0.32276153564453125,
+      "uv_interior_overlap_fraction": 0.0,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.14387211919840612,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 205294,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "normal",
+          "bytes": 243345,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "orm",
+          "bytes": 250477,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "finish",
+          "bytes": 255424,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        }
+      ]
+    },
+    {
+      "asset": "crater",
+      "triangles": 7584,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 512,
+      "uv_coverage": 0.4495124816894531,
+      "uv_interior_overlap_fraction": 0.0,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.13502204357932246,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 193614,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "normal",
+          "bytes": 235652,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "orm",
+          "bytes": 136775,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "finish",
+          "bytes": 206250,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        }
+      ]
+    },
+    {
+      "asset": "station_hall",
+      "triangles": 63752,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 1024,
+      "uv_coverage": 0.2144012451171875,
+      "uv_interior_overlap_fraction": 0.0,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.12974148464312465,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 1984454,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        },
+        {
+          "map": "normal",
+          "bytes": 1900981,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        },
+        {
+          "map": "orm",
+          "bytes": 2060581,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        },
+        {
+          "map": "finish",
+          "bytes": 1806541,
+          "dimensions": [
+            2048,
+            2048
+          ],
+          "rgba8_mip_bytes": 22369621
+        }
+      ]
+    },
+    {
+      "asset": "refinery_core",
+      "triangles": 16004,
+      "source_preserved": true,
+      "bounds_error_inches": 0.0,
+      "uv_raster_size": 1024,
+      "uv_coverage": 0.23426437377929688,
+      "uv_interior_overlap_fraction": 0.0,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.08253506997654408,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 510938,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "normal",
+          "bytes": 519523,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "orm",
+          "bytes": 620968,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        },
+        {
+          "map": "finish",
+          "bytes": 507883,
+          "dimensions": [
+            1024,
+            1024
+          ],
+          "rgba8_mip_bytes": 5592405
+        }
+      ]
+    },
+    {
+      "asset": "scenic_ground",
+      "triangles": 3344,
+      "source_preserved": true,
+      "bounds_error_inches": 0,
+      "uv_raster_size": 512,
+      "uv_coverage": 0.7288665771484375,
+      "uv_interior_overlap_fraction": 0.0,
+      "tangents_finite_unit": true,
+      "normal_xy_stddev": 0.12688693438053378,
+      "textures": [
+        {
+          "map": "pigment",
+          "bytes": 65663,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "normal",
+          "bytes": 89657,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "orm",
+          "bytes": 65861,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        },
+        {
+          "map": "finish",
+          "bytes": 148351,
+          "dimensions": [
+            512,
+            512
+          ],
+          "rgba8_mip_bytes": 1398101
+        }
+      ]
+    }
+  ],
+  "new_png_bytes": 53045455,
+  "uncompressed_rgba8_mip_bytes": 503316460,
+  "uv_limit": "Raster triangle-interior audit at up to 1024px; subpixel UVs need visual seam review."
+}

@@ -1,0 +1,20 @@
+{
+	"ai": [
+		{
+			"finished": true,
+			"invalid_actions": 0,
+			"map": "hollow_basilica",
+			"movement_actions": 5,
+			"ticks": 22
+		},
+		{
+			"finished": true,
+			"invalid_actions": 0,
+			"map": "ashfall_station",
+			"movement_actions": 5,
+			"ticks": 30
+		}
+	],
+	"checks": 153,
+	"failures": 0
+}

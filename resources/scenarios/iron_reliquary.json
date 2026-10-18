@@ -1,0 +1,267 @@
+{
+  "format_version": 1,
+  "id": "iron_reliquary",
+  "name": "The Iron Reliquary",
+  "notes": "Miniature art showcase and playable skirmish. Original Blender-sculpted Legion infantry, war walker, Swarm hunters and a ruined basilica manufactorum. Upper floors are decorative. Ground movement and all profiles retain their existing rules.",
+  "board": {
+    "width": 44,
+    "depth": 32,
+    "theme": "cathedral",
+    "lighting": "Dusk",
+    "atmosphere": 0.35
+  },
+  "coherency_distance": 2,
+  "deployment_zones": [
+    {
+      "id": "zone_a",
+      "shape": "rectangle",
+      "team": 0,
+      "name": "Legion assembly",
+      "center": [
+        0,
+        12
+      ],
+      "size": [
+        44,
+        8
+      ]
+    },
+    {
+      "id": "zone_b",
+      "shape": "rectangle",
+      "team": 1,
+      "name": "Swarm emergence",
+      "center": [
+        0,
+        -12
+      ],
+      "size": [
+        44,
+        8
+      ]
+    }
+  ],
+  "terrain": [
+    {
+      "id": "basilica_nave",
+      "title": "Ruined Basilica Manufactorum",
+      "kind": "ruin",
+      "art_style": "gothic",
+      "size": [
+        13,
+        10,
+        7
+      ],
+      "position": [
+        -8,
+        0,
+        -7
+      ],
+      "rotation": 0,
+      "tint": "#858174",
+      "blocks_movement": true,
+      "blocks_los": true
+    },
+    {
+      "id": "forward_cover",
+      "title": "Industrial barricade",
+      "kind": "box",
+      "art_style": "barricade",
+      "size": [
+        4,
+        1,
+        0.8
+      ],
+      "position": [
+        8,
+        0,
+        0
+      ],
+      "rotation": 0,
+      "tint": "#48545a",
+      "blocks_movement": true,
+      "blocks_los": false
+    },
+    {
+      "id": "bomb_crater",
+      "title": "Broken road",
+      "kind": "box",
+      "art_style": "crater",
+      "size": [
+        4,
+        0.12,
+        4
+      ],
+      "position": [
+        -6,
+        0,
+        0
+      ],
+      "rotation": 0,
+      "tint": "#48545a",
+      "blocks_movement": false,
+      "blocks_los": false,
+      "cover_bonus": 1
+    }
+  ],
+  "objectives": [
+    {
+      "id": "objective_1",
+      "number": 1,
+      "name": "Nave relay",
+      "radius": 3,
+      "position": [
+        -6,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "objective_2",
+      "number": 2,
+      "name": "Procession road",
+      "radius": 3,
+      "position": [
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "objective_3",
+      "number": 3,
+      "name": "Forge conduit",
+      "radius": 3,
+      "position": [
+        13,
+        0,
+        4
+      ]
+    }
+  ],
+  "armies": [
+    {
+      "id": "legion_trooper_squad",
+      "name": "Basilica Wardens",
+      "team": 0,
+      "unit_id": "legion_trooper",
+      "models": [
+        {
+          "id": "warden_0",
+          "position": [
+            -10.0,
+            0,
+            5
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "warden_1",
+          "position": [
+            -8.2,
+            0,
+            5
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "warden_2",
+          "position": [
+            -6.4,
+            0,
+            5
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "warden_3",
+          "position": [
+            -4.6,
+            0,
+            5
+          ],
+          "rotation": 0
+        },
+        {
+          "id": "warden_4",
+          "position": [
+            -2.8,
+            0,
+            5
+          ],
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "legion_walker_squad",
+      "name": "Iron Sentinel",
+      "team": 0,
+      "unit_id": "legion_walker",
+      "models": [
+        {
+          "id": "sentinel",
+          "position": [
+            6,
+            0,
+            6
+          ],
+          "rotation": 0
+        }
+      ]
+    },
+    {
+      "id": "swarm_hunter_squad",
+      "name": "Quill Stalkers",
+      "team": 1,
+      "unit_id": "swarm_hunter",
+      "models": [
+        {
+          "id": "stalker_0",
+          "position": [
+            -2,
+            0,
+            -3
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "stalker_1",
+          "position": [
+            0,
+            0,
+            -3
+          ],
+          "rotation": 180
+        },
+        {
+          "id": "stalker_2",
+          "position": [
+            2,
+            0,
+            -3
+          ],
+          "rotation": 180
+        }
+      ]
+    }
+  ],
+  "starting_state": {
+    "round": 1,
+    "phase": 1,
+    "team": 0,
+    "deployment": false
+  },
+  "scoring": {
+    "objective_points_per_round": 1
+  },
+  "rules": {
+    "difficult_ground_penalty": 2,
+    "charge": {
+      "dice": 2,
+      "sides": 6,
+      "bonus": 0,
+      "engagement_range": 1
+    }
+  }
+}

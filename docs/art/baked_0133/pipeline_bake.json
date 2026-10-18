@@ -1,0 +1,70 @@
+{
+  "asset": "pipeline",
+  "kind": "industrial",
+  "source": "art/blender/environment/0131/pipeline.blend",
+  "source_sha256": "627b17fae29ae118f21a5e9d60b7f93ea3f7767d3a44334a2cba4431f42b5e55",
+  "derived_source": "art/blender/baked_0133/pipeline.blend",
+  "export": "assets/terrain/environment/0131/pipeline.glb",
+  "triangles": 28442,
+  "resolution": 512,
+  "bake_samples": 12,
+  "bake_margin": 4,
+  "uv": "Unique BakeUV, Smart Project 50 degrees, fractional margin .003; exported as TEXCOORD_0",
+  "normal_basis": "MikkTSpace / X+ Y+ Z+ / triangulated before baking",
+  "high_vertices": 85734,
+  "max_relief_inches": 0.008999999666317217,
+  "maps": [
+    {
+      "map": "pigment",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 205294,
+      "space": "sRGB",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "normal",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 243345,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "orm",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 250477,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "finish",
+      "resolution": [
+        512,
+        512
+      ],
+      "bytes": 255424,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "elapsed_seconds": 7.14,
+  "glb_bytes": 4648408,
+  "glb_sha256": "b2f0f141814dc0364a17e9dc71151b36f751e85ba171325338ae9cec496cdd06",
+  "tangent_guard": {
+    "fallback_vertices": 24,
+    "affected_surface_fraction": 1.163135595046519e-09,
+    "method": "Orthogonal fallback only for numerically degenerate, subpixel bevel slivers; no geometry removed"
+  }
+}

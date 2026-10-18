@@ -1,0 +1,70 @@
+{
+  "asset": "swarm_creature",
+  "kind": "organic",
+  "source": "art/blender/swarm_creature.blend",
+  "source_sha256": "b3e10b9ebed68d718f0bde51f5c33dfd167b55e9689999391936f2fa074a05d9",
+  "derived_source": "art/blender/baked_0133/swarm_creature.blend",
+  "export": "assets/miniatures/swarm/swarm_creature.glb",
+  "triangles": 90764,
+  "resolution": 1024,
+  "bake_samples": 12,
+  "bake_margin": 4,
+  "uv": "Unique BakeUV, Smart Project 50 degrees, fractional margin .003; exported as TEXCOORD_0",
+  "normal_basis": "MikkTSpace / X+ Y+ Z+ / triangulated before baking",
+  "high_vertices": 272814,
+  "max_relief_inches": 0.0017999999319506727,
+  "maps": [
+    {
+      "map": "pigment",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 468793,
+      "space": "sRGB",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "normal",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 1181086,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "orm",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 685834,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "finish",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 757234,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "elapsed_seconds": 17.92,
+  "glb_bytes": 6668204,
+  "glb_sha256": "44dce257fa9ac351e18fa8efdf471e11cd778f35f8fce088a45bfaf0c44d2fce",
+  "tangent_guard": {
+    "fallback_vertices": 2,
+    "affected_surface_fraction": 1.1085196184949695e-06,
+    "method": "Orthogonal fallback only for numerically degenerate, subpixel bevel slivers; no geometry removed"
+  }
+}

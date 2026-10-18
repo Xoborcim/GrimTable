@@ -1,0 +1,42 @@
+[
+  {
+    "asset": "legion_infantry",
+    "export": "assets/miniatures/legion/legion_infantry.glb",
+    "source": "art/blender/legion_infantry.blend",
+    "triangles": 54344,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 6462644,
+    "sha256": "d08f1494e9ffb82068856babd745817e4dc2b24d6957bab75985377baae89f7e"
+  },
+  {
+    "asset": "heavy_walker",
+    "export": "assets/miniatures/legion/heavy_walker.glb",
+    "source": "art/blender/heavy_walker.blend",
+    "triangles": 56822,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 6686228,
+    "sha256": "1686fc59ff47646028de93e6a8c907953db528d5abcca6aae65ea0aeb87eb7b7"
+  },
+  {
+    "asset": "swarm_creature",
+    "export": "assets/miniatures/swarm/swarm_creature.glb",
+    "source": "art/blender/swarm_creature.blend",
+    "triangles": 90764,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 9763460,
+    "sha256": "21f610b4b59d26879aea155b7bb69f7da4876f22086f57092297926cc9bd5b5a"
+  },
+  {
+    "asset": "ruined_basilica",
+    "export": "assets/terrain/gothic/ruined_basilica.glb",
+    "source": "art/blender/ruined_basilica.blend",
+    "triangles": 100720,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 10706320,
+    "sha256": "586570ee1079c3440277470585b8b5623ae7e4254c68c2688c9b75e5c00fab44"
+  }
+]

@@ -9,6 +9,136 @@ under the [MIT license](LICENSE). Third-party assets, fonts and WebRTC component
 retain their separate licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 See [CONTRIBUTING.md](CONTRIBUTING.md) to contribute.
 
+## Baked Visual Finish (0.13.3)
+
+Fourteen representative miniature, ruin, industrial and base assets now use
+Blender-baked local surface detail, padded bake UVs, packed AO/roughness/metallic,
+and shared Godot finishing materials. Legion armor separates neutral undercoat
+from paint regions; a developer recoloring sample preserves its normal, wear
+and material response. The Workshop UI is planned for the next milestone.
+
+Basilica masonry has painted course variation and foundation grime. Broken,
+dusted floor margins expose the underlying ground between surviving fragments.
+Ashfall keeps graphite steel, rust, concrete and industrial road treatment.
+
+[Milestone report](docs/BAKED_VISUALS_0133.md) |
+[Bake workflow](art/BAKING_0133.md) |
+[Native comparison gallery](docs/art/baked_0133/comparisons.html)
+
+## Exterior Approach Refinement (0.13.2)
+
+Hollow Basilica and Ashfall Station now have more irregular road-to-ash
+transitions, sediment wear, staggered surface joints and short surviving road
+margins. The additions use shared batched materials and stay flush to the board.
+
+[0.13.2 report](docs/ENVIRONMENT_0132.md) |
+[Basilica approach](docs/environment/0132/hollow_basilica_approach_after.png) |
+[Ashfall approach](docs/environment/0132/ashfall_station_approach_after.png)
+
+## Battlefield Composition & Surface Detail (0.13.1)
+
+**The Hollow Basilica** now centers on the Shattered Sanctum: connected nave
+walls, a broken crossing arch, a collapsed transept and surviving foundations.
+Broken paving and coarse-to-fine debris follow the structural damage. A breached
+gate, ruined shrine and wrecked service court frame the exposed crossing.
+
+**Ashfall Station** has a distinct transport corridor, embedded cargo rails,
+destroyed checkpoint and ruptured manufacturing hall enclosing its generator.
+Authored floor/damage masks, actual Blender normal/AO bakes, fractured slabs and
+shallow crater geometry replace the uninterrupted tiled-board treatment.
+
+The editor's **Clusters** category provides nine composed locations with
+rendered previews and explicit footprint ghosts. **Surface Layout** selects
+Legacy, Sanctum or Transport ground treatment. Compound blockers leave genuine
+breaches open; decorative fragments do not add collision. Unit profiles, bases,
+combat rules and multiplayer authority are unchanged.
+
+[0.13.1 report](docs/ENVIRONMENT_0131.md) |
+[Basilica comparison](docs/environment/0131/hollow_basilica_comparison.png) |
+[Ashfall comparison](docs/environment/0131/ashfall_station_comparison.png) |
+[Source workflow](art/ENVIRONMENT.md)
+
+![Reconstructed Hollow Basilica](docs/environment/0131/hollow_basilica_after.png)
+
+## Environment & Map Art Pass (0.13.0)
+
+Play **The Hollow Basilica**, the new flagship gothic-industrial board. Its ruined
+nave, broken gatehouse, cloisters and reliquary frame a damaged processional
+crossing with cover clusters and two clear flanking routes. **The Ashen Basilica**,
+**Ashfall Manufactorum** and **Toxic Forge** have also been recomposed.
+
+Eight original Blender terrain sources add gatehouse/cloister ruins, a refinery
+core, cooling bank, blasted bunker, reliquary, freight hoist and revetment trench.
+Broken paving, ash margins, industrial decking, drainage, hazard remnants and
+ground wear give each theme a clearer identity. Dust/vapor effects remain sparse;
+upper structures remain decorative and original movement/LOS rules apply.
+
+The scenario editor now has category filters, a rendered terrain preview,
+appearance presets and fixed-size authored landmarks. Default ground grids stay
+subtle; movement, measuring, editing and the tactical view expose them.
+
+[Environment report](docs/ENVIRONMENT_0130.md) |
+[Flagship board](docs/environment/flagship_wide_0130.png) |
+[Before/after](docs/environment/ashen_basilica_comparison_0130.png) |
+[Terrain source workflow](art/ENVIRONMENT.md)
+
+![The Hollow Basilica](docs/environment/flagship_wide_0130.png)
+
+## Grimdark Miniature Art Pass (0.12.0)
+
+Four original Blender-created reference assets replace selected cosmetic defaults:
+**Legion infantry**, **heavy war walker**, **Swarm Quill Stalker**, and the
+**Ruined Basilica Manufactorum**. Contoured armor, connected mechanical joints,
+modeled weapon bores/vents, organic skin and carapace, and solid ruined masonry
+replace the earlier primitive-based presentation for these assets. Editable
+Blender sources, shared pigment/PBR maps and reproducible exports are included.
+Original visuals remain available as fallbacks; gameplay profiles are unchanged.
+
+Select a unit and choose **Inspect Miniature** in its unit card to orbit and zoom
+in a separate studio. Return restores the tactical view and input state. Play
+**The Iron Reliquary** to see all four assets together in a playable skirmish.
+
+[Infantry before/after](docs/art/comparisons/legion_infantry_side_by_side.png) ?
+[Walker](docs/art/renders/heavy_walker_hero.png) ?
+[Swarm](docs/art/renders/swarm_creature_hero.png) ?
+[Basilica](docs/art/renders/ruined_basilica_hero.png) ?
+[Art report](docs/MINIATURE_ART_0120.md) ? [Source/export workflow](art/README.md)
+
+![New Legion infantry geometry](docs/art/comparisons/legion_infantry_side_by_side.png)
+
+## Grimdark Battlefield, Cinematic Dice & Custom Miniatures (0.11.0)
+
+Physical D6 now tumble in a separate 3D tray, then smoothly settle onto the
+combat engine's exact results. Hit, wound, armor and damage stages advance
+automatically; Manual mode retains its reveal buttons. Settings ? **Cinematic
+Dice: Off / Quick / Full** controls the presentation. Skip or dismiss at any
+time. Reduced motion goes directly to the result. Manual rolls can be private
+or use the existing host-authoritative public roller.
+
+**Miniature Library** imports local GLB and standard glTF 2 files at runtime,
+including supported relative buffers and PNG/JPEG textures. Orbit the preview,
+adjust scale/rotation/placement, choose a cosmetic base, set a cosmetic LOS
+marker, edit materials and assign variants to existing profiles. OBJ/FBX use an
+optional configured Blender installation; Blender 5.0 conversion was tested.
+Models live in `user://miniatures/`, separate from saves, gameplay profiles and
+shareable mods. Replacing artwork preserves canonical base and LOS rules.
+
+Play **The Ashen Basilica**, **Ashfall Manufactorum**, or **Toxic Forge** for
+original monumental ruins, pointed arches, buttresses, pillars, industrial
+machinery, damaged structures, rubble and weathered shared materials. New
+terrain is also in the scenario editor, with theme/lighting/atmosphere controls,
+grid snapping and duplication. Raised structures remain decorative.
+
+Windows: [standalone executable](builds/windows/GrimTable.exe) (local build;
+keep the accompanying DLL and licenses). [Milestone report, measurements and
+limitations](docs/VISUAL_DICE_IMPORT_0110.md).
+
+![The Ashen Basilica](docs/basilica_0110.png)
+
+[Physical dice](docs/dice_result_0110.png) ?
+[Miniature Library](docs/miniature_library_0110.png) ?
+[Previous battlefield](docs/living_battlefield_0100.png)
+
 ## Living Battlefield + AI Opponent (0.10.0)
 
 **Play alone against the computer:** choose **Play**, a scenario, your side,

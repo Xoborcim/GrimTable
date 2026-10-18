@@ -1,0 +1,92 @@
+{
+  "asset": "heavy_walker",
+  "kind": "armor",
+  "source": "art/blender/heavy_walker.blend",
+  "source_sha256": "fb6f90d14d040e51980080879f892545069f00c64e6e0523d2a3659963b07e3b",
+  "derived_source": "art/blender/baked_0133/heavy_walker.blend",
+  "export": "assets/miniatures/legion/heavy_walker.glb",
+  "triangles": 56822,
+  "resolution": 2048,
+  "bake_samples": 12,
+  "bake_margin": 8,
+  "uv": "Unique BakeUV, Smart Project 50 degrees, fractional margin .003; exported as TEXCOORD_0",
+  "normal_basis": "MikkTSpace / X+ Y+ Z+ / triangulated before baking",
+  "high_vertices": 170831,
+  "max_relief_inches": 0.001788549280493717,
+  "maps": [
+    {
+      "map": "pigment",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 2198220,
+      "space": "sRGB",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "normal",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 1521622,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "orm",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 2219376,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "finish",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 4568765,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "regions",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 350006,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "display_color",
+      "resolution": [
+        2048,
+        2048
+      ],
+      "bytes": 2099558,
+      "space": "sRGB",
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "elapsed_seconds": 27.66,
+  "glb_bytes": 13499768,
+  "glb_sha256": "02b7099a21cd0d1062b2b664cafcefbce79e9b2c4a753fcf95403bfe4b5cebbe",
+  "tangent_guard": {
+    "fallback_vertices": 3,
+    "affected_surface_fraction": 8.145331991839427e-11,
+    "method": "Orthogonal fallback only for numerically degenerate, subpixel bevel slivers; no geometry removed"
+  }
+}

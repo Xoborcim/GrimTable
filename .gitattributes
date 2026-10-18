@@ -10,5 +10,7 @@
 *.so binary
 *.dylib binary
 *.png binary
+*.blend binary
+*.glb binary
 assets/third_party/** -text
 addons/webrtc_native/** -text

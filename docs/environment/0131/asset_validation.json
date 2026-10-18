@@ -1,0 +1,147 @@
+{
+  "assets": [
+    {
+      "asset": "environment/0131/sanctum",
+      "export": "assets/terrain/environment/0131/sanctum.glb",
+      "source": "art/blender/environment/0131/sanctum.blend",
+      "triangles": 95282,
+      "materials": 1,
+      "meshes": 2,
+      "bytes": 7991124,
+      "sha256": "61c366425d393eb75a0e9c2936db195be41b0a143870011103b7f973b19daae2",
+      "source_parts": 490,
+      "nondegenerate_source": true
+    },
+    {
+      "asset": "environment/0131/transept",
+      "export": "assets/terrain/environment/0131/transept.glb",
+      "source": "art/blender/environment/0131/transept.blend",
+      "triangles": 74232,
+      "materials": 1,
+      "meshes": 2,
+      "bytes": 6723468,
+      "sha256": "ea3483e5ada9836a89e7345611b335af9d2822ffb8fd17e644f10af5611e794e",
+      "source_parts": 358,
+      "nondegenerate_source": true
+    },
+    {
+      "asset": "environment/0131/breached_gate",
+      "export": "assets/terrain/environment/0131/breached_gate.glb",
+      "source": "art/blender/environment/0131/breached_gate.blend",
+      "triangles": 53508,
+      "materials": 1,
+      "meshes": 2,
+      "bytes": 5115168,
+      "sha256": "0abc630704657ff38b044c83324d04c3021a227b15c6997cb4f67ac459be67db",
+      "source_parts": 259,
+      "nondegenerate_source": true
+    },
+    {
+      "asset": "environment/0131/shrine",
+      "export": "assets/terrain/environment/0131/shrine.glb",
+      "source": "art/blender/environment/0131/shrine.blend",
+      "triangles": 21474,
+      "materials": 1,
+      "meshes": 2,
+      "bytes": 2184224,
+      "sha256": "2d956da2ddea7901c7617fc0e30e0fed83ae92605e608693c9c345e38b75eb4f",
+      "source_parts": 101,
+      "nondegenerate_source": true
+    },
+    {
+      "asset": "environment/0131/industrial_wreck",
+      "export": "assets/terrain/environment/0131/industrial_wreck.glb",
+      "source": "art/blender/environment/0131/industrial_wreck.blend",
+      "triangles": 55692,
+      "materials": 1,
+      "meshes": 2,
+      "bytes": 4884596,
+      "sha256": "3c604f6f1d429289bdc8cf8921611259abbea8e2a5902ed36b872fc1cf5adb5c",
+      "source_parts": 259,
+      "nondegenerate_source": true
+    },
+    {
+      "asset": "environment/0131/checkpoint",
+      "export": "assets/terrain/environment/0131/checkpoint.glb",
+      "source": "art/blender/environment/0131/checkpoint.blend",
+      "triangles": 31846,
+      "materials": 1,
+      "meshes": 2,
+      "bytes": 3034420,
+      "sha256": "961d8518cadcc94aa31cb8cbb205c43ca5ede48127d4c0ca3a58694dc0521a77",
+      "source_parts": 146,
+      "nondegenerate_source": true
+    },
+    {
+      "asset": "environment/0131/pipeline",
+      "export": "assets/terrain/environment/0131/pipeline.glb",
+      "source": "art/blender/environment/0131/pipeline.blend",
+      "triangles": 28442,
+      "materials": 1,
+      "meshes": 2,
+      "bytes": 2675400,
+      "sha256": "c84c95f6c0e831181f77870dd88d099530728d6fc7bd99ebdb03033cff6733aa",
+      "source_parts": 121,
+      "nondegenerate_source": true
+    },
+    {
+      "asset": "environment/0131/crater",
+      "export": "assets/terrain/environment/0131/crater.glb",
+      "source": "art/blender/environment/0131/crater.blend",
+      "triangles": 7584,
+      "materials": 1,
+      "meshes": 1,
+      "bytes": 1156028,
+      "sha256": "84fdfc4295a7ebc41bf304b807a38324e9980a9d56d9671a5e18dfaa2e045791",
+      "source_parts": 53,
+      "nondegenerate_source": true
+    },
+    {
+      "asset": "environment/0131/station_hall",
+      "export": "assets/terrain/environment/0131/station_hall.glb",
+      "source": "art/blender/environment/0131/station_hall.blend",
+      "triangles": 63752,
+      "materials": 1,
+      "meshes": 2,
+      "bytes": 5488060,
+      "sha256": "8cd7fe6f4581b0cd6cfc20982e8df9e0b50674d4cbc102da7d4d0fdd4a4231c5",
+      "source_parts": 322,
+      "nondegenerate_source": true
+    }
+  ],
+  "textures": [
+    {
+      "image": "fractured_normal",
+      "size": [
+        512,
+        512
+      ],
+      "red_channel_range": 0.7019608467817307
+    },
+    {
+      "image": "fractured_ao",
+      "size": [
+        512,
+        512
+      ],
+      "red_channel_range": 0.498039186000824
+    },
+    {
+      "image": "sanctum_layout_mask",
+      "size": [
+        512,
+        512
+      ],
+      "red_channel_range": 1.0
+    },
+    {
+      "image": "transport_layout_mask",
+      "size": [
+        512,
+        512
+      ],
+      "red_channel_range": 1.0
+    }
+  ],
+  "blender": "5.0.1"
+}

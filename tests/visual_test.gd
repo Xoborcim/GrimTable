@@ -13,10 +13,16 @@ func normals_match(mesh: Mesh) -> bool:
 	var arrays := mesh.surface_get_arrays(0)
 	var vertices: PackedVector3Array = arrays[Mesh.ARRAY_VERTEX]
 	var normals: PackedVector3Array = arrays[Mesh.ARRAY_NORMAL]
-	for i in range(0,vertices.size(),3):
-		var face := (vertices[i+2]-vertices[i]).cross(vertices[i+1]-vertices[i]).normalized()
+	var indices: PackedInt32Array=arrays[Mesh.ARRAY_INDEX]
+	if indices.is_empty():
+		for i in vertices.size(): indices.append(i)
+	if indices.size()%3!=0: return false
+	for i in range(0,indices.size(),3):
+		var a:=indices[i]; var b:=indices[i+1]; var c:=indices[i+2]
+		if a<0 or b<0 or c<0 or maxi(a,maxi(b,c))>=vertices.size(): return false
+		var face := (vertices[c]-vertices[a]).cross(vertices[b]-vertices[a]).normalized()
 		if face.length_squared() < .5: return false
-		if face.dot(normals[i]) < .4: return false
+		if face.dot(normals[a]) < .4: return false
 	return true
 
 func run() -> void:

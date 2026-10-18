@@ -1,0 +1,98 @@
+[
+  {
+    "asset": "environment/gatehouse",
+    "export": "assets/terrain/environment/gatehouse.glb",
+    "source": "art/blender/environment/gatehouse.blend",
+    "triangles": 27352,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 3824012,
+    "sha256": "0280d19534fc9ef9ac13e8f9c1632f1ee50c0ebefecb19cc646aa622b494f4a0",
+    "source_parts": 141,
+    "nondegenerate_source": true
+  },
+  {
+    "asset": "environment/cloister",
+    "export": "assets/terrain/environment/cloister.glb",
+    "source": "art/blender/environment/cloister.blend",
+    "triangles": 23552,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 3503192,
+    "sha256": "10e38b3dae490ef93f0c8d158b360ebbcbd83d8b760ce94a9e7f903ba8241257",
+    "source_parts": 121,
+    "nondegenerate_source": true
+  },
+  {
+    "asset": "environment/refinery_core",
+    "export": "assets/terrain/environment/refinery_core.glb",
+    "source": "art/blender/environment/refinery_core.blend",
+    "triangles": 16004,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 2866640,
+    "sha256": "54bcd5dc506f49e30bfe802628cdccccda84d0062bf2294d1142e3ace8228ad9",
+    "source_parts": 38,
+    "nondegenerate_source": true
+  },
+  {
+    "asset": "environment/cooling_bank",
+    "export": "assets/terrain/environment/cooling_bank.glb",
+    "source": "art/blender/environment/cooling_bank.blend",
+    "triangles": 5456,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 1964060,
+    "sha256": "f845e92abbb5b41c09f54baa00ad8f6d035aeae49cac36262f9fbfe3b0fab02b",
+    "source_parts": 25,
+    "nondegenerate_source": true
+  },
+  {
+    "asset": "environment/breach_bunker",
+    "export": "assets/terrain/environment/breach_bunker.glb",
+    "source": "art/blender/environment/breach_bunker.blend",
+    "triangles": 9824,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 2339840,
+    "sha256": "2f4832d53a6d433385d153c54dab1da91253db7d88ad5d8b4f3db52ae0df44c9",
+    "source_parts": 40,
+    "nondegenerate_source": true
+  },
+  {
+    "asset": "environment/reliquary",
+    "export": "assets/terrain/environment/reliquary.glb",
+    "source": "art/blender/environment/reliquary.blend",
+    "triangles": 2544,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 1719700,
+    "sha256": "c7ffbf5684f4abf7e4535058ee472e23e01b8563c63000b84ae0cdb235dcba39",
+    "source_parts": 7,
+    "nondegenerate_source": true
+  },
+  {
+    "asset": "environment/hoist",
+    "export": "assets/terrain/environment/hoist.glb",
+    "source": "art/blender/environment/hoist.blend",
+    "triangles": 7068,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 2101176,
+    "sha256": "8214428677fe5ee0314526a57ffeb6269500864394ee3a49cf74c9759f729f67",
+    "source_parts": 37,
+    "nondegenerate_source": true
+  },
+  {
+    "asset": "environment/trench",
+    "export": "assets/terrain/environment/trench.glb",
+    "source": "art/blender/environment/trench.blend",
+    "triangles": 4892,
+    "materials": 1,
+    "meshes": 1,
+    "bytes": 1837568,
+    "sha256": "61c5a03b5b482faa9f822569a8a496ffb57e521ccafb60d97fa2fd48c421fd11",
+    "source_parts": 25,
+    "nondegenerate_source": true
+  }
+]

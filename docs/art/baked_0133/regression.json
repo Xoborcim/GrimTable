@@ -1,0 +1,101 @@
+{
+  "version": "0.13.3",
+  "full_runs": 1,
+  "suites": [
+    {
+      "result": "GRIMTABLE: 275 checks, 0 failures",
+      "checks": 275
+    },
+    {
+      "result": "GRIMTABLE SQUADS/COMBAT: 76 checks, 0 failures",
+      "checks": 76
+    },
+    {
+      "result": "GRIMTABLE SCENARIOS/REPLAY: 48 checks, 0 failures",
+      "checks": 48
+    },
+    {
+      "result": "GRIMTABLE APPLICATION: 315 checks, 0 failures",
+      "checks": 315
+    },
+    {
+      "result": "GRIMTABLE NETWORK CHECKS 48 \u00c2\u00b7 PASS",
+      "checks": 48
+    },
+    {
+      "result": "GRIMTABLE INTERNET READINESS: 67 checks, 0 failures",
+      "checks": 67
+    },
+    {
+      "result": "GRIMTABLE NETWORK FAILURE: 3 checks, 0 failures",
+      "checks": 3
+    },
+    {
+      "result": "GRIMTABLE CONTENT: 252 checks, 0 failures",
+      "checks": 252
+    },
+    {
+      "result": "GRIMTABLE MODS: 54 checks, 0 failures",
+      "checks": 54
+    },
+    {
+      "result": "GRIMTABLE PERFORMANCE CACHES: 10 checks, 0 failures",
+      "checks": 10
+    },
+    {
+      "result": "GRIMTABLE EXPERIENCE CHECKS: 49 passed / 0 failed",
+      "checks": 49
+    },
+    {
+      "result": "GRIMTABLE ASSISTANCE: 90 checks, 0 failures",
+      "checks": 90
+    },
+    {
+      "result": "GRIMTABLE GUIDED: 42 checks, 0 failures",
+      "checks": 42
+    },
+    {
+      "result": "GRIMTABLE VISUAL: 17 checks, 0 failures",
+      "checks": 17
+    },
+    {
+      "result": "GRIMTABLE LIVING CHECKS: 27; failures: 0",
+      "checks": 27
+    },
+    {
+      "result": "GRIMTABLE AI CHECKS: 54; failures: 0",
+      "checks": 54
+    },
+    {
+      "result": "GRIMTABLE CINEMATIC: 45 checks / 0 failures",
+      "checks": 45
+    },
+    {
+      "result": "GRIMTABLE IMPORT: 26 checks / 0 failures",
+      "checks": 26
+    },
+    {
+      "result": "GRIMTABLE MONUMENTAL: 239 checks / 0 failures",
+      "checks": 239
+    },
+    {
+      "result": "GRIMTABLE ART 0120: 74 checks / 0 failures",
+      "checks": 74
+    },
+    {
+      "result": "GRIMTABLE ENVIRONMENT: 257 checks / 0 failures",
+      "checks": 257
+    },
+    {
+      "result": "GRIMTABLE COMPOSITION 0131: 151 checks / 0 failures",
+      "checks": 151
+    },
+    {
+      "result": "GRIMTABLE BAKED MATERIAL: 56 checks / 0 failures",
+      "checks": 56
+    }
+  ],
+  "checks": 2275,
+  "failures": 0,
+  "note": "Final scenery graphite-tone shader adjustment was followed by focused material and packaged rendering checks; no second full regression."
+}

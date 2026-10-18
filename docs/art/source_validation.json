@@ -1,0 +1,26 @@
+[
+  {
+    "asset": "legion_infantry",
+    "editable_parts": 171,
+    "game_meshes": 1,
+    "uv_layer": "PaintAtlas"
+  },
+  {
+    "asset": "heavy_walker",
+    "editable_parts": 146,
+    "game_meshes": 1,
+    "uv_layer": "PaintAtlas"
+  },
+  {
+    "asset": "swarm_creature",
+    "editable_parts": 86,
+    "game_meshes": 1,
+    "uv_layer": "PaintAtlas"
+  },
+  {
+    "asset": "ruined_basilica",
+    "editable_parts": 442,
+    "game_meshes": 1,
+    "uv_layer": "PaintAtlas"
+  }
+]

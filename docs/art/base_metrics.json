@@ -1,0 +1,7 @@
+{
+  "asset": "shared scenic ground",
+  "source": "art/blender/legion_infantry.blend / 03_STUDIO_BASE",
+  "export": "assets/miniatures/bases/scenic_ground.glb",
+  "triangles": 3344,
+  "materials": 1
+}

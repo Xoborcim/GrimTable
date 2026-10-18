@@ -1,0 +1,8 @@
+{
+	"checks": 16,
+	"failures": [],
+	"phase": "after",
+	"texture_memory_bytes": 440400411.0,
+	"version": "0.13.3",
+	"video_memory_bytes": 574632815.0
+}

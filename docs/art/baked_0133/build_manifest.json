@@ -1,0 +1,20 @@
+{
+  "version": "0.13.3",
+  "godot": "4.6.1",
+  "blender": "5.0.1",
+  "executable_bytes": 332182616,
+  "executable_sha256": "ff0c2ae078b71319c99e1d3eef9bd560be16210191adbbb2c7df7cc602573fb1",
+  "full_regression_runs": 1,
+  "full_regression_suites": 23,
+  "full_regression_checks": 2275,
+  "failures": 0,
+  "packaged_material_checks": 16,
+  "packaged_gameplay_checks": 46,
+  "baked_assets": 14,
+  "texture_files": 60,
+  "new_png_bytes": 53045455,
+  "texture_memory_observed_bytes": 440400411.0,
+  "video_memory_observed_bytes": 576763007.0,
+  "performance": "docs/benchmarks/baked_0133.json",
+  "scope": "Visual finish only; no Workshop UI or gameplay expansion"
+}

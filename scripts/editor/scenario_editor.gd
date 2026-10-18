@@ -4,13 +4,46 @@ extends Node3D
 signal changed
 signal message(text: String)
 enum Tool { SELECT, TERRAIN, OBJECTIVE, UNIT, ZONE, DELETE }
-const TERRAIN := [
+const BASE_TERRAIN := [
 	{"name": "Wall", "kind": "box", "size": [7, 3, 0.8]},
 	{"name": "Ruin", "kind": "ruin", "size": [6, 4, 6]},
 	{"name": "Crates", "kind": "box", "size": [2.2, 1.8, 2.2]},
 	{"name": "Barricade", "kind": "box", "size": [5, 0.8, 0.7]},
-	{"name": "Block", "kind": "box", "size": [3, 3, 4]}]
+	{"name": "Block", "kind": "box", "size": [3, 3, 4]},
+	{"name":"Gothic / Basilica Manufactorum","kind":"ruin","art_style":"gothic","size":[13,10,7],"blocks_movement":true,"blocks_los":true},
+	{"name":"Decorative / Chemical Runoff","kind":"box","art_style":"pool","size":[6,.12,4],"blocks_movement":false,"blocks_los":false},
+	{"name": "Gothic Ruins / Ruined Basilica", "kind": "ruin", "art_style": "gothic", "size": [9, 7, 6], "blocks_movement": true, "blocks_los": true},
+	{"name": "Gothic Ruins / Broken Wall", "kind": "box", "art_style": "gothic", "size": [7, 5, 0.8], "blocks_movement": true, "blocks_los": true},
+	{"name": "Gothic Ruins / Pillar", "kind": "box", "art_style": "pillar", "size": [2, 7, 2], "blocks_movement": true, "blocks_los": true},
+	{"name": "Industrial / Factory", "kind": "box", "art_style": "factory", "size": [7, 6, 5], "blocks_movement": true, "blocks_los": true},
+	{"name": "Industrial / Generator", "kind": "box", "art_style": "generator", "size": [4, 4, 4], "blocks_movement": true, "blocks_los": true},
+	{"name": "Industrial / Refinery", "kind": "box", "art_style": "refinery", "size": [6, 6, 5], "blocks_movement": true, "blocks_los": true},
+	{"name": "Industrial / Pipes", "kind": "box", "art_style": "pipes", "size": [6, 1.8, 2], "blocks_movement": true, "blocks_los": false},
+	{"name": "Industrial / Gantry (decorative height)", "kind": "box", "art_style": "gantry", "size": [7, 3, 3], "blocks_movement": true, "blocks_los": true},
+	{"name": "Industrial / Communications", "kind": "box", "art_style": "tower", "size": [3, 8, 3], "blocks_movement": true, "blocks_los": true},
+	{"name": "Battlefield / Bunker", "kind": "box", "art_style": "bunker", "size": [6, 2.5, 4], "blocks_movement": true, "blocks_los": true},
+	{"name": "Battlefield / Barricade", "kind": "box", "art_style": "barricade", "size": [5, 1, 0.8], "blocks_movement": true, "blocks_los": false},
+	{"name": "Battlefield / Crater", "kind": "box", "art_style": "crater", "size": [4, 0.12, 4], "blocks_movement": false, "blocks_los": false},
+	{"name": "Decorative / Rubble", "kind": "box", "art_style": "rubble", "size": [3, 0.4, 2], "blocks_movement": false, "blocks_los": false},
+	{"name": "Battlefield / Wreckage", "kind": "box", "art_style": "wreckage", "size": [4, 1.4, 3], "blocks_movement": true, "blocks_los": false},
+	{"name":"Centerpieces / Broken Gatehouse","kind":"box","size":[8,12.4,3],"visual_scene":"res://assets/terrain/environment/gatehouse.glb"},
+	{"name":"Centerpieces / Refinery Core","kind":"box","size":[7,11,6],"visual_scene":"res://assets/terrain/environment/refinery_core.glb"},
+	{"name":"Gothic / Cloister Wall","kind":"box","size":[8,6,1.4],"visual_scene":"res://assets/terrain/environment/cloister.glb"},
+	{"name":"Industrial / Cooling Bank","kind":"box","size":[6,6,4],"visual_scene":"res://assets/terrain/environment/cooling_bank.glb"},
+	{"name":"Battlefield / Blasted Casemate","kind":"box","size":[7,3,4],"visual_scene":"res://assets/terrain/environment/breach_bunker.glb"},
+	{"name":"Objectives / Split-circle Reliquary","kind":"box","size":[3,3.3,3],"visual_scene":"res://assets/terrain/environment/reliquary.glb"},
+	{"name":"Industrial / Freight Hoist (solid footprint)","kind":"box","size":[7,8,4],"visual_scene":"res://assets/terrain/environment/hoist.glb"},
+	{"name":"Battlefield / Revetment Trench","kind":"box","size":[8,.7,3],"visual_scene":"res://assets/terrain/environment/trench.glb","blocks_movement":false,"blocks_los":false,"cover_bonus":1,"movement_penalty":2}]
 static var PROFILES: Array[String] = profile_palette()
+static var TERRAIN: Array = terrain_palette()
+
+static func terrain_palette() -> Array:
+	var items: Array=BASE_TERRAIN.duplicate(true)
+	var path:="res://resources/environment/clusters_0131.json"
+	if FileAccess.file_exists(path):
+		var catalogue: Variant=JSON.parse_string(FileAccess.get_file_as_string(path))
+		if catalogue is Dictionary:items.append_array(catalogue.get("clusters",[]))
+	return items
 
 static func profile_palette() -> Array[String]:
 	var result: Array[String] = ["res://resources/units/trooper.json", "res://resources/units/heavy.json", "res://resources/units/vehicle.json"]
@@ -28,6 +61,7 @@ var profile_index := 0
 var unit_count := 5
 var team := 0
 var angle := 0.0
+var grid_snap := false
 var selected_id := ""
 var selected_kind := ""
 var preview: Node3D
@@ -49,6 +83,8 @@ func _ready() -> void:
 
 func show_objective_radii() -> void:
 	for objective: TableObjective in game.battlefield.objectives.get_children(): objective.radius_ring.visible = true
+	var ground:=game.battlefield.visuals.get_node_or_null("GroundSurface") as MeshInstance3D
+	if ground!=null:(ground.material_override as ShaderMaterial).set_shader_parameter("grid_visibility",1.0)
 
 func set_tool(value: int) -> void:
 	cancel_drag()
@@ -64,7 +100,9 @@ func _build_preview() -> void:
 	add_child(preview)
 	if tool == Tool.TERRAIN:
 		var size := ScenarioFactory.vector(TERRAIN[terrain_index].size)
-		if TERRAIN[terrain_index].kind == "ruin":
+		if not TERRAIN[terrain_index].get("footprint_parts",[]).is_empty():
+			for part: Dictionary in TERRAIN[terrain_index].footprint_parts:TableVisuals.box(preview,ScenarioFactory.vector(part.size),ScenarioFactory.vector(part.center),Color("a0d8ce"))
+		elif TERRAIN[terrain_index].kind == "ruin":
 			TableVisuals.box(preview, Vector3(size.x, size.y, 0.8), Vector3(0, size.y / 2, -size.z / 2 + 0.4), Color("a0d8ce"))
 			TableVisuals.box(preview, Vector3(0.8, size.y, size.z), Vector3(-size.x / 2 + 0.4, size.y / 2, 0), Color("a0d8ce"))
 		else: TableVisuals.box(preview, size, Vector3(0, size.y / 2, 0), Color("a0d8ce"))
@@ -85,6 +123,7 @@ func update_pointer(screen: Vector2) -> void:
 	var point: Variant = MeasurementService.tabletop_point(game.camera_rig.camera, screen)
 	if point == null: return
 	cursor = game.interaction._clamp_to_board(point)
+	if grid_snap: cursor=cursor.snapped(Vector3(1,1,1))
 	if is_instance_valid(preview):
 		preview.position = cursor
 		preview.rotation.y = deg_to_rad(angle)
@@ -165,7 +204,9 @@ func place(point: Vector3) -> bool:
 	var data := ScenarioFactory.capture(game)
 	if tool == Tool.TERRAIN:
 		var palette: Dictionary = TERRAIN[terrain_index]
-		data.terrain.append({"id": ScenarioLibrary.new_id("terrain"), "title": palette.name, "kind": palette.kind, "size": palette.size.duplicate(), "position": ScenarioFactory.array(point), "rotation": angle, "tint": "#7a817c", "blocks_movement": true, "blocks_los": true})
+		data.terrain.append({"id": ScenarioLibrary.new_id("terrain"), "title": palette.name, "kind": palette.kind, "art_style": palette.get("art_style", ""), "size": palette.size.duplicate(), "position": ScenarioFactory.array(point), "rotation": angle, "tint": "#7a817c", "blocks_movement": palette.get("blocks_movement",true), "blocks_los": palette.get("blocks_los",true)})
+		for key in ["visual_scene","cover_bonus","movement_penalty","footprint_parts"]:
+			if palette.has(key):data.terrain[-1][key]=palette[key]
 	elif tool == Tool.OBJECTIVE:
 		data.objectives.append({"id": ScenarioLibrary.new_id("objective"), "name": "Objective " + str(data.objectives.size() + 1), "number": data.objectives.size() + 1, "radius": 3, "position": ScenarioFactory.array(point)})
 	elif tool == Tool.ZONE:
@@ -217,6 +258,17 @@ func cancel_drag() -> void:
 		game.deployment.visible = true
 	drag_start = null
 	drag_origins.clear()
+
+func duplicate_selected() -> void:
+	if selected_kind not in ["terrain","objectives"]: message.emit("Select terrain or an objective to duplicate."); return
+	var data := ScenarioFactory.capture(game)
+	var record := find_record(data,selected_kind,selected_id).duplicate(true)
+	if record.is_empty(): return
+	record.id=ScenarioLibrary.new_id("terrain" if selected_kind=="terrain" else "objective")
+	record.position[0]=float(record.position[0])+2
+	record.position[2]=float(record.position[2])+2
+	data[selected_kind].append(record)
+	if commit(data): selected_id=record.id; changed.emit()
 
 func rotate_selection(degrees: float) -> void:
 	cancel_drag()

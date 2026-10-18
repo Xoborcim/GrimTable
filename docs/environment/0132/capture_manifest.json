@@ -1,0 +1,36 @@
+﻿{
+    "renderer":  "Godot 4.6.1 Compatibility",
+    "quality":  "Medium",
+    "resolution":  [
+                       1440,
+                       900
+                   ],
+    "heading":  0.08,
+    "wide":  {
+                 "destination":  [
+                                     0,
+                                     0.5,
+                                     -2
+                                 ],
+                 "pitch":  0.82,
+                 "distance":  58
+             },
+    "approach":  {
+                     "hollow_destination":  [
+                                                -9,
+                                                0.4,
+                                                8
+                                            ],
+                     "pitch":  0.88,
+                     "ashfall_destination":  [
+                                                 -10,
+                                                 0.4,
+                                                 8
+                                             ],
+                     "distance":  24
+                 },
+    "before":  "Unmodified 0.13.1 source, captured before refinement edits",
+    "after":  "Final 0.13.2 visual code",
+    "image_processing":  "None",
+    "script":  "tools/art/capture_0132.gd"
+}

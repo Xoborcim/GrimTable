@@ -2,7 +2,7 @@ class_name LivingAtmosphere
 extends RefCounted
 
 static func add(board: Battlefield) -> void:
-	if board.scenario.id != "ashfall_station": return
+	if board.scenario.id not in ["ashfall_station","ashen_basilica","ashfall_manufactorum","toxic_forge"]: return
 	var root := Node3D.new()
 	root.name = "LivingAtmosphere"
 	board.visuals.add_child(root)
@@ -19,7 +19,7 @@ static func add(board: Battlefield) -> void:
 		var steam := CPUParticles3D.new()
 		steam.name = "Steam"
 		steam.position = at+Vector3(0,1.6,0)
-		steam.amount = 7
+		steam.amount = maxi(1,int(10*float(board.scenario.board.get("atmosphere",.5))))
 		steam.lifetime = 2.6
 		steam.preprocess = 1
 		steam.direction = Vector3.UP

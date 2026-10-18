@@ -311,6 +311,8 @@ func _request_resync() -> void:
 
 func _restore_dice(records: Variant) -> void:
 	if not records is Array or records.size() > 8: return
+	# Snapshot/UI refresh is not a new roll. Canonical events already emitted it.
+	if state_hash({"records":records}) == state_hash({"records":game.dice.history}): return
 	game.dice.history.clear()
 	for record in records:
 		if not record is Dictionary or not record.get("values") is Array: continue

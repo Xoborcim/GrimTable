@@ -14,6 +14,9 @@ var quality := "Medium"
 var movement_speed := "Normal"
 var ai_speed := "Normal"
 var combat_speed := "Normal"
+var cinematic_dice := "Quick"
+var dice_style := "Ivory"
+var dice_volume := .35
 var combat_camera := false
 var particles := true
 var phase_warnings := true
@@ -34,9 +37,12 @@ const PATH := "user://settings.cfg"
 func load_settings() -> void:
 	var file := ConfigFile.new()
 	if file.load(PATH) != OK: return
-	for key in ["movement_speed", "ai_speed", "quality", "combat_speed", "combat_camera", "particles", "phase_warnings", "combat_summary", "automatic_scoring", "ui_scale", "reduce_motion", "assistance", "quick_movement", "combat_resolution", "offer_next_phase", "auto_advance_phase", "camera_assistance", "hide_illegal_targets", "gameplay_hints"]:
+	for key in ["cinematic_dice", "dice_style", "dice_volume", "movement_speed", "ai_speed", "quality", "combat_speed", "combat_camera", "particles", "phase_warnings", "combat_summary", "automatic_scoring", "ui_scale", "reduce_motion", "assistance", "quick_movement", "combat_resolution", "offer_next_phase", "auto_advance_phase", "camera_assistance", "hide_illegal_targets", "gameplay_hints"]:
 		var value: Variant = file.get_value("experience", key, get(key))
 		if typeof(value) == typeof(get(key)): set(key, value)
+	if cinematic_dice not in ["Off", "Quick", "Full"]: cinematic_dice = "Quick"
+	if dice_style not in ["Ivory", "Steel"]: dice_style = "Ivory"
+	dice_volume = clampf(dice_volume,0,1)
 	if movement_speed not in ["Fast","Normal","Cinematic"]: movement_speed = "Normal"
 	if ai_speed not in ["Fast","Normal","Cinematic"]: ai_speed = "Normal"
 	if quality not in ["Low", "Medium", "High"]: quality = "Medium"
@@ -62,7 +68,7 @@ func load_settings() -> void:
 
 func save_settings() -> String:
 	var file := ConfigFile.new()
-	for key in ["movement_speed", "ai_speed", "quality", "combat_speed", "combat_camera", "particles", "phase_warnings", "combat_summary", "automatic_scoring", "ui_scale", "reduce_motion", "assistance", "quick_movement", "combat_resolution", "offer_next_phase", "auto_advance_phase", "camera_assistance", "hide_illegal_targets", "gameplay_hints"]: file.set_value("experience", key, get(key))
+	for key in ["cinematic_dice", "dice_style", "dice_volume", "movement_speed", "ai_speed", "quality", "combat_speed", "combat_camera", "particles", "phase_warnings", "combat_summary", "automatic_scoring", "ui_scale", "reduce_motion", "assistance", "quick_movement", "combat_resolution", "offer_next_phase", "auto_advance_phase", "camera_assistance", "hide_illegal_targets", "gameplay_hints"]: file.set_value("experience", key, get(key))
 	file.set_value("window", "fullscreen", fullscreen)
 	file.set_value("window", "resolution", resolution)
 	file.set_value("table", "camera_sensitivity", camera_sensitivity)

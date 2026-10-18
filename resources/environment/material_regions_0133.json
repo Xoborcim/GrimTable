@@ -1,0 +1,9 @@
+{
+  "version":1,
+  "scope":"Original GrimTable baked assets; user GLBs may omit these maps",
+  "paint_regions":{"R":"primary armor","G":"secondary armor","B":"trim","A":"reserved"},
+  "finish":{"R":"curvature / raised edges","G":"local dirt","B":"material ID / 15","A":"edge-local paint wear on armor; constant 1 on scenery"},
+  "orm":{"R":"local ambient occlusion","G":"roughness","B":"metallic","A":"reserved"},
+  "material_ids":{"0":"primary armor","1":"primary edge paint","2":"secondary armor / scenery edge stone","3":"weapon gunmetal","4":"joint and recess","5":"trim","6":"optics / glow color","7":"cloth","8":"carapace","9":"skin","10":"claw / bone","11":"rust and iron oxide","12":"stone","13":"mortar / soot","14":"piston and barrel steel","15":"base ash / earth"},
+  "note":"Decode numeric material IDs with nearest sampling for future tools. RGB paint weights may filter linearly. No Workshop UI is implemented."
+}

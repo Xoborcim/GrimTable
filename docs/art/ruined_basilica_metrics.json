@@ -1,0 +1,12 @@
+{
+  "asset": "ruined_basilica",
+  "source": "art/blender/ruined_basilica.blend",
+  "export": "assets/terrain/gothic/ruined_basilica.glb",
+  "triangles": 100720,
+  "vertices": 51519,
+  "materials": 1,
+  "height_inches": 10.354331016540527,
+  "normalization": 0.9999999702656686,
+  "animations": [],
+  "blender": "5.0.1"
+}

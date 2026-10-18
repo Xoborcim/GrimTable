@@ -2,7 +2,8 @@ class_name ScenarioLibrary
 extends RefCounted
 
 const DIRECTORY := "user://scenarios/"
-const BUILTINS := ["res://resources/scenarios/demo.json", "res://resources/scenarios/empty.json", "res://resources/scenarios/legion_vs_swarm.json", "res://resources/scenarios/horde_vs_synthetics.json", "res://resources/scenarios/ashfall_station.json"]
+const FLAGSHIP := "res://resources/scenarios/hollow_basilica.json"
+const BUILTINS := ["res://resources/scenarios/demo.json", "res://resources/scenarios/empty.json", "res://resources/scenarios/legion_vs_swarm.json", "res://resources/scenarios/horde_vs_synthetics.json", "res://resources/scenarios/ashfall_station.json", "res://resources/scenarios/ashen_basilica.json", "res://resources/scenarios/ashfall_manufactorum.json", "res://resources/scenarios/toxic_forge.json", "res://resources/scenarios/iron_reliquary.json"]
 
 static func read(path: String) -> Dictionary:
 	if not FileAccess.file_exists(path): return {"error": "Scenario file not found: " + path}
@@ -16,6 +17,7 @@ static func read(path: String) -> Dictionary:
 
 static func list_scenarios() -> Array[Dictionary]:
 	var result: Array[Dictionary] = []
+	result.append(read(FLAGSHIP))
 	for path in BUILTINS: result.append(read(path))
 	for path: String in ContentRegistry.catalog().scenarios.values():
 		if path not in BUILTINS: result.append(read(path))

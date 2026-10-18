@@ -1,0 +1,70 @@
+{
+  "asset": "transept",
+  "kind": "stone",
+  "source": "art/blender/environment/0131/transept.blend",
+  "source_sha256": "442aa5abe862d7c2f054900fc5407d0e3bb384a872df84fcdfa9c77616427452",
+  "derived_source": "art/blender/baked_0133/transept.blend",
+  "export": "assets/terrain/environment/0131/transept.glb",
+  "triangles": 74232,
+  "resolution": 1024,
+  "bake_samples": 12,
+  "bake_margin": 4,
+  "uv": "Unique BakeUV, Smart Project 50 degrees, fractional margin .003; exported as TEXCOORD_0",
+  "normal_basis": "MikkTSpace / X+ Y+ Z+ / triangulated before baking",
+  "high_vertices": 223703,
+  "max_relief_inches": 0.008999999945778325,
+  "maps": [
+    {
+      "map": "pigment",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 762376,
+      "space": "sRGB",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "normal",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 740322,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "orm",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 593159,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "map": "finish",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 805864,
+      "space": "Non-Color",
+      "min": 0.0,
+      "max": 1.0
+    }
+  ],
+  "elapsed_seconds": 18.08,
+  "glb_bytes": 13114288,
+  "glb_sha256": "6c289a925ba7402bc704c0d8ced61ad109df471ebd0756f378282621ded6b767",
+  "tangent_guard": {
+    "fallback_vertices": 33,
+    "affected_surface_fraction": 1.1243689330930828e-05,
+    "method": "Orthogonal fallback only for numerically degenerate, subpixel bevel slivers; no geometry removed"
+  }
+}

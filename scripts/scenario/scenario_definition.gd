@@ -33,7 +33,11 @@ static func validate(data: Variant) -> String:
 	if not ContentRegistry.content_id(data.get("id")) or not data.get("name") is String or data.name.strip_edges().is_empty(): return "Scenario ID/name missing or invalid"
 	if not data.get("notes", "") is String: return "Scenario notes must be text"
 	if not data.get("board") is Dictionary or not number(data.board.get("width"), 12, 120) or not number(data.board.get("depth"), 12, 120): return "Board dimensions must be 12–120 inches"
-	if not data.board.get("theme", "industrial") in ["industrial", "desert", "alien"]: return "Unknown board theme"
+	if not data.board.get("theme", "industrial") in ["industrial", "desert", "alien", "ashfall", "cathedral", "toxic"]: return "Unknown board theme"
+	if data.board.get("lighting","Dusk") not in ["Day","Dusk","Night"] or not number(data.board.get("atmosphere",.5),0,1): return "Invalid lighting or atmosphere preset"
+	if data.board.get("clutter","Composed") not in ["None","Sparse","Composed","Dense"] or data.board.get("surround","Obsidian") not in ["Obsidian","Brass"] or data.board.get("weather","Theme") not in ["Theme","Clear","Dust","Vapor"]:return "Invalid environment appearance preset"
+	if not data.board.get("environment_art",false) is bool:return "Invalid environment art flag"
+	if data.board.get("surface_layout","Legacy") not in ["Legacy","Sanctum","Transport"]:return "Invalid location surface layout"
 	if not data.get("rules", {}) is Dictionary: return "Rules must be an object"
 	if not number(data.get("rules", {}).get("difficult_ground_penalty", 2), 0, 24): return "Invalid difficult ground penalty"
 	var charge: Variant = data.get("rules", {}).get("charge", {})
@@ -53,7 +57,14 @@ static func validate(data: Variant) -> String:
 				if not vector(item.get("size")): return "Invalid terrain size"
 				for value in item.size:
 					if not number(value, 0.1, 120): return "Terrain dimensions must be positive"
+				if not item.get("footprint_parts",[]) is Array or item.get("footprint_parts",[]).size()>16:return "Invalid compound terrain footprint"
+				for part in item.get("footprint_parts",[]):
+					if not part is Dictionary or not vector(part.get("size")) or not vector(part.get("center")):return "Invalid compound terrain part"
+					for axis in 3:
+						if not number(part.size[axis],.1,120) or absf(float(part.center[axis]))+float(part.size[axis])*.5>float(item.size[axis])*.5+(.001 if axis!=1 else float(item.size[axis])*.5):return "Compound terrain part exceeds bounds"
+					if float(part.center[1])-float(part.size[1])*.5<-.001:return "Compound terrain below ground"
 				if not item.get("title") is String or not item.get("blocks_movement") is bool or not item.get("blocks_los") is bool or not number(item.get("rotation", 0), -36000, 36000): return "Invalid terrain properties"
+				if item.get("art_style", "") not in MonumentalTerrain.STYLES: return "Invalid terrain art style"
 				if item.get("kind", "box") not in ["box", "ruin"] or not item.get("tint", "#7a817c") is String or not Color.html_is_valid(item.get("tint", "#7a817c")): return "Invalid terrain kind/color"
 			elif key == "objectives":
 				if not number(item.get("number"), 1, 999) or not number(item.get("radius"), 0.1, 30) or not item.get("name") is String: return "Invalid objective properties"

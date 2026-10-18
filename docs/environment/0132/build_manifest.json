@@ -1,0 +1,20 @@
+﻿{
+    "version":  "0.13.2",
+    "base_version":  "0.13.1",
+    "godot":  "4.6.1",
+    "executable_bytes":  164011952,
+    "executable_sha256":  "4bcb59326d88f95266c122627c856a28414d706c6a9381db41dc7c28e3bf7d20",
+    "prior_0131_executable_preserved":  true,
+    "affected_suites":  {
+                            "visual":  17,
+                            "environment":  257,
+                            "guided":  42,
+                            "composition_ai":  153
+                        },
+    "affected_checks":  469,
+    "packaged_checks":  46,
+    "failures":  0,
+    "full_regression_executions":  0,
+    "performance_sample":  "docs/benchmarks/approaches_0132.json",
+    "human_playtest":  "outstanding"
+}

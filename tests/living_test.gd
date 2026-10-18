@@ -45,7 +45,8 @@ func run() -> void:
 	for terrain: TerrainPiece in game.battlefield.terrain.get_children(): check(terrain.footprint_overlay.visible,"Terrain traits visible")
 	game.life.set_tactical(false)
 	check(not game.life.overlay.visible and state == WorldState.capture(game),"Release tactical view cleans up without action")
-	check(game.battlefield.visuals.get_node_or_null("LivingAtmosphere") != null,"Showcase has original machinery and steam")
+	var vapor: Node=game.battlefield.visuals.get_node_or_null("EnvironmentalVapor")
+	check(vapor!=null and vapor.get_child_count()>0 and game.battlefield.terrain.get_node_or_null("refinery_tower")!=null,"Showcase has authored refinery machinery and sparse steam")
 	var settings := AppSettings.new()
 	settings.movement_speed = "Cinematic"
 	settings.ai_speed = "Fast"

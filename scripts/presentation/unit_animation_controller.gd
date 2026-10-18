@@ -15,6 +15,7 @@ var reaction_kind := State.IDLE
 var aim := Vector3.ZERO
 var player: AnimationPlayer
 var clip_state := -1
+var animation_map := {}
 
 func _init(piece: Miniature) -> void:
 	model = piece
@@ -23,6 +24,10 @@ func _init(piece: Miniature) -> void:
 	phase = float(piece.cosmetic_id.hash() & 65535) / 65535.0 * TAU
 	for node in piece.visual_root.find_children("*","AnimationPlayer",true,false):
 		player = node
+		var ancestor: Node=player
+		while ancestor != piece.visual_root:
+			if ancestor.has_meta("animation_map"): animation_map=ancestor.get_meta("animation_map"); break
+			ancestor=ancestor.get_parent()
 		break
 
 func move_from(origin: Vector3, speed: String, reduced: bool) -> void:
@@ -76,6 +81,8 @@ func update(delta: float, clock: float, reduced: bool, hovered: bool, aiming: bo
 		clip_state = state
 		var hints: Array = ["idle","alert","walk","aim","attack","hit","death"]
 		var found := false
+		var mapped: String=animation_map.get(["idle","idle","move","idle","attack","hit","defeat"][state],"")
+		if not mapped.is_empty() and player.has_animation(mapped): player.play(mapped,.12); return
 		for clip in player.get_animation_list():
 			if hints[state] in clip.to_lower(): player.play(clip,.12); found = true; break
 		if not found: player.stop()

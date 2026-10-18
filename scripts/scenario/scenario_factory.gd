@@ -18,9 +18,11 @@ static func add_terrain(board: Battlefield, item: Dictionary) -> TerrainPiece:
 	piece.name = item.id
 	piece.title = item.title
 	piece.kind = item.get("kind", "box")
+	piece.art_style = item.get("art_style", "")
 	piece.cover_bonus = int(item.get("cover_bonus", 0))
 	piece.movement_penalty = float(item.get("movement_penalty", board.scenario.get("rules", {}).get("difficult_ground_penalty", 2) if item.get("difficult_ground", false) else 0))
 	piece.visual_scene = item.get("visual_scene", "")
+	piece.footprint_parts=item.get("footprint_parts",[]).duplicate(true)
 	piece.size = vector(item.size)
 	piece.position = vector(item.position)
 	piece.rotation.y = deg_to_rad(float(item.get("rotation", 0)))
@@ -74,13 +76,16 @@ static func add_unit(board: Battlefield, item: Dictionary, coherency: float = 2)
 
 static func capture(game: Node3D) -> Dictionary:
 	var data: Dictionary = game.scenario.duplicate(true)
-	data.board = {"width": game.battlefield.width, "depth": game.battlefield.depth, "theme": game.scenario.board.get("theme", "industrial")}
+	data.board = game.scenario.board.duplicate(true)
+	data.board.width = game.battlefield.width
+	data.board.depth = game.battlefield.depth
 	data.terrain = []
 	data.objectives = []
 	data.armies = []
 	data.deployment_zones = []
 	for piece: TerrainPiece in game.battlefield.terrain.get_children():
-		data.terrain.append({"id": piece.object_id, "title": piece.title, "kind": piece.kind, "visual_scene": piece.visual_scene, "size": array(piece.size), "position": array(piece.position), "rotation": rad_to_deg(piece.rotation.y), "tint": "#" + piece.tint.to_html(false), "movement_penalty": piece.movement_penalty, "cover_bonus": piece.cover_bonus, "blocks_movement": piece.blocks_movement, "blocks_los": piece.blocks_los})
+		data.terrain.append({"id": piece.object_id, "title": piece.title, "kind": piece.kind, "art_style": piece.art_style, "visual_scene": piece.visual_scene, "size": array(piece.size), "position": array(piece.position), "rotation": rad_to_deg(piece.rotation.y), "tint": "#" + piece.tint.to_html(false), "movement_penalty": piece.movement_penalty, "cover_bonus": piece.cover_bonus, "blocks_movement": piece.blocks_movement, "blocks_los": piece.blocks_los})
+		if not piece.footprint_parts.is_empty():data.terrain[-1]["footprint_parts"]=piece.footprint_parts.duplicate(true)
 	for objective: TableObjective in game.battlefield.objectives.get_children():
 		data.objectives.append({"id": objective.object_id, "name": objective.display_name, "number": objective.number, "radius": objective.radius, "position": array(objective.position)})
 	for unit: TableUnit in game.battlefield.units.get_children():

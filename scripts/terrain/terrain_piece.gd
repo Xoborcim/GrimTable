@@ -10,9 +10,15 @@ var footprint_overlay: Node3D
 var debug_shape: MeshInstance3D
 var object_id := ""
 var kind := "box"
+var art_style := ""
 var visual_scene := ""
 var cover_bonus := 0
 var movement_penalty := 0.0
+var _compound_cache: Array[Dictionary]=[]
+var footprint_parts: Array = []:
+	set(value):
+		footprint_parts=value
+		_compound_cache.clear()
 static var surface_materials: Dictionary = {}
 
 func _ready() -> void:
@@ -24,6 +30,14 @@ func _ready() -> void:
 		var resource := load(visual_scene) as PackedScene
 		if resource != null: add_child(resource.instantiate())
 		else: has_visual = false
+		if has_visual and visual_scene.begins_with(EnvironmentArt.ROOT):EnvironmentArt.weather_visual(self,posmod(object_id.hash(),3))
+	if not art_style.is_empty() and not has_visual:
+		var authored:=AuthoredArt.terrain(kind,art_style,size)
+		if authored!=null:
+			add_child(authored)
+			EnvironmentArt.weather_visual(authored,posmod(object_id.hash(),3))
+		else: MonumentalTerrain.add(self)
+		has_visual = true
 	footprint_overlay = Node3D.new()
 	add_child(footprint_overlay)
 	footprint_overlay.hide()
@@ -51,7 +65,10 @@ func _ready() -> void:
 		part_collider.shape = part_shape
 		part_collider.position = center
 		add_child(part_collider)
-	TableVisuals.box(self, Vector3(size.x + 0.25, 0.12, size.z + 0.25), Vector3(0, 0.06, 0), tint.darkened(0.3))
+	var plinth:=TableVisuals.box(self, Vector3(size.x + 0.25, 0.06, size.z + 0.25), Vector3(0, 0.02, 0), tint.darkened(0.3))
+	if has_visual:
+		# Remove before batching: hidden meshes would otherwise be merged visible.
+		remove_child(plinth);plinth.free()
 	if size.y > .3:
 		var pad := PlaneMesh.new()
 		pad.size = Vector2(size.x+1.2,size.z+1.2)
@@ -77,14 +94,20 @@ func overlaps_base(point: Vector3, radius: float) -> bool:
 	return false
 
 func footprint() -> Array[Dictionary]:
+	if not footprint_parts.is_empty():
+		if _compound_cache.is_empty():
+			for part: Dictionary in footprint_parts:_compound_cache.append({"size":ScenarioFactory.vector(part.size),"center":ScenarioFactory.vector(part.center)})
+		return _compound_cache
 	if kind == "ruin":
 		return [{"size": Vector3(size.x, size.y, 0.8), "center": Vector3(0, size.y / 2, -size.z / 2 + 0.4)}, {"size": Vector3(0.8, size.y, size.z), "center": Vector3(-size.x / 2 + 0.4, size.y / 2, 0)}]
 	return [{"size": size, "center": Vector3(0, size.y / 2, 0)}]
 
 func path_touches(start: Vector3, finish: Vector3, radius: float) -> bool:
+	var local_start:=to_local(start)
+	var local_finish:=to_local(finish)
 	for part in footprint():
 		var extent: Vector3 = part.size / 2
 		var point: Vector3 = part.center
 		var area := AABB(Vector3(point.x - extent.x - radius, -10, point.z - extent.z - radius), Vector3((extent.x + radius) * 2, 20, (extent.z + radius) * 2))
-		if area.has_point(to_local(start)) or area.has_point(to_local(finish)) or area.intersects_segment(to_local(start), to_local(finish)) != null: return true
+		if area.has_point(local_start) or area.has_point(local_finish) or area.intersects_segment(local_start, local_finish) != null: return true
 	return false

@@ -1,0 +1,13 @@
+{
+  "Sanctum": [
+    {"name":"Broken processional approach","from":[0,15],"to":[0,5],"width":3.0,"edges":[-1],"surface":"roadstone","seed":201},
+    {"name":"Transept forecourt","from":[-17,10],"to":[-15,5],"width":3.5,"edges":[1],"surface":"roadstone","seed":202},
+    {"name":"Distribution service approach","from":[15,12],"to":[15,7],"width":2.8,"edges":[-1],"surface":"roadstone","seed":203}
+  ],
+  "Transport": [
+    {"name":"West rail shoulder","from":[-14,11],"to":[-14,2],"width":1.6,"edges":[-1],"surface":"roadstone","seed":301},
+    {"name":"East rail shoulder","from":[-6,-5],"to":[-6,-13],"width":1.4,"edges":[1],"surface":"roadstone","seed":302},
+    {"name":"Loading apron approach","from":[3,13],"to":[3,5],"width":2.6,"edges":[1],"surface":"roadstone","seed":303},
+    {"name":"Manufacturing service drain","from":[11,-1.6],"to":[24,-1.6],"width":1.1,"edges":[-1],"surface":"iron","seed":304}
+  ]
+}

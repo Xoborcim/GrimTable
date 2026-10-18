@@ -82,6 +82,14 @@ func run() -> void:
 		game.queue_free()
 		for i in 4: await process_frame
 	var report := {"label": label, "godot": Engine.get_version_info().string, "cpu": OS.get_processor_name(), "logical_cpus": OS.get_processor_count(), "gpu": RenderingServer.get_video_adapter_name(), "display": DisplayServer.get_name(), "resolution": [1280, 800], "vsync": false, "frames_per_mode": samples, "results": results}
+	if label == "visual_0110":
+		var tray := DiceTray.new()
+		tray.settings=AppSettings.new(); tray.settings.cinematic_dice="Full"; tray.settings.dice_volume=0
+		root.add_child(tray)
+		tray.enqueue("BENCHMARK",[1,2,3,4,5,6,6,5,4,3,2,1],4)
+		var dice_ms: float=await measure_frames()
+		report.dice={"bodies":12,"average_frame_ms":dice_ms,"fps":1000.0/dice_ms,"context":"tray alone; 90-frame sample during one Full roll"}
+		tray.queue_free()
 	DirAccess.make_dir_recursive_absolute("res://docs/benchmarks")
 	var file := FileAccess.open("res://docs/benchmarks/" + label + ".json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(report, "\t", true, true))

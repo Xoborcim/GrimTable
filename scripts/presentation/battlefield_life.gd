@@ -71,6 +71,8 @@ func set_tactical(value: bool) -> void:
 	if value == tactical: return
 	tactical = value
 	overlay.visible = value
+	var ground:=game.battlefield.visuals.get_node_or_null("GroundSurface") as MeshInstance3D
+	if ground!=null:(ground.material_override as ShaderMaterial).set_shader_parameter("grid_visibility",1.0 if value or game.editing else 0.0)
 	if not value:
 		for piece: TerrainPiece in game.battlefield.terrain.get_children(): piece.footprint_overlay.visible = terrain_visibility.get(piece.object_id,false)
 		terrain_visibility.clear()

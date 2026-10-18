@@ -1,0 +1,17 @@
+{
+  "version": "0.13.1",
+  "godot": "4.6.1",
+  "blender": "5.0.1",
+  "executable_bytes": 164008520,
+  "executable_sha256": "fb5747b508efdcc8621bfaec3c101f5ceca30a1c74873c925faa0d48ab3b640b",
+  "full_regression_executions": 1,
+  "regression_checks": 2211,
+  "initial_regression_failures": 1,
+  "focused_correction_passed": true,
+  "unresolved_failures": 0,
+  "final_packaged_checks": 46,
+  "final_packaged_failures": 0,
+  "packaged_smoke_executions": 2,
+  "performance_sample": "docs/benchmarks/composition_0131.json",
+  "performance_note": "One 100/200 sample before the final cosmetic footing-pivot correction; geometry/material budgets unchanged."
+}

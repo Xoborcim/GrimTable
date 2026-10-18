@@ -1,0 +1,52 @@
+{
+  "sanctum": {
+    "size": [
+      512,
+      512
+    ],
+    "channel_ranges": [
+      [
+        0,
+        255
+      ],
+      [
+        0,
+        255
+      ],
+      [
+        0,
+        235
+      ],
+      [
+        0,
+        255
+      ]
+    ],
+    "godot_alpha_border_processing": false
+  },
+  "transport": {
+    "size": [
+      512,
+      512
+    ],
+    "channel_ranges": [
+      [
+        0,
+        255
+      ],
+      [
+        0,
+        255
+      ],
+      [
+        0,
+        235
+      ],
+      [
+        0,
+        255
+      ]
+    ],
+    "godot_alpha_border_processing": false
+  }
+}
