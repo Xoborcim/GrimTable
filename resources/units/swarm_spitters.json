@@ -1,0 +1,30 @@
+{
+  "id": "swarm_spitters",
+  "name": "Spine Brood",
+  "faction": "swarm",
+  "movement": 6,
+  "defense": 4,
+  "toughness": 4,
+  "save": 5,
+  "wounds": 2,
+  "max_wounds": 2,
+  "base_mm": 40,
+  "model_scene": "res://assets/grimtable/models/swarm_hunter.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 1.8,
+  "los_height": 1.4400000000000002,
+  "weapons": [
+    "swarm_spines"
+  ],
+  "weapon": "res://resources/weapons/swarm_spines.json",
+  "fallback_model_scene": "res://assets/grimtable/models/swarm_hunter.tscn",
+  "roster": {
+    "role": "Heavy support",
+    "points_per_model": 26,
+    "base_points": 0,
+    "min_size": 3,
+    "max_size": 8,
+    "max_units": 4,
+    "upgrades": []
+  }
+}

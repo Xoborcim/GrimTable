@@ -1,0 +1,246 @@
+{
+	"passed": false,
+	"project": "D:/40k-sim/.runtime/validation_project_832597",
+	"suites": [
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "prototype_test",
+			"summaries": [
+				"GRIMTABLE: 275 checks, 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "squad_combat_test",
+			"summaries": [
+				"GRIMTABLE SQUADS/COMBAT: 76 checks, 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "scenario_replay_test",
+			"summaries": [
+				"GRIMTABLE SCENARIOS/REPLAY: 48 checks, 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "application_test",
+			"summaries": [
+				"GRIMTABLE APPLICATION: 361 checks, 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "network_test",
+			"summaries": [
+				"GRIMTABLE NETWORK CHECKS 48 Â· PASS\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "internet_readiness_test",
+			"summaries": [
+				"GRIMTABLE INTERNET READINESS: 67 checks, 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "network_failure_test",
+			"summaries": [
+				"GRIMTABLE NETWORK FAILURE: 3 checks, 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 1,
+			"script_errors": 0,
+			"suite": "content_test",
+			"summaries": [
+				"GRIMTABLE CONTENT: 252 checks, 1 failures\r"
+			]
+		},
+		{
+			"exit_code": 1,
+			"script_errors": 0,
+			"suite": "mod_test",
+			"summaries": [
+				"GRIMTABLE MODS: 54 checks, 1 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "performance_cache_test",
+			"summaries": [
+				"GRIMTABLE PERFORMANCE CACHES: 10 checks, 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "experience_test",
+			"summaries": [
+				"GRIMTABLE EXPERIENCE CHECKS: 49 passed / 0 failed\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "assistance_test",
+			"summaries": [
+				"GRIMTABLE ASSISTANCE: 90 checks, 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "guided_test",
+			"summaries": [
+				"GRIMTABLE GUIDED: 42 checks, 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "visual_test",
+			"summaries": [
+				"GRIMTABLE VISUAL: 17 checks, 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "living_test",
+			"summaries": [
+				"GRIMTABLE LIVING CHECKS: 27; failures: 0\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "ai_test",
+			"summaries": [
+				"GRIMTABLE AI CHECKS: 54; failures: 0\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "cinematic_test",
+			"summaries": [
+				"GRIMTABLE CINEMATIC: 45 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "miniature_import_test",
+			"summaries": [
+				"GRIMTABLE IMPORT: 26 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "monumental_test",
+			"summaries": [
+				"GRIMTABLE MONUMENTAL: 239 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "art_test",
+			"summaries": [
+				"GRIMTABLE ART 0120: 74 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "environment_test",
+			"summaries": [
+				"GRIMTABLE ENVIRONMENT: 257 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "composition_test",
+			"summaries": [
+				"GRIMTABLE COMPOSITION 0131: 151 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "baked_material_test",
+			"summaries": [
+				"GRIMTABLE BAKED MATERIAL: 56 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "workshop_test",
+			"summaries": [
+				"GRIMTABLE WORKSHOP: 84 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "army_test",
+			"summaries": [
+				"GRIMTABLE ARMIES 44 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "army_battle_test",
+			"summaries": [
+				"GRIMTABLE ARMY BATTLE 14 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "mission_test",
+			"summaries": [
+				"GRIMTABLE MISSIONS 19 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "homebrew_test",
+			"summaries": [
+				"GRIMTABLE HOMEBREW 20 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "army_network_test",
+			"summaries": [
+				"GRIMTABLE ARMY NETWORK 13 checks / 0 failures\r"
+			]
+		},
+		{
+			"exit_code": 0,
+			"script_errors": 0,
+			"suite": "army_system_test",
+			"summaries": [
+				"GRIMTABLE ARMY SYSTEM 15 checks / 0 failures\r"
+			]
+		}
+	]
+}

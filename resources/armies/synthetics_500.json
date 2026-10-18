@@ -1,0 +1,45 @@
+{
+  "kind": "grimtable_army",
+  "version": 1,
+  "id": "army_starter_synthetics_500",
+  "name": "Synthetics - 500 Patrol",
+  "faction": "synthetics",
+  "points_limit": 500,
+  "homebrew": false,
+  "units": [
+    {
+      "id": "squad_1",
+      "name": "Command Overseer 1",
+      "unit_id": "synthetic_overseer",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_2",
+      "name": "Synthetic Drone 2",
+      "unit_id": "synthetic_drone",
+      "count": 8,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_3",
+      "name": "Synthetic Sentinel 3",
+      "unit_id": "synthetic_sentinel",
+      "count": 3,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_4",
+      "name": "Vector Scouts 4",
+      "unit_id": "synthetic_scout",
+      "count": 3,
+      "upgrades": {},
+      "cosmetic": ""
+    }
+  ],
+  "dependencies": [],
+  "profiles": {}
+}

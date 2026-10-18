@@ -17,5 +17,14 @@
     "swarm_fangs"
   ],
   "weapon": "res://resources/weapons/swarm_fangs.json",
-  "fallback_model_scene": "res://assets/grimtable/models/swarm_winged_beast.tscn"
+  "fallback_model_scene": "res://assets/grimtable/models/swarm_winged_beast.tscn",
+  "roster": {
+    "role": "Fast",
+    "points_per_model": 110,
+    "base_points": 0,
+    "min_size": 1,
+    "max_size": 2,
+    "max_units": 4,
+    "upgrades": []
+  }
 }

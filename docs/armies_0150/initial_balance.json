@@ -1,0 +1,341 @@
+{
+  "caveat": "Static estimate per model at full eligibility versus Defense 4 / Save 4. No cover, position, objectives, attrition or traits. Costs are original creator estimates, not a competitive balance guarantee.",
+  "units": [
+    {
+      "id": "legion_trooper",
+      "role": "Infantry",
+      "points_per_model": 18,
+      "squad_bounds": [
+        5,
+        10
+      ],
+      "movement": 6,
+      "health": 2,
+      "save": 3,
+      "ranged_damage_vs_def4_save4": 0.444,
+      "melee_damage_vs_def4_save4": 0.333
+    },
+    {
+      "id": "legion_heavy",
+      "role": "Heavy support",
+      "points_per_model": 35,
+      "squad_bounds": [
+        3,
+        5
+      ],
+      "movement": 5,
+      "health": 3,
+      "save": 3,
+      "ranged_damage_vs_def4_save4": 1.667,
+      "melee_damage_vs_def4_save4": 0.333
+    },
+    {
+      "id": "legion_walker",
+      "role": "Walker",
+      "points_per_model": 210,
+      "squad_bounds": [
+        1,
+        1
+      ],
+      "movement": 6,
+      "health": 9,
+      "save": 3,
+      "ranged_damage_vs_def4_save4": 1.667,
+      "melee_damage_vs_def4_save4": 0.333
+    },
+    {
+      "id": "legion_battle_tank",
+      "role": "Vehicle",
+      "points_per_model": 260,
+      "squad_bounds": [
+        1,
+        1
+      ],
+      "movement": 7,
+      "health": 12,
+      "save": 2,
+      "ranged_damage_vs_def4_save4": 4.167,
+      "melee_damage_vs_def4_save4": 0.0
+    },
+    {
+      "id": "horde_raider",
+      "role": "Infantry",
+      "points_per_model": 7,
+      "squad_bounds": [
+        5,
+        20
+      ],
+      "movement": 6,
+      "health": 1,
+      "save": 5,
+      "ranged_damage_vs_def4_save4": 0.5,
+      "melee_damage_vs_def4_save4": 0.5
+    },
+    {
+      "id": "horde_bruiser",
+      "role": "Specialist",
+      "points_per_model": 38,
+      "squad_bounds": [
+        2,
+        5
+      ],
+      "movement": 5,
+      "health": 4,
+      "save": 5,
+      "ranged_damage_vs_def4_save4": 0.0,
+      "melee_damage_vs_def4_save4": 2.222
+    },
+    {
+      "id": "horde_gunner",
+      "role": "Heavy support",
+      "points_per_model": 20,
+      "squad_bounds": [
+        3,
+        10
+      ],
+      "movement": 6,
+      "health": 2,
+      "save": 5,
+      "ranged_damage_vs_def4_save4": 0.5,
+      "melee_damage_vs_def4_save4": 0.5
+    },
+    {
+      "id": "horde_war_machine",
+      "role": "Vehicle",
+      "points_per_model": 175,
+      "squad_bounds": [
+        1,
+        1
+      ],
+      "movement": 6,
+      "health": 10,
+      "save": 4,
+      "ranged_damage_vs_def4_save4": 0.5,
+      "melee_damage_vs_def4_save4": 2.222
+    },
+    {
+      "id": "swarm_crawler",
+      "role": "Infantry",
+      "points_per_model": 6,
+      "squad_bounds": [
+        5,
+        20
+      ],
+      "movement": 8,
+      "health": 1,
+      "save": 6,
+      "ranged_damage_vs_def4_save4": 0.0,
+      "melee_damage_vs_def4_save4": 0.375
+    },
+    {
+      "id": "swarm_hunter",
+      "role": "Fast",
+      "points_per_model": 30,
+      "squad_bounds": [
+        3,
+        6
+      ],
+      "movement": 9,
+      "health": 3,
+      "save": 5,
+      "ranged_damage_vs_def4_save4": 0.25,
+      "melee_damage_vs_def4_save4": 0.375
+    },
+    {
+      "id": "swarm_brood_beast",
+      "role": "Creature",
+      "points_per_model": 220,
+      "squad_bounds": [
+        1,
+        1
+      ],
+      "movement": 6,
+      "health": 10,
+      "save": 4,
+      "ranged_damage_vs_def4_save4": 0.25,
+      "melee_damage_vs_def4_save4": 2.37
+    },
+    {
+      "id": "swarm_winged_beast",
+      "role": "Fast",
+      "points_per_model": 110,
+      "squad_bounds": [
+        1,
+        2
+      ],
+      "movement": 10,
+      "health": 5,
+      "save": 5,
+      "ranged_damage_vs_def4_save4": 0.0,
+      "melee_damage_vs_def4_save4": 2.37
+    },
+    {
+      "id": "synthetic_drone",
+      "role": "Infantry",
+      "points_per_model": 22,
+      "squad_bounds": [
+        5,
+        10
+      ],
+      "movement": 4,
+      "health": 2,
+      "save": 3,
+      "ranged_damage_vs_def4_save4": 0.593,
+      "melee_damage_vs_def4_save4": 0.0
+    },
+    {
+      "id": "synthetic_sentinel",
+      "role": "Specialist",
+      "points_per_model": 36,
+      "squad_bounds": [
+        3,
+        6
+      ],
+      "movement": 4,
+      "health": 3,
+      "save": 3,
+      "ranged_damage_vs_def4_save4": 0.593,
+      "melee_damage_vs_def4_save4": 0.333
+    },
+    {
+      "id": "synthetic_destroyer",
+      "role": "Heavy support",
+      "points_per_model": 115,
+      "squad_bounds": [
+        1,
+        3
+      ],
+      "movement": 4,
+      "health": 6,
+      "save": 2,
+      "ranged_damage_vs_def4_save4": 2.222,
+      "melee_damage_vs_def4_save4": 0.0
+    },
+    {
+      "id": "synthetic_walker",
+      "role": "Walker",
+      "points_per_model": 270,
+      "squad_bounds": [
+        1,
+        1
+      ],
+      "movement": 5,
+      "health": 11,
+      "save": 2,
+      "ranged_damage_vs_def4_save4": 2.222,
+      "melee_damage_vs_def4_save4": 0.333
+    },
+    {
+      "id": "legion_commander",
+      "role": "Leader",
+      "points_per_model": 110,
+      "squad_bounds": [
+        1,
+        1
+      ],
+      "movement": 6,
+      "health": 5,
+      "save": 3,
+      "ranged_damage_vs_def4_save4": 0.444,
+      "melee_damage_vs_def4_save4": 0.333
+    },
+    {
+      "id": "legion_assault",
+      "role": "Fast",
+      "points_per_model": 21,
+      "squad_bounds": [
+        5,
+        10
+      ],
+      "movement": 8,
+      "health": 2,
+      "save": 3,
+      "ranged_damage_vs_def4_save4": 0.444,
+      "melee_damage_vs_def4_save4": 0.333
+    },
+    {
+      "id": "horde_warchief",
+      "role": "Leader",
+      "points_per_model": 95,
+      "squad_bounds": [
+        1,
+        1
+      ],
+      "movement": 5,
+      "health": 6,
+      "save": 4,
+      "ranged_damage_vs_def4_save4": 0.0,
+      "melee_damage_vs_def4_save4": 2.222
+    },
+    {
+      "id": "horde_runners",
+      "role": "Fast",
+      "points_per_model": 12,
+      "squad_bounds": [
+        5,
+        10
+      ],
+      "movement": 10,
+      "health": 1,
+      "save": 5,
+      "ranged_damage_vs_def4_save4": 0.5,
+      "melee_damage_vs_def4_save4": 0.5
+    },
+    {
+      "id": "swarm_synapse",
+      "role": "Leader",
+      "points_per_model": 100,
+      "squad_bounds": [
+        1,
+        1
+      ],
+      "movement": 9,
+      "health": 7,
+      "save": 5,
+      "ranged_damage_vs_def4_save4": 0.25,
+      "melee_damage_vs_def4_save4": 0.375
+    },
+    {
+      "id": "swarm_spitters",
+      "role": "Heavy support",
+      "points_per_model": 26,
+      "squad_bounds": [
+        3,
+        8
+      ],
+      "movement": 6,
+      "health": 2,
+      "save": 5,
+      "ranged_damage_vs_def4_save4": 0.25,
+      "melee_damage_vs_def4_save4": 0.0
+    },
+    {
+      "id": "synthetic_overseer",
+      "role": "Leader",
+      "points_per_model": 125,
+      "squad_bounds": [
+        1,
+        1
+      ],
+      "movement": 4,
+      "health": 6,
+      "save": 3,
+      "ranged_damage_vs_def4_save4": 2.222,
+      "melee_damage_vs_def4_save4": 0.333
+    },
+    {
+      "id": "synthetic_scout",
+      "role": "Fast",
+      "points_per_model": 28,
+      "squad_bounds": [
+        3,
+        6
+      ],
+      "movement": 9,
+      "health": 2,
+      "save": 4,
+      "ranged_damage_vs_def4_save4": 0.593,
+      "melee_damage_vs_def4_save4": 0.0
+    }
+  ]
+}

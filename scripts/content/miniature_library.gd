@@ -268,6 +268,7 @@ static func sanitize(node: Node) -> void:
 static func assigned(profile: String, variant: String) -> Node3D:
 	var options: Array[Dictionary] = []
 	for record in records():
+		if record.id == variant and record.get("profile","") == profile: return instantiate_record(record)
 		if record.get("profile","") == profile: options.append(record)
 	if options.is_empty(): return null
 	return instantiate_record(options[(variant.hash() & 0x7fffffff)%options.size()])

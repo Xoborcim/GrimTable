@@ -3,6 +3,7 @@ render_mode diffuse_burley;
 uniform sampler2D relief:hint_normal,filter_linear_mipmap,repeat_enable;
 uniform sampler2D cavity:filter_linear_mipmap,repeat_enable;
 uniform int base_style=0;
+uniform vec4 ground_tint:source_color=vec4(1.0);
 varying vec3 local_point;
 void vertex(){local_point=VERTEX;}
 void fragment(){
@@ -15,7 +16,7 @@ void fragment(){
   stone*=1.0-joint*.26;
  }else if(base_style==2){stone*=1.0-joint*.16;}
  else if(base_style==3){stone=mix(vec3(.12,.125,.115),vec3(.20,.21,.19),ao);}
- ALBEDO=stone;
+ ALBEDO=stone*ground_tint.rgb;
  ROUGHNESS=base_style==1 ? .81 : .95;
  METALLIC=base_style==1 ? .32 : 0.0;
  AO=mix(1.0,ao,.20);

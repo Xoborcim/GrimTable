@@ -1,0 +1,119 @@
+{
+	"ai_decisions": 200,
+	"ai_max_ms": 221.848,
+	"ai_mean_ms": 32.978585,
+	"ai_p95_ms": 118.295,
+	"battle_ms": 14529.421,
+	"deployment_error": "",
+	"deployment_ms": 678.187,
+	"events": 438,
+	"mode": "Automated AI vs AI, not human usability testing",
+	"models": 99,
+	"phase": 5,
+	"points": 2000,
+	"primary_secondary": {
+		"0": {
+			"active": [
+				"hold_breach",
+				"secure_relay"
+			],
+			"alive_at_draw": [
+				"t0s0",
+				"t0s1",
+				"t0s2",
+				"t0s3",
+				"t0s4",
+				"t0s5",
+				"t0s6",
+				"t0s7",
+				"t0s8",
+				"t0s9",
+				"t0s10",
+				"t0s11",
+				"t0s12",
+				"t0s13",
+				"t1s4",
+				"t1s7",
+				"t1s9",
+				"t1s10",
+				"t1s18",
+				"t1s19"
+			],
+			"completed": [
+				"defend_strongpoint",
+				"eliminate_vanguard",
+				"break_defense",
+				"cut_command"
+			],
+			"discard": [
+				"disrupt_comms",
+				"forward_position",
+				"defend_strongpoint",
+				"sabotage_generator",
+				"hold_network",
+				"eliminate_vanguard",
+				"behind_lines",
+				"break_defense",
+				"cut_command",
+				"recover_artifact"
+			],
+			"draw": [],
+			"primary_score": 10,
+			"secondary_score": 17
+		},
+		"1": {
+			"active": [
+				"behind_lines",
+				"eliminate_vanguard"
+			],
+			"alive_at_draw": [
+				"t0s0",
+				"t0s1",
+				"t0s2",
+				"t0s3",
+				"t0s4",
+				"t0s5",
+				"t0s6",
+				"t0s7",
+				"t0s8",
+				"t0s9",
+				"t0s10",
+				"t0s11",
+				"t0s12",
+				"t0s13",
+				"t1s4",
+				"t1s7",
+				"t1s9",
+				"t1s10",
+				"t1s18",
+				"t1s19"
+			],
+			"completed": [],
+			"discard": [
+				"cut_command",
+				"disrupt_comms",
+				"break_defense",
+				"forward_position",
+				"hold_breach",
+				"defend_strongpoint",
+				"secure_relay",
+				"recover_artifact",
+				"hold_network",
+				"sabotage_generator"
+			],
+			"draw": [],
+			"primary_score": 0,
+			"secondary_score": 0
+		}
+	},
+	"replay_validation": "",
+	"result": "complete",
+	"round": 6,
+	"save": "Saved tabletop to user://acceptance_2000.json",
+	"scores": {
+		"0": 27,
+		"1": 0
+	},
+	"seed": 17000,
+	"steps": 200
+}

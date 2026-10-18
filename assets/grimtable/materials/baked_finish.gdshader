@@ -13,6 +13,24 @@ uniform vec4 secondary_paint:source_color=vec4(.773,.741,.647,1.0);
 uniform vec4 trim_paint:source_color=vec4(.627,.553,.373,1.0);
 uniform float normal_strength=.65;
 uniform float ao_strength=.38;
+uniform bool workshop_enabled=false;
+uniform sampler2D region_ids:filter_nearest,repeat_disable;
+uniform vec4 cloth_paint:source_color=vec4(.40,.35,.28,1.0);
+uniform vec4 weapon_paint:source_color=vec4(.25,.29,.31,1.0);
+uniform vec4 metal_paint:source_color=vec4(.45,.50,.53,1.0);
+uniform vec4 glow_paint:source_color=vec4(.38,.82,.83,1.0);
+uniform vec4 body_paint:source_color=vec4(.43,.35,.42,1.0);
+uniform float wash_amount=.32;
+uniform float drybrush_amount=.20;
+uniform float highlight_amount=.42;
+uniform float weathering_amount=.48;
+uniform float metallic_adjust=0.0;
+uniform float roughness_adjust=0.0;
+uniform float glow_amount=0.0;
+uniform bool has_overlay=false;
+uniform bool has_markings=false;
+uniform sampler2D overlay_tex:source_color,filter_linear_mipmap,repeat_disable;
+uniform sampler2D marking_tex:source_color,filter_linear_mipmap,repeat_disable;
 uniform bool ground_contact=false;
 uniform vec3 ground_bounds_min=vec3(0.0);
 uniform vec3 ground_bounds_max=vec3(0.0);
@@ -33,6 +51,17 @@ void fragment(){
  }
  float raised=finish.r;
  float dirt=finish.g;
+ if(workshop_enabled){
+  float region_id=floor(texture(region_ids,UV).r*255.0+.5)-1.0;
+  float value=clamp(dot(base,vec3(.2126,.7152,.0722))*2.8,.22,1.3);
+  if(region_id==7.0){base=cloth_paint.rgb*value;}
+  if(region_id==3.0){base=weapon_paint.rgb*value;}
+  if(region_id==14.0){base=metal_paint.rgb*value;}
+  if(region_id==6.0){base=glow_paint.rgb*value;EMISSION=glow_paint.rgb*glow_amount*.7;}
+  if(material_family==1 && region_id>=8.0 && region_id<=10.0){base*=body_paint.rgb*2.0;}
+  if(has_overlay){vec4 ink=texture(overlay_tex,UV);base=mix(base,ink.rgb,ink.a);}
+  if(has_markings){vec4 ink=texture(marking_tex,UV);base=mix(base,ink.rgb,ink.a);}
+ }
  if(material_family>=2){
   // Legacy palette slots 0/1 are enamel on miniatures, but structural iron
   // on these scenery exports. Keep the industrial family graphite-toned.
@@ -57,22 +86,24 @@ void fragment(){
  }
  if(material_family==1){
   // Carapace highlights follow growth ridges; no metallic chipped-paint layer.
-  base=mix(base,base*1.22+vec3(.012,.008,.015),raised*.34);
-  base=mix(base,base*vec3(.80,.73,.77),dirt*.22);
+  base=mix(base,base*1.22+vec3(.012,.008,.015),raised*(workshop_enabled ? highlight_amount : .34));
+  base=mix(base,base*vec3(.80,.73,.77),dirt*(workshop_enabled ? wash_amount : .22));
+  if(workshop_enabled){base=mix(base,base*vec3(.75,.68,.64),dirt*weathering_amount*.35);}
  }else{
   vec3 edge_color=material_family==0 ? vec3(.34,.37,.37) : vec3(.40,.385,.33);
-  base=mix(base,base*1.18+edge_color*.12,raised*(material_family==0 ? .42 : .32));
-  base=mix(base,base*vec3(.55,.52,.46),dirt*(material_family==0 ? .32 : .74));
+  base=mix(base,base*1.18+edge_color*.12,raised*(workshop_enabled ? highlight_amount : (material_family==0 ? .42 : .32)));
+  base=mix(base,base*vec3(.55,.52,.46),dirt*(workshop_enabled ? wash_amount : (material_family==0 ? .32 : .74)));
   // Wear is baked from curvature and sparse local pigment loss. Organic
   // surfaces take the separate branch above and never receive armor chips.
-  if(material_family==0){base=mix(base,vec3(.20,.225,.23),finish.a*.48);}
+  if(material_family==0){base=mix(base,vec3(.20,.225,.23),finish.a*(workshop_enabled ? weathering_amount : .48));}
  }
+ if(workshop_enabled){base=mix(base,base*1.3+vec3(.035),raised*drybrush_amount*.45);}
  // Local AO is deliberately mild. No scene sun or world lighting is baked.
  ALBEDO=base*(1.0-(1.0-response.r)*.10);
  AO=mix(1.0,response.r,ao_strength);
  AO_LIGHT_AFFECT=0.0;
- ROUGHNESS=clamp(response.g,.36,.98);
- METALLIC=material_family==1 ? 0.0 : response.b;
+ ROUGHNESS=clamp(response.g+(workshop_enabled ? roughness_adjust : 0.0),.25,.98);
+ METALLIC=material_family==1 ? 0.0 : clamp(response.b+(workshop_enabled ? metallic_adjust : 0.0),0.0,1.0);
  NORMAL_MAP=texture(normal_tex,UV).rgb;
  NORMAL_MAP_DEPTH=normal_strength;
 }

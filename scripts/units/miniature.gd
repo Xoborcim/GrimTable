@@ -31,6 +31,7 @@ var caption: Label3D
 var _was_selected := false
 static var _state_materials: Dictionary = {}
 var debug_ring: MeshInstance3D
+var workshop_cosmetic: Dictionary={}
 
 func _ready() -> void:
 	collision_layer = 2
@@ -53,7 +54,9 @@ func _ready() -> void:
 	visual_root.position.y = 0.2
 	add_child(visual_root)
 	var path: String = profile.get("preferred_scene", profile.get("model_scene", ""))
-	var imported: Node3D = MiniatureLibrary.assigned(str(profile.get("id","")),cosmetic_id)
+	var imported: Node3D = WorkshopAppearance.assigned(profile,cosmetic_id,str(get_parent().name))
+	if imported!=null:workshop_cosmetic=imported.get_meta("workshop_data",{})
+	if imported==null:imported=MiniatureLibrary.assigned(str(profile.get("id","")),cosmetic_id)
 	var local_cosmetic := imported != null
 	if local_cosmetic:
 		top.material_override=BakedMaterials.base(str(imported.get_meta("base_style","Industrial")))
@@ -71,7 +74,7 @@ func _ready() -> void:
 			push_warning("Missing preferred visual for " + str(profile.get("id", display_name)) + "; using GrimTable fallback")
 			imported = resource.instantiate() as Node3D
 	if imported != null:
-		if imported.has_meta("authored_art"):
+		if imported.has_meta("authored_art") and workshop_cosmetic.is_empty():
 			var ground:=AuthoredArt.instantiate(AuthoredArt.GROUND)
 			if ground!=null:
 				ground.name="ScenicBaseGround"
@@ -100,6 +103,10 @@ func _ready() -> void:
 		TableVisuals.box(self, Vector3(0.75, 0.18, 0.22), Vector3(0.18, 1.02, -0.32), Color("26323c"))
 		if team == 1:
 			TableVisuals.box(self, Vector3(0.65, 0.2, 0.35), Vector3(0, 1.24, 0), color)
+	if not workshop_cosmetic.is_empty():
+		base_mesh.visible=false;top.visible=false
+		var workshop_base:=Node3D.new();workshop_base.name="WorkshopBase";add_child(workshop_base)
+		WorkshopAppearance.add_base(workshop_base,workshop_cosmetic,base_radius)
 	los_origin = Marker3D.new()
 	los_origin.name = "LOSOrigin"
 	los_origin.position.y = float(profile.get("los_height", 1.35))
@@ -181,6 +188,7 @@ func casualty_effect() -> void:
 		var copy := MeshInstance3D.new()
 		copy.mesh = source.mesh
 		copy.material_override = source.material_override
+		for surface in source.mesh.get_surface_count():copy.set_surface_override_material(surface,source.get_surface_override_material(surface))
 		copy.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		ghost.add_child(copy)
 		copy.global_transform = source.global_transform

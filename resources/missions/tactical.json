@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "cards": [
+    {
+      "id": "hold_breach",
+      "title": "Hold the Breach",
+      "text": "Control at least two locations at round end.",
+      "condition": "control",
+      "count": 2,
+      "points": 4,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    },
+    {
+      "id": "secure_relay",
+      "title": "Secure the Relay",
+      "text": "Control the location closest to the battlefield center.",
+      "condition": "central",
+      "count": 1,
+      "points": 3,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    },
+    {
+      "id": "disrupt_comms",
+      "title": "Disrupt Communications",
+      "text": "Control a location in the enemy half.",
+      "condition": "enemy_objective",
+      "count": 1,
+      "points": 4,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    },
+    {
+      "id": "eliminate_vanguard",
+      "title": "Eliminate the Vanguard",
+      "text": "Destroy an enemy Fast unit during this round.",
+      "condition": "destroy_fast",
+      "count": 1,
+      "points": 4,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    },
+    {
+      "id": "break_defense",
+      "title": "Break the Defense",
+      "text": "Destroy an enemy Vehicle, Walker or Creature this round.",
+      "condition": "destroy_heavy",
+      "count": 1,
+      "points": 5,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    },
+    {
+      "id": "recover_artifact",
+      "title": "Recover the Artifact",
+      "text": "Finish with a squad within four inches of the center.",
+      "condition": "center",
+      "count": 1,
+      "points": 3,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    },
+    {
+      "id": "behind_lines",
+      "title": "Behind Enemy Lines",
+      "text": "Finish with two squads in the enemy deployment band.",
+      "condition": "behind",
+      "count": 2,
+      "points": 5,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    },
+    {
+      "id": "sabotage_generator",
+      "title": "Sabotage the Generator",
+      "text": "Control more locations than the opponent, including an enemy-half location.",
+      "condition": "sabotage",
+      "count": 1,
+      "points": 5,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    },
+    {
+      "id": "forward_position",
+      "title": "Establish a Forward Position",
+      "text": "Finish with two squads in the enemy half.",
+      "condition": "advance",
+      "count": 2,
+      "points": 3,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    },
+    {
+      "id": "defend_strongpoint",
+      "title": "Defend the Strongpoint",
+      "text": "Control at least one home-half location and lose no squads this round.",
+      "condition": "defend",
+      "count": 1,
+      "points": 3,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    },
+    {
+      "id": "cut_command",
+      "title": "Cut the Command Link",
+      "text": "Destroy an enemy Leader during this round.",
+      "condition": "destroy_leader",
+      "count": 1,
+      "points": 5,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    },
+    {
+      "id": "hold_network",
+      "title": "Hold the Network",
+      "text": "Control at least three locations at round end.",
+      "condition": "control",
+      "count": 3,
+      "points": 6,
+      "draw": "round_start",
+      "expires": "round_end",
+      "retain": false,
+      "discard": false
+    }
+  ],
+  "primaries": [
+    {
+      "id": "control",
+      "title": "Secure the Field",
+      "text": "2 points per controlled location, maximum 6 per round.",
+      "condition": "control",
+      "points": 2,
+      "cap": 6
+    },
+    {
+      "id": "convergence",
+      "title": "Convergence",
+      "text": "4 points for the central location, plus 1 per other controlled location (maximum 6).",
+      "condition": "central",
+      "points": 4,
+      "cap": 6
+    },
+    {
+      "id": "domination",
+      "title": "Network Superiority",
+      "text": "5 points when controlling more locations than the opponent; otherwise 2 for at least one.",
+      "condition": "more",
+      "points": 5,
+      "cap": 5
+    }
+  ]
+}

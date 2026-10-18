@@ -17,5 +17,14 @@
     "tank_cannon"
   ],
   "weapon": "res://resources/weapons/tank_cannon.json",
-  "fallback_model_scene": "res://assets/grimtable/models/legion_battle_tank.tscn"
+  "fallback_model_scene": "res://assets/grimtable/models/legion_battle_tank.tscn",
+  "roster": {
+    "role": "Vehicle",
+    "points_per_model": 260,
+    "base_points": 0,
+    "min_size": 1,
+    "max_size": 1,
+    "max_units": 3,
+    "upgrades": []
+  }
 }

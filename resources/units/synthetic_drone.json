@@ -17,5 +17,21 @@
     "synth_beam"
   ],
   "weapon": "res://resources/weapons/synth_beam.json",
-  "fallback_model_scene": "res://assets/grimtable/models/synthetic_drone.tscn"
+  "fallback_model_scene": "res://assets/grimtable/models/synthetic_drone.tscn",
+  "roster": {
+    "role": "Infantry",
+    "points_per_model": 22,
+    "base_points": 0,
+    "min_size": 5,
+    "max_size": 10,
+    "max_units": 6,
+    "upgrades": [
+      {
+        "weapon": "synth_lance",
+        "replaces": "synth_beam",
+        "points": 18,
+        "per_models": 5
+      }
+    ]
+  }
 }

@@ -1,6 +1,13 @@
 class_name AttackResolver
 extends RefCounted
 
+static func strength_against(weapon: Dictionary, target: Dictionary) -> int:
+	var strength:=int(weapon.get("strength",4))
+	var role: String=target.get("roster",{}).get("role","")
+	if weapon.get("tags",[]).has("anti_heavy") and role in ["Vehicle","Walker","Creature"]:strength+=2
+	if weapon.get("tags",[]).has("anti_infantry") and role in ["Infantry","Specialist","Leader"]:strength+=1
+	return strength
+
 static func wound_target(strength: int, toughness: int) -> int:
 	if strength >= toughness * 2: return 2
 	if strength > toughness: return 3
@@ -21,6 +28,7 @@ static func preview(attacker: TableUnit, target: TableUnit, world: World3D, weap
 	var in_range := 0
 	var ids: Array[String] = []
 	for model in attacker.living_models():
+		if not WeaponUse.eligible(attacker,model,weapon): continue
 		for enemy in target.living_models():
 			if MeasurementService.distance_between_bases(model, enemy) <= float(weapon.get("range", 0)) + 0.001:
 				in_range += 1
@@ -65,6 +73,7 @@ static func eligible_attackers(attacker: TableUnit, target: TableUnit, world: Wo
 	var result: Array[Miniature] = []
 	if attacker == target or attacker.team == target.team: return result
 	for model in attacker.living_models():
+		if not WeaponUse.eligible(attacker,model,weapon): continue
 		for enemy in target.living_models():
 			if MeasurementService.distance_between_bases(model, enemy) <= float(weapon.get("range", 0)) and MeasurementService.line_of_sight(world, model, enemy).clear:
 				result.append(model)
@@ -73,10 +82,10 @@ static func eligible_attackers(attacker: TableUnit, target: TableUnit, world: Wo
 
 static func resolve(dice: DiceManager, attacker: TableUnit, target: TableUnit, world: World3D, weapon: Dictionary) -> Dictionary:
 	var eligible := eligible_attackers(attacker, target, world, weapon)
-	if eligible.is_empty(): return {"error": "No living attacker has range and clear LOS to a living target"}
+	if eligible.is_empty(): return {"error": "No equipped, unused model can attack in this phase with range and clear LOS"}
 	var attacks := clampi(eligible.size() * int(weapon.get("attacks", 1)), 0, 10000)
 	var hit := clampi(int(weapon.get("hit", 3)), 2, 7)
-	var wound := wound_target(maxi(1, int(weapon.get("strength", 4))), maxi(1, int(target.definition.get("defense", target.definition.get("toughness", 4)))))
+	var wound := wound_target(maxi(1, strength_against(weapon,target.definition)), maxi(1, int(target.definition.get("defense", target.definition.get("toughness", 4)))))
 	var save := save_target(int(target.definition.get("save", 3)), int(weapon.get("ap", 0)))
 	if weapon.get("ap_semantics", "legacy") == "penalty": save = modified_save_target(int(target.definition.get("save", 3)), int(weapon.get("ap", 0)))
 	var cover := cover_for(target)

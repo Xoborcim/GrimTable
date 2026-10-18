@@ -145,7 +145,7 @@ func run() -> void:
 	check(str(ModLoader.entries[0].error).contains("weapon"), "Missing weapon error is clear")
 	write(PACK + "/units/infantry.json", [])
 	ContentRegistry.reload_content()
-	check(not ModLoader.loaded.has("example_army") and ContentRegistry.catalog().units.size() == 16, "Malformed pack does not prevent built-in startup")
+	check(not ModLoader.loaded.has("example_army") and ContentRegistry.catalog().units.size() == ContentRegistry._builtin.units.size(), "Malformed pack does not prevent built-in startup")
 	write(PACK + "/units/infantry.json", JSON.parse_string(original))
 	ModLoader.set_enabled("example_army", false)
 	ContentRegistry.reload_content()

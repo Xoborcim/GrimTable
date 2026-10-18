@@ -1,0 +1,125 @@
+{
+  "kind": "grimtable_army",
+  "version": 1,
+  "id": "army_starter_legion_2000",
+  "name": "Legion - 2000 Combined Arms",
+  "faction": "legion",
+  "points_limit": 2000,
+  "homebrew": false,
+  "units": [
+    {
+      "id": "squad_1",
+      "name": "Armored Commander 1",
+      "unit_id": "legion_commander",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_2",
+      "name": "Legion Trooper 2",
+      "unit_id": "legion_trooper",
+      "count": 7,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_3",
+      "name": "Legion Heavy 3",
+      "unit_id": "legion_heavy",
+      "count": 3,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_4",
+      "name": "Legion Walker 4",
+      "unit_id": "legion_walker",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_5",
+      "name": "Legion Breach Squad 5",
+      "unit_id": "legion_assault",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_6",
+      "name": "Legion Battle Tank 6",
+      "unit_id": "legion_battle_tank",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_7",
+      "name": "Legion Trooper 7",
+      "unit_id": "legion_trooper",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_8",
+      "name": "Legion Heavy 8",
+      "unit_id": "legion_heavy",
+      "count": 3,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_9",
+      "name": "Legion Walker 9",
+      "unit_id": "legion_walker",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_10",
+      "name": "Legion Breach Squad 10",
+      "unit_id": "legion_assault",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_11",
+      "name": "Legion Battle Tank 11",
+      "unit_id": "legion_battle_tank",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_12",
+      "name": "Legion Trooper 12",
+      "unit_id": "legion_trooper",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_13",
+      "name": "Legion Heavy 13",
+      "unit_id": "legion_heavy",
+      "count": 3,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_14",
+      "name": "Legion Breach Squad 14",
+      "unit_id": "legion_assault",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    }
+  ],
+  "dependencies": [],
+  "profiles": {}
+}

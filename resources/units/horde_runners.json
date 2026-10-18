@@ -1,0 +1,31 @@
+{
+  "id": "horde_runners",
+  "name": "Horde Outriders",
+  "faction": "horde",
+  "movement": 10,
+  "defense": 3,
+  "toughness": 3,
+  "save": 5,
+  "wounds": 1,
+  "max_wounds": 1,
+  "base_mm": 25,
+  "model_scene": "res://assets/grimtable/models/horde_raider.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 1.6,
+  "los_height": 1.2800000000000002,
+  "weapons": [
+    "scrap_blades",
+    "scrap_gun"
+  ],
+  "weapon": "res://resources/weapons/scrap_blades.json",
+  "fallback_model_scene": "res://assets/grimtable/models/horde_raider.tscn",
+  "roster": {
+    "role": "Fast",
+    "points_per_model": 12,
+    "base_points": 0,
+    "min_size": 5,
+    "max_size": 10,
+    "max_units": 4,
+    "upgrades": []
+  }
+}

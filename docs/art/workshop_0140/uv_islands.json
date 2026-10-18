@@ -1,0 +1,6 @@
+{
+  "islands": 2244,
+  "resolution": 1024,
+  "source": "0.13.3 uniquely unwrapped Legion atlas",
+  "encoding": "R + G*256 + B*65536, zero outside triangles"
+}

@@ -57,23 +57,26 @@ func _ready() -> void:
 		var copy:=MeshInstance3D.new()
 		copy.mesh=source.mesh
 		copy.material_override=source.material_override
+		for surface in source.mesh.get_surface_count():copy.set_surface_override_material(surface,source.get_surface_override_material(surface))
 		copy.transform=model.visual_root.global_transform.affine_inverse()*source.global_transform
 		sculpt.add_child(copy)
-	var ground:=model.get_node_or_null("ScenicBaseGround")
-	if ground!=null:
-		for source: MeshInstance3D in ground.find_children("*","MeshInstance3D",true,false):
-			var copy:=MeshInstance3D.new()
-			copy.mesh=source.mesh
-			copy.material_override=source.material_override
-			copy.transform=model.global_transform.affine_inverse()*source.global_transform
-			copy.position.y-=.2
-			studio.add_child(copy)
+	for ground_name in ["ScenicBaseGround","WorkshopBase"]:
+		var ground:=model.get_node_or_null(ground_name)
+		if ground!=null:
+			for source: MeshInstance3D in ground.find_children("*","MeshInstance3D",true,false):
+				var copy:=MeshInstance3D.new()
+				copy.mesh=source.mesh
+				copy.material_override=source.material_override
+				for surface in source.mesh.get_surface_count():copy.set_surface_override_material(surface,source.get_surface_override_material(surface))
+				copy.transform=model.global_transform.affine_inverse()*source.global_transform
+				copy.position.y-=.2
+				studio.add_child(copy)
 	var bounds:=MiniatureLibrary.bounds(sculpt)
 	focus=bounds.get_center()
 	distance=maxf(2,bounds.size.length()*1.5)
 	var base:=CylinderMesh.new()
 	base.top_radius=model.base_radius*.91; base.bottom_radius=model.base_radius; base.height=.16
-	TableVisuals.mesh(studio,base,Vector3(0,-.08,0),Color("20272b"))
+	if model.get_node_or_null("WorkshopBase")==null:TableVisuals.mesh(studio,base,Vector3(0,-.08,0),Color("20272b"))
 	var floor_mesh:=PlaneMesh.new()
 	floor_mesh.size=Vector2(40,40)
 	var floor:=TableVisuals.mesh(studio,floor_mesh,Vector3(0,-.18,0),Color("303638"))

@@ -1,0 +1,9 @@
+{
+  "version": "0.14.0",
+  "baseline_commit": "2657b2c413126dfe5aae5fb268f023e16b0cf903",
+  "renderer": "Godot 4.6.1 OpenGL Compatibility",
+  "executable_bytes": 341599568,
+  "executable_sha256": "962dd7908f5d85fdc1d3d2165ac9cda6b1a88320ce2b96fcba540aa0241c4172",
+  "new_components_glb_bytes": 12565320,
+  "new_editable_blend_bytes": 17526139
+}

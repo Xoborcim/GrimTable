@@ -176,7 +176,7 @@ func update_preview() -> void:
 		loadout_unit = unit
 		weapon_choice.clear()
 		if unit != null:
-			for weapon in unit.weapon_profiles: weapon_choice.add_item("%s ×%d" % [weapon.name, unit.living_models().size()])
+			for weapon in unit.weapon_profiles: weapon_choice.add_item("%s ×%d" % [weapon.name, weapon.get("_equipped_models",unit.living_models()).size()])
 	if unit == null or unit.weapon_profiles.is_empty():
 		eligibility.text = "Select an attacking unit."
 		return
@@ -186,7 +186,7 @@ func update_preview() -> void:
 		clear_eligibility()
 		return
 	var target := interaction.target_model.get_parent() as TableUnit
-	var stamp: Array = [unit.get_instance_id(), target.get_instance_id(), weapon, interaction.board.spatial_revision]
+	var stamp: Array = [unit.get_instance_id(), target.get_instance_id(), weapon, interaction.board.spatial_revision,combat.log.sequence,combat.manager.phase]
 	for squad in [unit, target]:
 		for model in squad.models: stamp.append([model.global_position, model.wounds, model.removed, model.selected])
 	if stamp == _preview_stamp: return

@@ -1,0 +1,789 @@
+{
+  "family": "legion_infantry",
+  "source": "art\\blender\\workshop_0140\\legion_components.blend",
+  "slots": {
+    "head": [
+      "Sentinel",
+      "Surveyor",
+      "Bastion"
+    ],
+    "shoulders": [
+      "Standard",
+      "Reinforced",
+      "Bulwark"
+    ],
+    "backpack": [
+      "Reactor",
+      "Signal",
+      "Coolant"
+    ],
+    "weapon": [
+      "Service",
+      "Vented",
+      "Rail"
+    ],
+    "accessory": [
+      "None",
+      "Pouch",
+      "Canister",
+      "Signal tablet"
+    ],
+    "decoration": [
+      "None",
+      "Masonry",
+      "Conduit",
+      "Fractured tile"
+    ]
+  },
+  "constraints": "Cosmetic only; 32mm base envelope; head yaw +/-25, upper torso yaw +/-8 degrees; no gameplay stats",
+  "category_faces": {
+    "body": 19500,
+    "torso": 17473,
+    "head": 4483,
+    "shoulders": 4931,
+    "backpack": 4398,
+    "weapon": 3559
+  },
+  "components": [
+    {
+      "id": "head_0",
+      "node": "head_0",
+      "family": "legion_infantry",
+      "slot": "head",
+      "attachment_position_y_up": [
+        0.0,
+        1.3188976049423218,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "shoulders_0",
+      "node": "shoulders_0",
+      "family": "legion_infantry",
+      "slot": "shoulders",
+      "attachment_position_y_up": [
+        0.0,
+        0.748031497001648,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "backpack_0",
+      "node": "backpack_0",
+      "family": "legion_infantry",
+      "slot": "backpack",
+      "attachment_position_y_up": [
+        0.0,
+        0.748031497001648,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "weapon_0",
+      "node": "weapon_0",
+      "family": "legion_infantry",
+      "slot": "weapon",
+      "attachment_position_y_up": [
+        0.0,
+        0.748031497001648,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "head_1",
+      "node": "head_1",
+      "family": "legion_infantry",
+      "slot": "head",
+      "attachment_position_y_up": [
+        0.0,
+        1.3188976049423218,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "head_2",
+      "node": "head_2",
+      "family": "legion_infantry",
+      "slot": "head",
+      "attachment_position_y_up": [
+        0.0,
+        1.3188976049423218,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "shoulders_1",
+      "node": "shoulders_1",
+      "family": "legion_infantry",
+      "slot": "shoulders",
+      "attachment_position_y_up": [
+        0.0,
+        0.748031497001648,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "shoulders_2",
+      "node": "shoulders_2",
+      "family": "legion_infantry",
+      "slot": "shoulders",
+      "attachment_position_y_up": [
+        0.0,
+        0.748031497001648,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "backpack_1",
+      "node": "backpack_1",
+      "family": "legion_infantry",
+      "slot": "backpack",
+      "attachment_position_y_up": [
+        0.0,
+        0.748031497001648,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "backpack_2",
+      "node": "backpack_2",
+      "family": "legion_infantry",
+      "slot": "backpack",
+      "attachment_position_y_up": [
+        0.0,
+        0.748031497001648,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "weapon_1",
+      "node": "weapon_1",
+      "family": "legion_infantry",
+      "slot": "weapon",
+      "attachment_position_y_up": [
+        0.0,
+        0.748031497001648,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "weapon_2",
+      "node": "weapon_2",
+      "family": "legion_infantry",
+      "slot": "weapon",
+      "attachment_position_y_up": [
+        0.0,
+        0.748031497001648,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "accessory_0",
+      "node": "accessory_0",
+      "family": "legion_infantry",
+      "slot": "accessory",
+      "attachment_position_y_up": [
+        -0.2800000011920929,
+        0.7699999809265137,
+        -0.10000000149011612
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "accessory_1",
+      "node": "accessory_1",
+      "family": "legion_infantry",
+      "slot": "accessory",
+      "attachment_position_y_up": [
+        -0.2800000011920929,
+        0.7699999809265137,
+        -0.10000000149011612
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "accessory_2",
+      "node": "accessory_2",
+      "family": "legion_infantry",
+      "slot": "accessory",
+      "attachment_position_y_up": [
+        -0.2800000011920929,
+        0.7699999809265137,
+        -0.10000000149011612
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "accessory_3",
+      "node": "accessory_3",
+      "family": "legion_infantry",
+      "slot": "accessory",
+      "attachment_position_y_up": [
+        -0.2800000011920929,
+        0.7699999809265137,
+        -0.10000000149011612
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "decoration_0",
+      "node": "decoration_0",
+      "family": "legion_infantry",
+      "slot": "decoration",
+      "attachment_position_y_up": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "decoration_1",
+      "node": "decoration_1",
+      "family": "legion_infantry",
+      "slot": "decoration",
+      "attachment_position_y_up": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "decoration_2",
+      "node": "decoration_2",
+      "family": "legion_infantry",
+      "slot": "decoration",
+      "attachment_position_y_up": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    },
+    {
+      "id": "decoration_3",
+      "node": "decoration_3",
+      "family": "legion_infantry",
+      "slot": "decoration",
+      "attachment_position_y_up": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "pose_compatibility": "rigid_head_and_upper_assembly_v1",
+      "material_regions": [
+        "primary",
+        "trim",
+        "metal"
+      ],
+      "visual_only": true,
+      "attachment_rotation_degrees": [
+        0,
+        0,
+        0
+      ],
+      "constraints": {
+        "head_yaw_degrees": [
+          -25,
+          25
+        ],
+        "upper_assembly_yaw_degrees": [
+          -8,
+          8
+        ],
+        "base_decoration_radius_inches": 0.63,
+        "affects_collision": false,
+        "affects_los": false,
+        "weapon_statistics": "unchanged"
+      }
+    }
+  ]
+}

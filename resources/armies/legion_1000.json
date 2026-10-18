@@ -1,0 +1,69 @@
+{
+  "kind": "grimtable_army",
+  "version": 1,
+  "id": "army_starter_legion_1000",
+  "name": "Legion - 1000 Task Force",
+  "faction": "legion",
+  "points_limit": 1000,
+  "homebrew": false,
+  "units": [
+    {
+      "id": "squad_1",
+      "name": "Armored Commander 1",
+      "unit_id": "legion_commander",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_2",
+      "name": "Legion Trooper 2",
+      "unit_id": "legion_trooper",
+      "count": 6,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_3",
+      "name": "Legion Heavy 3",
+      "unit_id": "legion_heavy",
+      "count": 3,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_4",
+      "name": "Legion Walker 4",
+      "unit_id": "legion_walker",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_5",
+      "name": "Legion Breach Squad 5",
+      "unit_id": "legion_assault",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_6",
+      "name": "Legion Battle Tank 6",
+      "unit_id": "legion_battle_tank",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_7",
+      "name": "Legion Trooper 7",
+      "unit_id": "legion_trooper",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    }
+  ],
+  "dependencies": [],
+  "profiles": {}
+}

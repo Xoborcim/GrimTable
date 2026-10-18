@@ -37,7 +37,15 @@
     "synthetic_drone": "res://resources/units/synthetic_drone.json",
     "synthetic_sentinel": "res://resources/units/synthetic_sentinel.json",
     "synthetic_destroyer": "res://resources/units/synthetic_destroyer.json",
-    "synthetic_walker": "res://resources/units/synthetic_walker.json"
+    "synthetic_walker": "res://resources/units/synthetic_walker.json",
+    "legion_commander": "res://resources/units/legion_commander.json",
+    "legion_assault": "res://resources/units/legion_assault.json",
+    "horde_warchief": "res://resources/units/horde_warchief.json",
+    "horde_runners": "res://resources/units/horde_runners.json",
+    "swarm_synapse": "res://resources/units/swarm_synapse.json",
+    "swarm_spitters": "res://resources/units/swarm_spitters.json",
+    "synthetic_overseer": "res://resources/units/synthetic_overseer.json",
+    "synthetic_scout": "res://resources/units/synthetic_scout.json"
   },
   "weapons": {
     "legion_rifle": "res://resources/weapons/legion_rifle.json",

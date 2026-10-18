@@ -35,6 +35,9 @@ func resolve(attacker: TableUnit, target: TableUnit, world: World3D, weapon_inde
 	if result.has("error"):
 		message.emit(result.error)
 		return false
+	if WeaponUse.strict(attacker):
+		result["_round"] = manager.round_number
+		result["_phase"] = manager.phase
 	var resolution := AttackResolution.new()
 	resolution.result = result
 	resolution.target = target

@@ -1,0 +1,98 @@
+{
+	"ai_decisions": 139,
+	"ai_max_ms": 301.465,
+	"ai_mean_ms": 28.133690647482,
+	"ai_p95_ms": 144.396,
+	"battle_ms": 6685.736,
+	"deployment_error": "",
+	"deployment_ms": 202.39,
+	"events": 263,
+	"mode": "Automated AI vs AI, not human usability testing",
+	"models": 58,
+	"phase": 5,
+	"points": 1000,
+	"primary_secondary": {
+		"0": {
+			"active": [
+				"cut_command",
+				"hold_network"
+			],
+			"alive_at_draw": [
+				"t0s0",
+				"t0s1",
+				"t0s2",
+				"t0s3",
+				"t0s4",
+				"t0s5",
+				"t0s6",
+				"t1s0",
+				"t1s1",
+				"t1s2",
+				"t1s3"
+			],
+			"completed": [
+				"cut_command"
+			],
+			"discard": [
+				"eliminate_vanguard",
+				"break_defense",
+				"behind_lines",
+				"secure_relay",
+				"hold_breach",
+				"sabotage_generator",
+				"disrupt_comms",
+				"recover_artifact",
+				"forward_position",
+				"defend_strongpoint"
+			],
+			"draw": [],
+			"primary_score": 0,
+			"secondary_score": 5
+		},
+		"1": {
+			"active": [
+				"cut_command",
+				"break_defense"
+			],
+			"alive_at_draw": [
+				"t0s0",
+				"t0s1",
+				"t0s2",
+				"t0s3",
+				"t0s4",
+				"t0s5",
+				"t0s6",
+				"t1s0",
+				"t1s1",
+				"t1s2",
+				"t1s3"
+			],
+			"completed": [],
+			"discard": [
+				"defend_strongpoint",
+				"recover_artifact",
+				"hold_network",
+				"sabotage_generator",
+				"hold_breach",
+				"forward_position",
+				"eliminate_vanguard",
+				"disrupt_comms",
+				"secure_relay",
+				"behind_lines"
+			],
+			"draw": [],
+			"primary_score": 0,
+			"secondary_score": 0
+		}
+	},
+	"replay_validation": "",
+	"result": "complete",
+	"round": 6,
+	"save": "Saved tabletop to user://acceptance_1000.json",
+	"scores": {
+		"0": 5,
+		"1": 0
+	},
+	"seed": 16000,
+	"steps": 139
+}

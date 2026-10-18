@@ -1,0 +1,10 @@
+{
+	"army_id": "army_1792360842_48_5064247",
+	"checks": 17,
+	"failures": [],
+	"gpu": "NVIDIA GeForce GTX 1660 Ti",
+	"renderer": "gl_compatibility",
+	"texture_memory_bytes": 426119491.0,
+	"version": "0.15.0",
+	"video_memory_bytes": 588362463.0
+}

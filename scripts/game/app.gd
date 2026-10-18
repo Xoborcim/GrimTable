@@ -65,6 +65,12 @@ func _ready() -> void:
 	discard_dialog.confirmed.connect(show_main)
 	root.add_child(discard_dialog)
 	show_main()
+	if "--smoke-armies" in OS.get_cmdline_user_args():
+		var army_smoke:=ArmySmoke.new();add_child(army_smoke);army_smoke.call_deferred("run",self)
+	if "--smoke-army-hud" in OS.get_cmdline_user_args():
+		var army_hud:=ArmySmoke.new();add_child(army_hud);army_hud.call_deferred("run_hud",self)
+	if "--smoke-workshop" in OS.get_cmdline_user_args():
+		var workshop_smoke:=WorkshopSmoke.new();add_child(workshop_smoke);workshop_smoke.call_deferred("run",self)
 	if "--smoke-baked-0133" in OS.get_cmdline_user_args():
 		var baked_smoke:=BakedVisual133Smoke.new();add_child(baked_smoke);baked_smoke.call_deferred("run",self)
 	if "--smoke-composition-0131" in OS.get_cmdline_user_args():
@@ -158,9 +164,9 @@ func show_main() -> void:
 	column.custom_minimum_size.x = 320
 	column.get_child(0).add_theme_font_size_override("font_size", 42)
 	AppUI.label(column,"THE HOLLOW BASILICA  /  LEGION vs SWARM",12).modulate = GrimTheme.IVORY
-	var play := AppUI.button(column,"Play",show_local_play)
+	var play := AppUI.button(column,"Play",show_army_battle)
 	play.add_theme_stylebox_override("normal",GrimTheme.primary())
-	for action in [["Multiplayer",online_menu.show_menu],["Scenarios / Load",func(): show_browser(false)],["Scenario Editor",func(): show_browser(true)],["Miniature Library",show_miniature_library],["Mods",show_mods],["Replay",show_replays],["Settings",show_settings],["Quit",func(): get_tree().quit()]]:
+	for action in [["Army Builder",show_army_builder],["Custom Factions",show_homebrew],["Quick Play",show_local_play],["Multiplayer",online_menu.show_menu],["Scenarios / Load",func(): show_browser(false)],["Scenario Editor",func(): show_browser(true)],["Miniature Workshop",show_workshop],["Miniature Library",show_miniature_library],["Mods",show_mods],["Replay",show_replays],["Settings",show_settings],["Quit",func(): get_tree().quit()]]:
 		AppUI.button(column,action[0],action[1])
 	AppUI.label(column,str(ProjectSettings.get_setting("application/config/version"))+"   /   ORIGINAL SCI-FI TABLETOP",12).modulate = GrimTheme.MUTED
 
@@ -500,8 +506,27 @@ func show_local_play() -> void:
 		launch_with_transition(items[scenario_choice.selected]))
 	AppUI.button(column,"Back",show_main)
 
+func show_army_builder() -> ArmyBuilder:
+	menu.hide()
+	var builder:=ArmyBuilder.new();builder.app=self;root.add_child(builder)
+	return builder
+
+func show_army_battle() -> void:
+	ArmyBattleSetup.show_menu(self)
+
+func show_homebrew() -> HomebrewEditor:
+	menu.hide()
+	var editor_ui:=HomebrewEditor.new();editor_ui.app=self;root.add_child(editor_ui)
+	return editor_ui
+
 func show_miniature_library() -> void:
 	menu.hide()
 	var library := MiniatureLibraryPanel.new()
 	library.app = self
 	root.add_child(library)
+
+func show_workshop(source: String="legion_trooper") -> MiniatureWorkshop:
+	menu.hide();backdrop.hide()
+	var workshop:=preload("res://scenes/main/miniature_workshop.tscn").instantiate() as MiniatureWorkshop
+	workshop.app=self;workshop.initial_source=source;root.add_child(workshop)
+	return workshop

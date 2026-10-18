@@ -24,6 +24,9 @@ static func turn_error(value: Variant) -> String:
 	if not value is Dictionary or not ScenarioDefinition.integer(value.get("round"), 1, 10000) or not ScenarioDefinition.integer(value.get("phase"), 0, 5) or not ScenarioDefinition.integer(value.get("team"), 0, 1) or not value.get("deployment") is bool: return "Invalid round/phase/player"
 	var extra := assistance_state_error(value)
 	if not extra.is_empty(): return extra
+	if value.has("missions"):
+		extra = MissionRules.error(value.missions)
+		if not extra.is_empty(): return extra
 	if value.has("scores"):
 		if not value.scores is Dictionary: return "Invalid objective scores"
 		for team in ["0", "1"]:

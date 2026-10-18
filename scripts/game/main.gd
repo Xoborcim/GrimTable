@@ -28,6 +28,7 @@ var life: BattlefieldLife
 var dice_tray: DiceTray
 var ai_config: Dictionary = {}
 var match_overlay: CanvasLayer
+var battle_desk: BattleDesk
 
 func _ready() -> void:
 	for issue in ContentRegistry.validate(): push_error("Content: " + issue)
@@ -72,7 +73,8 @@ func _ready() -> void:
 	manager.name = "GameManager"
 	add_child(manager)
 	manager.restore(scenario.starting_state)
-	manager.score_provider = func(): return {} if not settings.automatic_scoring else ObjectiveControl.scores(battlefield, int(scenario.get("scoring", {}).get("objective_points_per_round", 0)))
+	manager.score_provider = func(): return {} if not settings.automatic_scoring or not manager.missions.is_empty() else ObjectiveControl.scores(battlefield, int(scenario.get("scoring", {}).get("objective_points_per_round", 0)))
+	manager.transition_hook = func(): MissionRules.update(self)
 	deployment = DeploymentManager.new()
 	deployment.board = battlefield
 	deployment.manager = manager
@@ -119,6 +121,7 @@ func _ready() -> void:
 	ai.game = self
 	add_child(ai)
 	ai.configure(ai_config)
+	battle_desk=BattleDesk.new();battle_desk.game=self;add_child(battle_desk)
 	life = BattlefieldLife.new()
 	life.game = self
 	add_child(life)
@@ -173,6 +176,8 @@ func apply_scenario(data: Dictionary) -> void:
 	BattlefieldPresentation.apply_theme(self,data.board)
 	deployment.load_zones(data)
 	manager.restore(data.starting_state)
+	if is_instance_valid(battle_desk):remove_child(battle_desk);battle_desk.queue_free()
+	battle_desk=BattleDesk.new();battle_desk.game=self;add_child(battle_desk)
 	camera_rig.bounds = Vector2(battlefield.width, battlefield.depth) / 2
 	hud.refresh_selection()
 
@@ -212,6 +217,7 @@ func start_game() -> bool:
 		return false
 	var before := manager.snapshot()
 	manager.deployment = false
+	MissionRules.update(self)
 	manager.changed.emit()
 	history.clear()
 	battle_log.append("start_game", {"scenario": scenario.id, "before": before, "after": manager.snapshot()})
@@ -254,7 +260,7 @@ func show_match_summary() -> void:
 	guidance.toast.hide()
 	var rows := VBoxContainer.new()
 	card.add_child(rows)
-	var us := int(ai.config.get("human_team",0))
+	var us := (0 if network_session.host else 1) if network_session!=null else int(ai.config.get("human_team",0))
 	var ours := int(manager.scores[str(us)])
 	var theirs := int(manager.scores[str(1-us)])
 	var alive := [0,0]
@@ -264,6 +270,12 @@ func show_match_summary() -> void:
 	AppUI.label(rows,"Defeat" if surrendered else "Victory" if won else "Draw" if ours == theirs and alive[0]>0 and alive[1]>0 else "Defeat",32)
 	AppUI.label(rows,ai.reason,15)
 	AppUI.label(rows,"You %d  -  %d Enemy" % [ours,theirs],26)
+	if not manager.missions.is_empty():
+		for team in ["0","1"]:
+			var mission_score: Dictionary=manager.missions.teams[team]
+			var army_name: String=scenario.get("army_lists",[{},{}])[int(team)].get("name","Team "+team)
+			AppUI.label(rows,army_name+" · Primary "+str(mission_score.primary_score)+" · Tactical "+str(mission_score.secondary_score),15)
+		AppUI.label(rows,"Rounds played: "+str(manager.missions.scored.size()),15)
 	var remaining := 0
 	var damage := 0
 	var defeated := 0
@@ -285,6 +297,9 @@ func show_match_summary() -> void:
 	AppUI.label(rows,"Objectives: %d\nModels remaining: %d\nEnemy models defeated: %d\nDamage dealt: %d" % [objectives,remaining,defeated,damage],17)
 	AppUI.button(rows,"Save Replay",func(): hud.set_status(ReplayController.save(self)))
 	AppUI.button(rows,"Play Again",func():
+		if network_session!=null:
+			if network_session.host:network_session.rematch()
+			return
 		layer.queue_free()
 		apply_scenario(initial_scenario)
 		var fresh := ai_config.duplicate(true)
@@ -292,4 +307,5 @@ func show_match_summary() -> void:
 		fresh.erase("reason")
 		ai.configure(fresh)
 		interaction.read_only = false)
+	if network_session!=null and not network_session.host:rows.get_child(rows.get_child_count()-1).queue_free()
 	AppUI.button(rows,"Main Menu",func(): get_parent().show_main())

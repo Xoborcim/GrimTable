@@ -18,5 +18,21 @@
     "scrap_gun"
   ],
   "weapon": "res://resources/weapons/scrap_blades.json",
-  "fallback_model_scene": "res://assets/grimtable/models/horde_raider.tscn"
+  "fallback_model_scene": "res://assets/grimtable/models/horde_raider.tscn",
+  "roster": {
+    "role": "Infantry",
+    "points_per_model": 7,
+    "base_points": 0,
+    "min_size": 5,
+    "max_size": 20,
+    "max_units": 8,
+    "upgrades": [
+      {
+        "weapon": "scrap_crusher",
+        "replaces": "scrap_blades",
+        "points": 9,
+        "per_models": 5
+      }
+    ]
+  }
 }

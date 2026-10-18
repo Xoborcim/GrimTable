@@ -1,0 +1,18 @@
+{
+  "version": "0.15.0",
+  "engine": "Godot 4.6.1",
+  "renderer": "gl_compatibility",
+  "executable_bytes": 341730368,
+  "executable_sha256": "62c497d7df9dbae2e104cc506b0990b5cf68ebc5dcbc514ff1220b464008dbba",
+  "packaged_checks": 17,
+  "focused_hud_checks": 3,
+  "regression_suites": 30,
+  "full_run_count": 1,
+  "effective_all_suites_passed": true,
+  "native_fps_100": 156.4338641076404,
+  "native_fps_200": 82.9434224483608,
+  "new_texture_bytes": 0,
+  "human_usability_tested": false,
+  "live_internet_match_tested": false,
+  "focused_persistence_checks": 46
+}

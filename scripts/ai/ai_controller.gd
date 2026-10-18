@@ -204,6 +204,7 @@ func step(preplanned: Dictionary = {}) -> String:
 	return str(choice.kind) if ok else "invalid"
 
 func check_end() -> bool:
+	MissionRules.finish_elimination(game)
 	var alive := [0,0]
 	for unit: TableUnit in game.battlefield.units.get_children(): alive[unit.team] += unit.living_models().size()
 	if alive[0] == 0 or alive[1] == 0: finish("Battle complete: opposing force defeated.")

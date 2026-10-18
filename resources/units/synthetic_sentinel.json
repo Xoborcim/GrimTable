@@ -18,5 +18,14 @@
     "combat_blade"
   ],
   "weapon": "res://resources/weapons/synth_beam.json",
-  "fallback_model_scene": "res://assets/grimtable/models/synthetic_sentinel.tscn"
+  "fallback_model_scene": "res://assets/grimtable/models/synthetic_sentinel.tscn",
+  "roster": {
+    "role": "Specialist",
+    "points_per_model": 36,
+    "base_points": 0,
+    "min_size": 3,
+    "max_size": 6,
+    "max_units": 4,
+    "upgrades": []
+  }
 }

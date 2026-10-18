@@ -119,7 +119,7 @@ func _process(delta: float) -> void:
 	for id in animations:
 		var controller: UnitAnimationController = animations[id]
 		var model := controller.model
-		if not is_instance_valid(model) or model.removed: continue
+		if not is_instance_valid(model) or not model.is_inside_tree() or model.removed: continue
 		var active := controller.motion_left > 0 or controller.reaction > 0
 		if not active and idle_clock < .10: continue
 		if camera.is_position_behind(model.global_position) or camera.global_position.distance_to(model.global_position)>70:

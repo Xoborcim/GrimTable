@@ -1,0 +1,31 @@
+{
+  "id": "legion_commander",
+  "name": "Armored Commander",
+  "faction": "legion",
+  "movement": 6,
+  "defense": 4,
+  "toughness": 4,
+  "save": 3,
+  "wounds": 5,
+  "max_wounds": 5,
+  "base_mm": 32,
+  "model_scene": "res://assets/grimtable/models/legion_trooper.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 1.7,
+  "los_height": 1.36,
+  "weapons": [
+    "legion_rifle",
+    "combat_blade"
+  ],
+  "weapon": "res://resources/weapons/legion_rifle.json",
+  "fallback_model_scene": "res://assets/grimtable/models/legion_trooper.tscn",
+  "roster": {
+    "role": "Leader",
+    "points_per_model": 110,
+    "base_points": 0,
+    "min_size": 1,
+    "max_size": 1,
+    "max_units": 2,
+    "upgrades": []
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "swarm_synapse",
+  "name": "Brood Guide",
+  "faction": "swarm",
+  "movement": 9,
+  "defense": 5,
+  "toughness": 5,
+  "save": 5,
+  "wounds": 7,
+  "max_wounds": 7,
+  "base_mm": 40,
+  "model_scene": "res://assets/grimtable/models/swarm_hunter.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 1.8,
+  "los_height": 1.4400000000000002,
+  "weapons": [
+    "swarm_talons",
+    "swarm_spines"
+  ],
+  "weapon": "res://resources/weapons/swarm_talons.json",
+  "fallback_model_scene": "res://assets/grimtable/models/swarm_hunter.tscn",
+  "roster": {
+    "role": "Leader",
+    "points_per_model": 100,
+    "base_points": 0,
+    "min_size": 1,
+    "max_size": 1,
+    "max_units": 2,
+    "upgrades": []
+  }
+}

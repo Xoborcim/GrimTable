@@ -1,0 +1,70 @@
+{
+  "legion_infantry": {
+    "resolution": 1024,
+    "triangles": 326064,
+    "palette_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      14
+    ],
+    "ownership": "Exact preserved high-relief UV faces and original bake_tile recipes",
+    "bytes": 76233,
+    "existing_paint_mask_agreement": {
+      "primary": 1.0,
+      "secondary": 0.99364896073903,
+      "trim": 0.9977777777777778
+    },
+    "agreement_test": "Fully opaque independent paint-mask interiors eroded by 3px on each side; excludes unmapped/padding texels",
+    "uv_orientation": "Blender V flipped to glTF/PNG row coordinates",
+    "encoding": "lossless R8: palette ID + 1; 0 outside mapped geometry; nearest sampling; no mips"
+  },
+  "heavy_walker": {
+    "resolution": 2048,
+    "triangles": 340932,
+    "palette_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      11,
+      14
+    ],
+    "ownership": "Exact preserved high-relief UV faces and original bake_tile recipes",
+    "bytes": 153049,
+    "existing_paint_mask_agreement": {
+      "primary": 1.0,
+      "secondary": 0.9841782370035518,
+      "trim": 0.9862024500322373
+    },
+    "agreement_test": "Fully opaque independent paint-mask interiors eroded by 3px on each side; excludes unmapped/padding texels",
+    "uv_orientation": "Blender V flipped to glTF/PNG row coordinates",
+    "encoding": "lossless R8: palette ID + 1; 0 outside mapped geometry; nearest sampling; no mips"
+  },
+  "swarm_creature": {
+    "resolution": 1024,
+    "triangles": 544584,
+    "palette_ids": [
+      0,
+      4,
+      6,
+      8,
+      9,
+      10
+    ],
+    "ownership": "Exact preserved high-relief UV faces and original bake_tile recipes",
+    "bytes": 38465,
+    "existing_paint_mask_agreement": {},
+    "agreement_test": "Fully opaque independent paint-mask interiors eroded by 3px on each side; excludes unmapped/padding texels",
+    "uv_orientation": "Blender V flipped to glTF/PNG row coordinates",
+    "encoding": "lossless R8: palette ID + 1; 0 outside mapped geometry; nearest sampling; no mips"
+  }
+}

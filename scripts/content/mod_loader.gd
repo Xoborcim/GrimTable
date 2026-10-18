@@ -170,7 +170,7 @@ static func register_pack(entry: Dictionary) -> String:
 	for record: Dictionary in records.units:
 		var unit: Dictionary = record.data
 		for key in unit:
-			if key not in ["id", "name", "faction", "movement", "defense", "toughness", "save", "wounds", "max_wounds", "base_mm", "gameplay_height", "los_height", "visual_scale", "weapons", "fallback_visual", "visual"]: return "Unsupported unit field: " + str(key)
+			if key not in ["id", "name", "faction", "movement", "defense", "toughness", "save", "wounds", "max_wounds", "base_mm", "gameplay_height", "los_height", "visual_scale", "weapons", "fallback_visual", "visual", "roster"]: return "Unsupported unit field: " + str(key)
 		if not unit.get("faction") is String or not unit.get("weapons") is Array: return "Missing faction/weapons"
 		unit.faction = ContentRegistry.resolve_id(unit.faction)
 		if not allowed_reference(unit.faction, entry): return "Undeclared faction dependency: " + unit.faction
@@ -180,6 +180,11 @@ static func register_pack(entry: Dictionary) -> String:
 			if not allowed_reference(unit.weapons[i], entry): return "Undeclared weapon dependency: " + unit.weapons[i]
 			if not ContentRegistry.catalog().weapons.has(unit.weapons[i]): return "Missing weapon reference \"%s\" in %s" % [unit.weapons[i], unit.id]
 		unit["max_wounds"] = unit.get("max_wounds", unit.get("wounds"))
+		if unit.has("roster"):
+			var roster_issue := ArmyRoster.rules_error(unit.roster)
+			if not roster_issue.is_empty():return roster_issue
+			for option in unit.roster.get("upgrades",[]):
+				if not allowed_reference(option.weapon,entry) or not ContentRegistry.catalog().weapons.has(option.weapon) or not unit.weapons.has(option.replaces):return "Invalid roster weapon replacement."
 		var fallback: Variant = unit.get("fallback_visual", "legion_trooper")
 		if not fallback is String or not ContentRegistry._builtin.units.has(ContentRegistry.resolve_id(fallback)): return "Unknown built-in fallback visual"
 		unit["model_scene"] = ContentRegistry.fallback_path(fallback)

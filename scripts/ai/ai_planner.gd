@@ -33,7 +33,7 @@ static func charge_probability(required: float, rule: Dictionary) -> float:
 
 static func expected_damage(attacker: TableUnit, target: TableUnit, group: Dictionary) -> float:
 	var weapon: Dictionary = group.weapon
-	return float(group.preview.attacks) * probability(clampi(int(weapon.hit), 2, 7)) * probability(AttackResolver.wound_target(int(weapon.strength), int(target.definition.get("defense", target.definition.get("toughness", 4))))) * (1 - probability(AttackOptions.save_required(target, weapon))) * float(weapon.damage)
+	return float(group.preview.attacks) * probability(clampi(int(weapon.hit), 2, 7)) * probability(AttackResolver.wound_target(AttackResolver.strength_against(weapon,target.definition), int(target.definition.get("defense", target.definition.get("toughness", 4))))) * (1 - probability(AttackOptions.save_required(target, weapon))) * float(weapon.damage)
 
 func enemies(unit: TableUnit) -> Array[TableUnit]:
 	var found: Array[TableUnit] = []
@@ -46,6 +46,10 @@ func states() -> Dictionary:
 	return PhaseAssistant.states(game.battle_log, game.manager.round_number, int(game.initial_scenario.starting_state.round), bool(game.initial_scenario.starting_state.deployment))
 
 func fired(unit: TableUnit, weapon: Dictionary) -> bool:
+	if WeaponUse.strict(unit):
+		for model in unit.living_models():
+			if WeaponUse.eligible(unit,model,weapon): return false
+		return true
 	var round_at := int(game.initial_scenario.starting_state.round)
 	for entry in game.battle_log.entries:
 		if entry.kind in ["turn", "start_game"]: round_at = int(entry.payload.get("after", {}).get("round", round_at))
@@ -58,6 +62,12 @@ func target_value(unit: TableUnit, target: TableUnit, group: Dictionary) -> floa
 	for model in target.living_models(): health += model.wounds
 	var score := damage * float(weights.damage)
 	if damage >= health * .65: score += float(weights.kill) * minf(1, damage / maxi(1, health))
+	if not game.manager.missions.is_empty():
+		var role: String=target.definition.get("roster",{}).get("role","")
+		for id: String in game.manager.missions.teams[str(unit.team)].active:
+			var card:=MissionRules.card(id)
+			if (card.condition=="destroy_heavy" and role in ["Vehicle","Walker","Creature"]) or (card.condition=="destroy_leader" and role=="Leader") or (card.condition=="destroy_fast" and role=="Fast"):
+				score+=float(card.points)*float(weights.kill)*minf(1,damage/maxi(1,health))
 	for objective: TableObjective in game.battlefield.objectives.get_children():
 		if FormationPlanner.center(target.living_models()).distance_to(objective.global_position) < objective.radius + 2: score += float(weights.objective_holder)
 	return score
@@ -135,7 +145,7 @@ func position_value(unit: TableUnit, point: Vector3) -> float:
 	if melee > 0 and is_finite(nearest): score += float(weights.melee) / (1 + nearest)
 	for piece: TerrainPiece in game.battlefield.terrain.get_children():
 		if piece.cover_bonus > 0 and piece.overlaps_base(point,0): score += float(weights.cover)
-	return score
+	return score + MissionRules.position_bonus(game,unit,point)*float(weights.objective)*.12
 
 func movement_candidates(unit: TableUnit) -> Array[Vector3]:
 	var models := unit.living_models()
@@ -143,6 +153,11 @@ func movement_candidates(unit: TableUnit) -> Array[Vector3]:
 	var allowance := INF
 	for model in models: allowance = minf(allowance,model.movement)
 	var goals: Array[Vector3] = []
+	if not game.manager.missions.is_empty():
+		for id: String in game.manager.missions.teams[str(unit.team)].active:
+			var condition: String=MissionRules.card(id).condition
+			if condition=="center":goals.append(Vector3.ZERO)
+			if condition in ["advance","behind"]:goals.append(Vector3(origin.x,0,(-1 if unit.team==0 else 1)*(game.battlefield.depth/2-5)))
 	for objective: TableObjective in game.battlefield.objectives.get_children(): goals.append(objective.global_position)
 	for enemy in enemies(unit): goals.append(FormationPlanner.center(enemy.living_models()))
 	var candidates: Array[Vector3] = []

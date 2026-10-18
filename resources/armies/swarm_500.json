@@ -1,0 +1,77 @@
+{
+  "kind": "grimtable_army",
+  "version": 1,
+  "id": "army_starter_swarm_500",
+  "name": "Swarm - 500 Patrol",
+  "faction": "swarm",
+  "points_limit": 500,
+  "homebrew": false,
+  "units": [
+    {
+      "id": "squad_1",
+      "name": "Brood Guide 1",
+      "unit_id": "swarm_synapse",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_2",
+      "name": "Swarm Crawler 2",
+      "unit_id": "swarm_crawler",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_3",
+      "name": "Swarm Hunter 3",
+      "unit_id": "swarm_hunter",
+      "count": 3,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_4",
+      "name": "Spine Brood 4",
+      "unit_id": "swarm_spitters",
+      "count": 3,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_5",
+      "name": "Swarm Winged Beast 5",
+      "unit_id": "swarm_winged_beast",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_6",
+      "name": "Swarm Crawler 6",
+      "unit_id": "swarm_crawler",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_7",
+      "name": "Swarm Crawler 7",
+      "unit_id": "swarm_crawler",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_8",
+      "name": "Swarm Crawler 8",
+      "unit_id": "swarm_crawler",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    }
+  ],
+  "dependencies": [],
+  "profiles": {}
+}

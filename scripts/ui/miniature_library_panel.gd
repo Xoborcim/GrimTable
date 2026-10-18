@@ -48,6 +48,8 @@ func _ready() -> void:
 	AppUI.button(left,"Import Model",func(): guard(func(): file_dialog.popup_centered_ratio(.75)))
 	AppUI.button(left,"Configure Blender…",func(): blender_dialog.popup_centered_ratio(.7))
 	AppUI.button(left,"Delete Miniature",delete_selected)
+	AppUI.button(left,"Open in Workshop",func():
+		if not record.is_empty():guard(func():queue_free();app.show_workshop(str(record.id))))
 	AppUI.button(left,"Back",func(): guard(func(): queue_free(); app.show_main()))
 	var middle := VBoxContainer.new()
 	middle.size_flags_horizontal = Control.SIZE_EXPAND_FILL

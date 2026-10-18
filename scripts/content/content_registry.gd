@@ -72,7 +72,7 @@ static func weapons(profile: Dictionary) -> Array[Dictionary]:
 		return result
 	for id in profile.get("weapons", [profile.get("weapon", "")]):
 		var path: String = catalog().get("weapons", {}).get(resolve_id(str(id)), id)
-		if FileAccess.file_exists(path):
+		if FileAccess.file_exists(path) or _definitions.has(path):
 			var value: Variant = read_json(path)
 			if value is Dictionary: result.append(value)
 	return result
@@ -105,6 +105,9 @@ static func profile_error(profile: Dictionary, snapshot: bool = false) -> String
 	for key in ["defense", "toughness", "save", "gameplay_height", "los_height", "visual_scale"]:
 		if profile.has(key) and not ScenarioDefinition.number(profile[key], 0.01, 100): return "Invalid unit stat: " + key
 	if not snapshot and profile.has("faction") and not catalog().get("factions", {}).has(profile.faction): return "Missing faction: " + str(profile.faction)
+	if profile.has("roster"):
+		var roster_issue := ArmyRoster.rules_error(profile.roster)
+		if not roster_issue.is_empty():return roster_issue
 	if profile.has("weapons"):
 		if not profile.weapons is Array or profile.weapons.is_empty() or profile.weapons.size() > 32: return "Invalid equipped weapons"
 		for id in profile.weapons:

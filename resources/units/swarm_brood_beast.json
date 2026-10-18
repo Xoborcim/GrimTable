@@ -18,5 +18,14 @@
     "swarm_spines"
   ],
   "weapon": "res://resources/weapons/swarm_fangs.json",
-  "fallback_model_scene": "res://assets/grimtable/models/swarm_brood_beast.tscn"
+  "fallback_model_scene": "res://assets/grimtable/models/swarm_brood_beast.tscn",
+  "roster": {
+    "role": "Creature",
+    "points_per_model": 220,
+    "base_points": 0,
+    "min_size": 1,
+    "max_size": 1,
+    "max_units": 3,
+    "upgrades": []
+  }
 }

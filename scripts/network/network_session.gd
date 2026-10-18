@@ -38,6 +38,12 @@ var ledger := RequestLedger.new()
 var compatibility := NetworkCompatibility.manifest()
 var debug_delay_ms := 0
 var delayed_frames: Array[Dictionary] = []
+var army_offer: Dictionary = {}
+var army_rules: Dictionary = {}
+var army_pending: Dictionary = {}
+var army_accepted: Dictionary = {}
+var army_match_ready := false
+var army_panel: ArmyLobbyPanel
 
 func _ready() -> void:
 	for argument in OS.get_cmdline_user_args():
@@ -66,6 +72,9 @@ func open(next_transport: MultiplayerTransport, table: Node3D) -> void:
 	if transport.peer != null: _attach()
 	committed = WorldState.capture(game)
 	game.hud.refresh_turn()
+	if not army_offer.is_empty():
+		game.interaction.read_only=true
+		army_panel=ArmyLobbyPanel.new();army_panel.session=self;add_child(army_panel)
 
 func _attach() -> void:
 	api.multiplayer_peer = transport.peer
@@ -101,7 +110,7 @@ func _peer_connected(id: int) -> void:
 	remote_id = id
 	transport.connected = true
 	quiet = 0
-	_send({"type": "hello", "compatibility": compatibility})
+	_send({"type": "hello", "compatibility": compatibility,"army_mode":not army_offer.is_empty()})
 
 func _accepted() -> void:
 	if compatibility_accepted: return
@@ -111,10 +120,42 @@ func _accepted() -> void:
 	snapshot_elapsed = 0
 	status_changed.emit("Opponent connected · " + transport.label)
 	opponent_connected.emit()
-	if host: _send_snapshot("lobby")
+	if not army_offer.is_empty():
+		if not host:_send({"type":"army_offer","army":army_offer})
+	elif host: _send_snapshot("lobby")
+
+func accept_armies() -> void:
+	if army_pending.is_empty() or army_match_ready:return
+	if host:
+		army_accepted["0"]=true
+		finish_army_agreement()
+	else:
+		army_accepted["1"]=true
+		_send({"type":"army_accept","hash":army_pending.agreement_hash})
+	if is_instance_valid(army_panel):army_panel.refresh()
+
+func finish_army_agreement() -> void:
+	if not army_accepted.get("0",false) or not army_accepted.get("1",false):return
+	army_match_ready=true
+	game.apply_scenario(army_pending.data)
+	game.interaction.read_only=false
+	committed=WorldState.capture(game);last_sequence=0
+	_send_snapshot("lobby")
+	if is_instance_valid(army_panel):army_panel.refresh()
+
+func rematch() -> void:
+	if not host or not army_match_ready:return
+	game.apply_scenario(army_pending.data)
+	game.ai.finished=false;game.ai.summary_shown=false
+	game.interaction.read_only=false
+	committed=WorldState.capture(game);last_sequence=0
+	_send_snapshot("lobby")
 
 func request(command: String, args: Dictionary = {}) -> bool:
 	if applying: return false
+	if not army_offer.is_empty() and not army_match_ready:
+		status_changed.emit("Both players must accept the army and mission agreement first.")
+		return true
 	if not session_ready:
 		status_changed.emit("Wait for an opponent before changing the table")
 		return true
@@ -143,6 +184,7 @@ func _submit_action(action: GameAction) -> bool:
 	return true
 
 func _execute_request(message: Dictionary, team: int) -> void:
+	if not army_offer.is_empty() and not army_match_ready:return
 	if game.interaction.session != null or game.interaction.dragging != null or game.interaction.drag_object != null:
 		if team == 1 or message.get("command") != "action":
 			if team == 0: status_changed.emit("Confirm or cancel movement before another action")
@@ -235,6 +277,7 @@ func _packet(id: int, bytes: PackedByteArray) -> void:
 
 func _receive(message: Dictionary) -> void:
 	if message.type == "hello":
+		if message.get("army_mode",false)!=(not army_offer.is_empty()):_lost("Both players must select the same Saved Armies or Preset Scenario mode.");return
 		var issue := NetworkCompatibility.error_for(message.get("compatibility"))
 		if not issue.is_empty():
 			_send({"type": "incompatible", "reason": issue})
@@ -246,6 +289,27 @@ func _receive(message: Dictionary) -> void:
 		return
 	if not compatibility_accepted: return
 	match message.type:
+		"army_offer":
+			if not host or army_offer.is_empty() or army_match_ready:return
+			var issue:=ArmyAgreement.proposal_error(message.get("army"),army_rules)
+			if not issue.is_empty():status_changed.emit(issue);_send({"type":"rejected","reason":issue});return
+			army_pending=ArmyAgreement.build(game.scenario,[army_offer,message.army],army_rules)
+			if army_pending.has("error"):status_changed.emit(army_pending.error);return
+			army_accepted={}
+			_send({"type":"army_proposal","scenario":army_pending.data,"rules":army_rules,"hash":army_pending.agreement_hash})
+			if is_instance_valid(army_panel):army_panel.refresh()
+		"army_proposal":
+			if host or army_offer.is_empty() or army_match_ready:return
+			if not message.get("scenario") is Dictionary or not ScenarioDefinition.validate(message.scenario).is_empty() or not ArmyAgreement.rules_error(message.get("rules")).is_empty():_lost("Invalid army agreement.");return
+			if not message.scenario.get("army_lists") is Array or message.scenario.army_lists.size()!=2 or state_hash(message.scenario.army_lists[1])!=state_hash(army_offer):_lost("Host proposal changed your selected army.");return
+			var rebuilt:=ArmyAgreement.build(message.scenario,message.scenario.army_lists,message.rules)
+			if rebuilt.has("error") or rebuilt.agreement_hash!=message.get("hash"):_lost("Army agreement content does not match.");return
+			army_rules=message.rules;army_pending=rebuilt;army_accepted={}
+			if is_instance_valid(army_panel):army_panel.refresh()
+		"army_accept":
+			if not host or army_pending.is_empty() or message.get("hash")!=army_pending.agreement_hash:return
+			army_accepted["1"]=true;finish_army_agreement()
+			if is_instance_valid(army_panel):army_panel.refresh()
 		"ping": _send({"type": "pong", "time": message.get("time", 0)})
 		"pong":
 			if ScenarioDefinition.number(message.get("time"), 0, Time.get_ticks_msec()): ping_ms = Time.get_ticks_msec() - int(message.time)
@@ -279,7 +343,12 @@ func _apply_canonical(message: Dictionary) -> void:
 	applying = true
 	game.interaction.cancel()
 	if snapshot:
+		if not army_offer.is_empty():
+			if army_pending.is_empty() or not army_accepted.get("1",false) or state_hash(scenario_data)!=state_hash(army_pending.data):_lost("Battle started without the agreed armies.");applying=false;return
+			army_match_ready=true
+			if is_instance_valid(army_panel):army_panel.refresh()
 		game.apply_scenario(scenario_data)
+		game.ai.finished=false;game.ai.summary_shown=false
 		resolutions.clear()
 	else:
 		for event: Dictionary in events: ActionCodec.apply(event, game, resolutions)

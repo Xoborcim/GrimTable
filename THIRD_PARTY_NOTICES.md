@@ -134,3 +134,12 @@ surface recipes. No downloaded texture, scan, proprietary miniature, protected
 faction insignia or reference image was added. Existing engine, font, Kenney
 and WebRTC licenses remain applicable. Blender and Godot were creation tools;
 their executables are not included in these art-source files.
+
+## 0.14.0 original Miniature Workshop
+
+The Workshop code, fitted Legion component adaptations, new accessory/detail
+geometry, categorical region/island masks, original stencil markings and paint
+scheme names are GrimTable MIT work. They derive from existing original
+GrimTable source artwork. No proprietary models, hobby paint branding or faction
+iconography were added. User-imported models and personal paint collections stay
+in local user data and are not included in this repository or game package.

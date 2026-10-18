@@ -9,13 +9,57 @@ under the [MIT license](LICENSE). Third-party assets, fonts and WebRTC component
 retain their separate licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 See [CONTRIBUTING.md](CONTRIBUTING.md) to contribute.
 
+## Armies and Complete Battles (0.15.0)
+
+Open **Army Builder** to edit saved armies, set a points budget, change squad
+sizes and legal weapon upgrades, and assign imported or painted miniatures.
+All four factions include 500/1,000/2,000-point starter forces and six unit
+choices each. Invalid drafts can be saved; specific validation errors prevent
+them starting a battle. JSON imports preserve missing content references.
+
+**Play** configures two armies, map, board dimensions, primary mission and
+seeded tactical cards. **Quick Play** retains the original preset flow. In an
+army battle, each model uses one weapon per combat phase; separate equipped
+groups can choose different targets. The tabletop combat panel retains manual
+targeting, queued groups and defender allocation, alongside assisted controls.
+
+**Custom Factions** authors safe original unit/weapon profiles and point costs,
+then installs ordinary content packs. Only implemented weapon traits are
+exposed. Exports contain rules and cosmetic references, without model files or
+scripts. Online Saved Armies mode requires both players to accept the same
+rosters, mission, budget and Homebrew policy before deployment.
+
+[Milestone report and supported limits](docs/ARMIES_BATTLES_0150.md) |
+[Packaged Windows screenshots](docs/armies_0150/gallery.html)
+
+## Miniature Workshop (0.14.0)
+
+Open **Miniature Workshop** from the main menu, or open an imported model from
+the Miniature Library. The studio offers region painting, finishing, saved
+schemes, scenic bases, a personal collection and local battlefield assignments.
+
+Prepared Legion infantry supports genuine 3D brush strokes and erasing, editable
+markings, fitted helmet/shoulder/backpack/weapon variants, accessories, and
+bounded head/upper-body posing. Brushwork saves as an independent overlay;
+normal maps, material response and sculpted detail remain intact. Ctrl+Z/Y
+undo/redo, Ctrl+S saves, right-drag orbits, middle-drag pans, and the wheel zooms.
+
+The walker and Swarm have narrower paint/base controls. Imported models retain
+material tints, placement and base editing; arbitrary imports do not gain brush,
+assembly or pose support automatically. Cosmetics remain local and do not alter
+equipped weapons, gameplay profiles, movement, collision, LOS or network state.
+
+[Milestone report](docs/MINIATURE_WORKSHOP_0140.md) |
+[Authoring workflow](art/WORKSHOP_0140.md) |
+[Packaged Windows screenshots](docs/art/workshop_0140/gallery.html)
+
 ## Baked Visual Finish (0.13.3)
 
 Fourteen representative miniature, ruin, industrial and base assets now use
 Blender-baked local surface detail, padded bake UVs, packed AO/roughness/metallic,
 and shared Godot finishing materials. Legion armor separates neutral undercoat
 from paint regions; a developer recoloring sample preserves its normal, wear
-and material response. The Workshop UI is planned for the next milestone.
+and material response. The player-facing Workshop builds on this in 0.14.0.
 
 Basilica masonry has painted course variation and foundation grime. Broken,
 dusted floor margins expose the underlying ground between surviving fragments.

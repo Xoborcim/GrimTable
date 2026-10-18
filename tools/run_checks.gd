@@ -28,13 +28,21 @@ func run() -> void:
 		print("\n".join(output))
 		quit(1)
 		return
-	for suite in ["prototype_test", "squad_combat_test", "scenario_replay_test", "application_test", "network_test", "internet_readiness_test", "network_failure_test", "content_test", "mod_test", "performance_cache_test", "experience_test", "assistance_test", "guided_test", "visual_test", "living_test", "ai_test", "cinematic_test", "miniature_import_test", "monumental_test", "art_test", "environment_test", "composition_test", "baked_material_test"]:
+	var reports: Array=[]
+	for suite in ["prototype_test", "squad_combat_test", "scenario_replay_test", "application_test", "network_test", "internet_readiness_test", "network_failure_test", "content_test", "mod_test", "performance_cache_test", "experience_test", "assistance_test", "guided_test", "visual_test", "living_test", "ai_test", "cinematic_test", "miniature_import_test", "monumental_test", "art_test", "environment_test", "composition_test", "baked_material_test", "workshop_test", "army_test", "army_battle_test", "mission_test", "homebrew_test", "army_network_test", "army_system_test"]:
 		output.clear()
 		var result := OS.execute(OS.get_executable_path(), ["--headless", "--path", target, "--script", "res://tests/" + suite + ".gd"], output, true)
+		var script_errors:=0
+		var summaries: Array=[]
 		for line in "\n".join(output).split("\n"):
 			if "GRIMTABLE" in line or "FAIL" in line or "SCRIPT ERROR" in line: print(line)
-		if result != 0:
+			if "SCRIPT ERROR" in line:script_errors+=1
+			if "GRIMTABLE" in line:summaries.append(line)
+		reports.append({"suite":suite,"exit_code":result,"script_errors":script_errors,"summaries":summaries})
+		if result != 0 or script_errors>0:
 			print("\n".join(output))
 			code = 1
 	print("VALIDATION ", "PASS" if code == 0 else "FAIL", " · isolated project: ", target)
+	DirAccess.make_dir_recursive_absolute("res://docs/armies_0150")
+	WorkshopStore.atomic_json("res://docs/armies_0150/regression.json",{"passed":code==0,"project":target,"suites":reports})
 	quit(code)

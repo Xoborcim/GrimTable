@@ -1,0 +1,106 @@
+{
+  "full_runs": 1,
+  "suites": 24,
+  "checks": 2361,
+  "failures": 0,
+  "results": [
+    {
+      "summary": "GRIMTABLE: 275 checks, 0 failures",
+      "checks": 275
+    },
+    {
+      "summary": "GRIMTABLE SQUADS/COMBAT: 76 checks, 0 failures",
+      "checks": 76
+    },
+    {
+      "summary": "GRIMTABLE SCENARIOS/REPLAY: 48 checks, 0 failures",
+      "checks": 48
+    },
+    {
+      "summary": "GRIMTABLE APPLICATION: 325 checks, 0 failures",
+      "checks": 325
+    },
+    {
+      "summary": "GRIMTABLE NETWORK CHECKS 48 \u00c2\u00b7 PASS",
+      "checks": 48
+    },
+    {
+      "summary": "GRIMTABLE INTERNET READINESS: 67 checks, 0 failures",
+      "checks": 67
+    },
+    {
+      "summary": "GRIMTABLE NETWORK FAILURE: 3 checks, 0 failures",
+      "checks": 3
+    },
+    {
+      "summary": "GRIMTABLE CONTENT: 252 checks, 0 failures",
+      "checks": 252
+    },
+    {
+      "summary": "GRIMTABLE MODS: 54 checks, 0 failures",
+      "checks": 54
+    },
+    {
+      "summary": "GRIMTABLE PERFORMANCE CACHES: 10 checks, 0 failures",
+      "checks": 10
+    },
+    {
+      "summary": "GRIMTABLE EXPERIENCE CHECKS: 49 passed / 0 failed",
+      "checks": 49
+    },
+    {
+      "summary": "GRIMTABLE ASSISTANCE: 90 checks, 0 failures",
+      "checks": 90
+    },
+    {
+      "summary": "GRIMTABLE GUIDED: 42 checks, 0 failures",
+      "checks": 42
+    },
+    {
+      "summary": "GRIMTABLE VISUAL: 17 checks, 0 failures",
+      "checks": 17
+    },
+    {
+      "summary": "GRIMTABLE LIVING CHECKS: 27; failures: 0",
+      "checks": 27
+    },
+    {
+      "summary": "GRIMTABLE AI CHECKS: 54; failures: 0",
+      "checks": 54
+    },
+    {
+      "summary": "GRIMTABLE CINEMATIC: 45 checks / 0 failures",
+      "checks": 45
+    },
+    {
+      "summary": "GRIMTABLE IMPORT: 26 checks / 0 failures",
+      "checks": 26
+    },
+    {
+      "summary": "GRIMTABLE MONUMENTAL: 239 checks / 0 failures",
+      "checks": 239
+    },
+    {
+      "summary": "GRIMTABLE ART 0120: 74 checks / 0 failures",
+      "checks": 74
+    },
+    {
+      "summary": "GRIMTABLE ENVIRONMENT: 257 checks / 0 failures",
+      "checks": 257
+    },
+    {
+      "summary": "GRIMTABLE COMPOSITION 0131: 151 checks / 0 failures",
+      "checks": 151
+    },
+    {
+      "summary": "GRIMTABLE BAKED MATERIAL: 56 checks / 0 failures",
+      "checks": 56
+    },
+    {
+      "summary": "GRIMTABLE WORKSHOP: 76 checks / 0 failures",
+      "checks": 76
+    }
+  ],
+  "final_focused_checks": 240,
+  "note": "After the full run, categorical mask orientation/imports, capability constraints and inspection/base/muzzle handling received affected-suite reruns and packaged rendering checks."
+}

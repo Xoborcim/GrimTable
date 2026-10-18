@@ -1,0 +1,31 @@
+{
+  "id": "legion_assault",
+  "name": "Legion Breach Squad",
+  "faction": "legion",
+  "movement": 8,
+  "defense": 4,
+  "toughness": 4,
+  "save": 3,
+  "wounds": 2,
+  "max_wounds": 2,
+  "base_mm": 32,
+  "model_scene": "res://assets/grimtable/models/legion_trooper.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 1.7,
+  "los_height": 1.36,
+  "weapons": [
+    "combat_blade",
+    "legion_rifle"
+  ],
+  "weapon": "res://resources/weapons/combat_blade.json",
+  "fallback_model_scene": "res://assets/grimtable/models/legion_trooper.tscn",
+  "roster": {
+    "role": "Fast",
+    "points_per_model": 21,
+    "base_points": 0,
+    "min_size": 5,
+    "max_size": 10,
+    "max_units": 4,
+    "upgrades": []
+  }
+}

@@ -92,6 +92,7 @@ static func capture(game: Node3D) -> Dictionary:
 		var models: Array[Dictionary] = []
 		for model in unit.models: models.append({"id": model.model_id, "label": model.code(), "position": array(model.global_position), "rotation": rad_to_deg(model.rotation.y), "cosmetic_id": model.cosmetic_id})
 		var army := {"id": str(unit.name), "name": unit.display_name, "team": unit.team, "profile": unit.definition_path, "models": models}
+		if game.scenario.get("strict_armies",false): army["profile_snapshot"] = unit.definition.duplicate(true)
 		if unit.definition.has("id"): army["unit_id"] = unit.definition.id
 		data.armies.append(army)
 	for zone in game.deployment.zones:

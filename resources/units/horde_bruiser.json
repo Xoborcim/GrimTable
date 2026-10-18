@@ -17,5 +17,14 @@
     "scrap_crusher"
   ],
   "weapon": "res://resources/weapons/scrap_crusher.json",
-  "fallback_model_scene": "res://assets/grimtable/models/horde_bruiser.tscn"
+  "fallback_model_scene": "res://assets/grimtable/models/horde_bruiser.tscn",
+  "roster": {
+    "role": "Specialist",
+    "points_per_model": 38,
+    "base_points": 0,
+    "min_size": 2,
+    "max_size": 5,
+    "max_units": 4,
+    "upgrades": []
+  }
 }

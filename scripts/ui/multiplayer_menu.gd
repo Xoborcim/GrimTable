@@ -10,6 +10,24 @@ var name_field: LineEdit
 var server_field: LineEdit
 var scenario_choice: OptionButton
 var scenarios: Array[Dictionary] = []
+var army_mode: CheckBox
+var army_choice: OptionButton
+var army_records: Array[Dictionary] = []
+var primary_choice: OptionButton
+var tactical_choice: CheckBox
+var homebrew_choice: CheckBox
+
+func choose_army(hosting: bool) -> void:
+	army_records=ArmyRoster.records()
+	army_mode=CheckBox.new();army_mode.text="Saved armies — both players review and accept before deployment";army_mode.button_pressed=true;app.column.add_child(army_mode)
+	var labels: Array=[]
+	for army in army_records:labels.append(army.name+" · "+str(ArmyRoster.total(army))+" / "+str(army.points_limit))
+	army_choice=AppUI.choices(app.column,labels)
+	AppUI.label(app.column,"Your saved army must match the host's points limit. Disable Saved Armies on both peers to play a preset scenario.",13).autowrap_mode=TextServer.AUTOWRAP_WORD_SMART
+	if hosting:
+		primary_choice=AppUI.choices(app.column,["Secure the Field","Convergence","Network Superiority"])
+		tactical_choice=CheckBox.new();tactical_choice.text="Tactical missions";tactical_choice.button_pressed=true;app.column.add_child(tactical_choice)
+		homebrew_choice=CheckBox.new();homebrew_choice.text="Allow Homebrew (matching content packs required)";app.column.add_child(homebrew_choice)
 
 func _init(application: Node) -> void:
 	app = application
@@ -55,6 +73,7 @@ func form(hosting: bool) -> void:
 	else:
 		code_field = field("Room Code", "")
 		code_field.max_length = 6
+	choose_army(hosting)
 	AppUI.label(app.column, "Server: " + app.settings.signaling_url, 14)
 	AppUI.button(app.column, "Create Room" if hosting else "Join", func():
 		var display := name_field.text.strip_edges()
@@ -75,6 +94,7 @@ func lan_form() -> void:
 	var address := field("Host Address", "127.0.0.1")
 	var port := field("UDP Port", "7777")
 	choose_scenario()
+	choose_army(true)
 	for hosting in [true, false]:
 		AppUI.button(app.column, "Host LAN Game" if hosting else "Connect to Host", func():
 			if not port.text.is_valid_int() or int(port.text) < 1024 or int(port.text) > 65535: app.status.text = "Port must be 1024–65535"; return
@@ -90,6 +110,9 @@ func begin(next_transport: MultiplayerTransport, item: Dictionary) -> void:
 	if not app.launch_scenario(item): next_transport.close(); next_transport.queue_free(); return
 	transport = next_transport
 	session = NetworkSession.new()
+	if is_instance_valid(army_mode) and army_mode.button_pressed and is_instance_valid(army_choice) and army_choice.selected>=0:
+		session.army_offer=army_records[army_choice.selected].duplicate(true)
+		if transport.is_host:session.army_rules={"points":int(session.army_offer.points_limit),"primary":["control","convergence","domination"][primary_choice.selected],"tactical":tactical_choice.button_pressed,"homebrew":homebrew_choice.button_pressed,"seed":15150}
 	app.add_child(session)
 	session.open(transport, app.game)
 	session.status_changed.connect(func(text: String):

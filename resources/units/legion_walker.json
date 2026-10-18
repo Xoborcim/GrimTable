@@ -18,5 +18,14 @@
     "combat_blade"
   ],
   "weapon": "res://resources/weapons/legion_cannon.json",
-  "fallback_model_scene": "res://assets/grimtable/models/legion_walker.tscn"
+  "fallback_model_scene": "res://assets/grimtable/models/legion_walker.tscn",
+  "roster": {
+    "role": "Walker",
+    "points_per_model": 210,
+    "base_points": 0,
+    "min_size": 1,
+    "max_size": 1,
+    "max_units": 3,
+    "upgrades": []
+  }
 }

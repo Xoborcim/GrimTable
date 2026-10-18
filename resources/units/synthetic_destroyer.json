@@ -17,5 +17,14 @@
     "synth_lance"
   ],
   "weapon": "res://resources/weapons/synth_lance.json",
-  "fallback_model_scene": "res://assets/grimtable/models/synthetic_destroyer.tscn"
+  "fallback_model_scene": "res://assets/grimtable/models/synthetic_destroyer.tscn",
+  "roster": {
+    "role": "Heavy support",
+    "points_per_model": 115,
+    "base_points": 0,
+    "min_size": 1,
+    "max_size": 3,
+    "max_units": 4,
+    "upgrades": []
+  }
 }

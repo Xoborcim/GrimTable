@@ -2,7 +2,7 @@ class_name NetworkCompatibility
 extends RefCounted
 
 const PROTOCOL := 2
-const GAME_VERSION := "0.13.3"
+const GAME_VERSION := "0.15.0"
 const SCENARIO_SCHEMA := 1
 const ACTION_SCHEMA := 1
 

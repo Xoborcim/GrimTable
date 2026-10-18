@@ -1,0 +1,31 @@
+{
+  "id": "synthetic_overseer",
+  "name": "Command Overseer",
+  "faction": "synthetics",
+  "movement": 4,
+  "defense": 5,
+  "toughness": 5,
+  "save": 3,
+  "wounds": 6,
+  "max_wounds": 6,
+  "base_mm": 40,
+  "model_scene": "res://assets/grimtable/models/synthetic_sentinel.tscn",
+  "visual_scale": 1.0,
+  "gameplay_height": 2,
+  "los_height": 1.6,
+  "weapons": [
+    "synth_lance",
+    "combat_blade"
+  ],
+  "weapon": "res://resources/weapons/synth_lance.json",
+  "fallback_model_scene": "res://assets/grimtable/models/synthetic_sentinel.tscn",
+  "roster": {
+    "role": "Leader",
+    "points_per_model": 125,
+    "base_points": 0,
+    "min_size": 1,
+    "max_size": 1,
+    "max_units": 2,
+    "upgrades": []
+  }
+}

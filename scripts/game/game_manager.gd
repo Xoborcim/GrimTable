@@ -16,9 +16,12 @@ var charges: Dictionary = {}
 var ready_teams: Dictionary = {}
 var objective_owners: Dictionary = {}
 var cover_overrides: Dictionary = {}
+var missions: Dictionary = {}
+var transition_hook: Callable
 
 func next_phase() -> void:
 	if submit.is_valid() and submit.call("next_phase"): return
+	if missions.get("finished",false):return
 	if deployment: return
 	var before := snapshot()
 	if phase == PHASES.size() - 1:
@@ -30,6 +33,7 @@ func next_phase() -> void:
 		var earned: Dictionary = score_provider.call()
 		for team in ["0", "1"]: scores[team] += int(earned.get(team, 0))
 		scored_rounds.append(round_number)
+	if transition_hook.is_valid(): transition_hook.call()
 	changed.emit()
 	transitioned.emit(before, snapshot())
 
@@ -55,13 +59,17 @@ func next_round() -> void:
 	round_number += 1
 	phase = 0
 	active_team = 0
+	if transition_hook.is_valid(): transition_hook.call()
 	changed.emit()
 	transitioned.emit(before, snapshot())
 
 func snapshot() -> Dictionary:
-	return {"round": round_number, "phase": phase, "team": active_team, "deployment": deployment, "scores": scores.duplicate(), "scored_rounds": scored_rounds.duplicate(), "charges": charges.duplicate(true), "ready_teams": ready_teams.duplicate(), "objective_owners": objective_owners.duplicate(), "cover_overrides": cover_overrides.duplicate()}
+	var data := {"round": round_number, "phase": phase, "team": active_team, "deployment": deployment, "scores": scores.duplicate(), "scored_rounds": scored_rounds.duplicate(), "charges": charges.duplicate(true), "ready_teams": ready_teams.duplicate(), "objective_owners": objective_owners.duplicate(), "cover_overrides": cover_overrides.duplicate()}
+	if not missions.is_empty(): data["missions"] = missions.duplicate(true)
+	return data
 
 func restore(data: Dictionary) -> void:
+	missions = MissionRules.normalized(data.get("missions",{}))
 	charges = data.get("charges", {}).duplicate(true)
 	for id in charges:
 		for key in ["round", "team", "distance"]: charges[id][key] = int(charges[id][key])

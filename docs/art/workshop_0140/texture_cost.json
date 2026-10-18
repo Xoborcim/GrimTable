@@ -1,0 +1,75 @@
+{
+  "new_png_bytes": 2492041,
+  "textures": [
+    {
+      "file": "assets/workshop/legion_components_normal.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "png_mode": "RGBA",
+      "source_bytes": 785080
+    },
+    {
+      "file": "assets/workshop/legion_components_orm.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "png_mode": "RGBA",
+      "source_bytes": 736814
+    },
+    {
+      "file": "assets/workshop/legion_components_display_color.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "png_mode": "RGBA",
+      "source_bytes": 622544
+    },
+    {
+      "file": "assets/workshop/legion_uv_islands.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "png_mode": "RGBA",
+      "source_bytes": 79856
+    },
+    {
+      "file": "assets/workshop/legion_infantry_region_ids.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "png_mode": "L",
+      "source_bytes": 76233
+    },
+    {
+      "file": "assets/workshop/heavy_walker_region_ids.png",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "png_mode": "L",
+      "source_bytes": 153049
+    },
+    {
+      "file": "assets/workshop/swarm_creature_region_ids.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "png_mode": "L",
+      "source_bytes": 38465
+    }
+  ],
+  "overlay_resolution": 1024,
+  "rgba_overlay_with_mips_bytes": 5592404,
+  "region_ids": "R8, no mipmaps: 6 MiB across three models",
+  "island_labels": "RGBA8, no mipmaps: 4 MiB",
+  "history_limit_entries": 24,
+  "history_limit_bytes": 32000000,
+  "fallback_estimate_bc8bpp_with_mips_bytes": 4194304
+}

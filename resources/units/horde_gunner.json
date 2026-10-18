@@ -18,5 +18,14 @@
     "scrap_blades"
   ],
   "weapon": "res://resources/weapons/scrap_gun.json",
-  "fallback_model_scene": "res://assets/grimtable/models/horde_gunner.tscn"
+  "fallback_model_scene": "res://assets/grimtable/models/horde_gunner.tscn",
+  "roster": {
+    "role": "Heavy support",
+    "points_per_model": 20,
+    "base_points": 0,
+    "min_size": 3,
+    "max_size": 10,
+    "max_units": 4,
+    "upgrades": []
+  }
 }

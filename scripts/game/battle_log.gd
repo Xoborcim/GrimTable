@@ -12,6 +12,7 @@ func append(kind: String, payload: Dictionary) -> int:
 	return sequence
 
 func restore(records: Array) -> void:
+	WeaponUse.cache.clear()
 	entries.clear()
 	sequence = 0
 	for record: Dictionary in records:

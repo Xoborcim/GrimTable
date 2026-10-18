@@ -1,0 +1,142 @@
+[
+  {
+    "file": "01_default_legion.png",
+    "title": "Default Legion",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "51eb53cd0addeef8a348b833117f12b9b7dd7728babe73b6bbbedeb0e3c48653",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "02_oxide_legion.png",
+    "title": "Oxide paint scheme",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "60178cfee23c4eaa54ddde8811728ab52aded15b8b51bfd511999eab39363998",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "03_second_scheme.png",
+    "title": "Verdant paint scheme",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "362595c9a89affcbed313014b68f780025426e1d37e5272c7ea5627324607616",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "04_assembled_legion.png",
+    "title": "Alternate fitted components",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "ef1dee7721ae54a3f1f37999df6a62566fc859ec88317e04c2ce126e273c5e4e",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "05_freehand_brush.png",
+    "title": "Player-driven surface stroke",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "3f53677cc1c21ec50943cd5e7898de8d0c9168fcb1ab2f8fdf38eee914393324",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "05b_surface_marking.png",
+    "title": "Island-clipped marking",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "1303c7ecd6f87d555cf523b9dc09abbdaf0cb2fb4b27704073893bbc37ab38ae",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "06_base_rubble.png",
+    "title": "Rubble base",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "06306292fe85bebb321db2924b2fbc61d515e978b7c47e7fd5321df6b759ca8f",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "06_base_industrial.png",
+    "title": "Industrial base",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "57a083f83a3641cdf4d1207a68b99304f9ac7dcac537298a41de648037e44bb2",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "06_base_stone.png",
+    "title": "Stone base",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "173090ba40064b026df88298b843f453c96079c4344cfd229ff53a354896b3b6",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "06_base_ash.png",
+    "title": "Ash base",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "238bd16f1806f5a6b0b526667bd1cd43c14c6923dfd2a61743fcd80bdfc71195",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "07_saved_collection.png",
+    "title": "Saved collection",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "44615353d436e9322a971a8fb97e014226036ce26c11d42cd2906f97d5d729f3",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "08_studio_photo.png",
+    "title": "Clean studio capture",
+    "dimensions": [
+      951,
+      691
+    ],
+    "sha256": "34e1aa6875727c40e56a9f6421aeaa757bc32b0101bb2fcb633ae729d4791b0e",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "09_customized_battle.png",
+    "title": "Customized figures in an actual battle",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "6b3233c8403a6fc7dc05d3e3840e03152b79348c0e82301dfd1d55c4959713f3",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  },
+  {
+    "file": "10_restart_collection.png",
+    "title": "Collection after application restart",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "sha256": "2df38c96a60af078802e753e720554c84537aef6c371a9027bb7445207460674",
+    "source": "Unretouched Godot 4.6.1 Windows release, OpenGL Compatibility"
+  }
+]

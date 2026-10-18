@@ -1,0 +1,63 @@
+{
+  "full_run_count": 1,
+  "full_suites": 30,
+  "full_checks": 2530,
+  "initial_failed_suites": [
+    "content_test",
+    "mod_test"
+  ],
+  "corrections": [
+    "Updated fixed sixteen-profile expectations for expanded canonical roster.",
+    "Skip animation updates for detached models.",
+    "Bound extreme armies and preserve missing paint overlays explicitly."
+  ],
+  "focused_reruns": [
+    {
+      "suite": "content_test",
+      "passed": true,
+      "summaries": [
+        "GRIMTABLE CONTENT: 252 checks, 0 failures"
+      ]
+    },
+    {
+      "suite": "mod_test",
+      "passed": true,
+      "summaries": [
+        "GRIMTABLE MODS: 54 checks, 0 failures"
+      ]
+    },
+    {
+      "suite": "living_test",
+      "passed": true,
+      "summaries": [
+        "GRIMTABLE LIVING CHECKS: 27; failures: 0"
+      ]
+    },
+    {
+      "suite": "army_test",
+      "passed": true,
+      "summaries": [
+        "GRIMTABLE ARMIES 45 checks / 0 failures"
+      ]
+    },
+    {
+      "suite": "army_system_test",
+      "passed": true,
+      "summaries": [
+        "GRIMTABLE ARMY SYSTEM 15 checks / 0 failures"
+      ]
+    }
+  ],
+  "effective_all_suites_passed": true,
+  "final_persistence_check": {
+    "suite": "army_test",
+    "checks": 46,
+    "failures": 0,
+    "reason": "Newly added squads retain fingerprint/dependency tracking without accepting existing changed profiles."
+  },
+  "focused_ui_checks": {
+    "engine_army_battle": 14,
+    "packaged_hud": 3,
+    "failures": 0
+  }
+}

@@ -28,6 +28,13 @@ static func profile_error(path: Variant) -> String:
 	return ContentRegistry.profile_error(value) if value is Dictionary else "Invalid unit definition"
 
 static func validate(data: Variant) -> String:
+	if data is Dictionary and data.has("strict_armies"):
+		if not data.strict_armies is bool:return "Invalid configured army mode."
+		if data.strict_armies:
+			if not data.get("army_lists") is Array or data.army_lists.size()!=2:return "Configured battles require two army lists."
+			for list in data.army_lists:
+				var list_issue:=ArmyRoster.schema_error(list)
+				if not list_issue.is_empty():return list_issue
 	if not data is Dictionary: return "Scenario must contain a JSON object"
 	if data.get("format_version") != VERSION: return "Unsupported scenario format version"
 	if not ContentRegistry.content_id(data.get("id")) or not data.get("name") is String or data.name.strip_edges().is_empty(): return "Scenario ID/name missing or invalid"
@@ -87,6 +94,9 @@ static func validate(data: Variant) -> String:
 		if not data.scoring is Dictionary or not integer(data.scoring.get("objective_points_per_round", 0), 0, 100): return "Invalid scenario scoring"
 	var state: Variant = data.get("starting_state")
 	if not state is Dictionary or not integer(state.get("round"), 1, 10000) or not integer(state.get("phase"), 0, 5) or not integer(state.get("team"), 0, 1) or not state.get("deployment") is bool: return "Invalid starting round/phase/player"
+	if state.has("missions"):
+		var issue := MissionRules.error(state.missions)
+		if not issue.is_empty():return issue
 	return ""
 
 static func on_board(point: Variant, board: Dictionary) -> bool:

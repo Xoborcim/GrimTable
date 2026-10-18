@@ -18,5 +18,14 @@
     "swarm_spines"
   ],
   "weapon": "res://resources/weapons/swarm_talons.json",
-  "fallback_model_scene": "res://assets/grimtable/models/swarm_hunter.tscn"
+  "fallback_model_scene": "res://assets/grimtable/models/swarm_hunter.tscn",
+  "roster": {
+    "role": "Fast",
+    "points_per_model": 30,
+    "base_points": 0,
+    "min_size": 3,
+    "max_size": 6,
+    "max_units": 4,
+    "upgrades": []
+  }
 }

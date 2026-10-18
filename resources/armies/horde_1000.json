@@ -1,0 +1,117 @@
+{
+  "kind": "grimtable_army",
+  "version": 1,
+  "id": "army_starter_horde_1000",
+  "name": "Horde - 1000 Task Force",
+  "faction": "horde",
+  "points_limit": 1000,
+  "homebrew": false,
+  "units": [
+    {
+      "id": "squad_1",
+      "name": "Scrap Warchief 1",
+      "unit_id": "horde_warchief",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_2",
+      "name": "Horde Raider 2",
+      "unit_id": "horde_raider",
+      "count": 8,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_3",
+      "name": "Horde Gunner 3",
+      "unit_id": "horde_gunner",
+      "count": 3,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_4",
+      "name": "Horde Bruiser 4",
+      "unit_id": "horde_bruiser",
+      "count": 2,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_5",
+      "name": "Horde War Machine 5",
+      "unit_id": "horde_war_machine",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_6",
+      "name": "Horde Outriders 6",
+      "unit_id": "horde_runners",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_7",
+      "name": "Horde Raider 7",
+      "unit_id": "horde_raider",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_8",
+      "name": "Horde Gunner 8",
+      "unit_id": "horde_gunner",
+      "count": 3,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_9",
+      "name": "Horde Bruiser 9",
+      "unit_id": "horde_bruiser",
+      "count": 2,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_10",
+      "name": "Horde War Machine 10",
+      "unit_id": "horde_war_machine",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_11",
+      "name": "Horde Outriders 11",
+      "unit_id": "horde_runners",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_12",
+      "name": "Horde Raider 12",
+      "unit_id": "horde_raider",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_13",
+      "name": "Horde Raider 13",
+      "unit_id": "horde_raider",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    }
+  ],
+  "dependencies": [],
+  "profiles": {}
+}

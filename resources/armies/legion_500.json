@@ -1,0 +1,53 @@
+{
+  "kind": "grimtable_army",
+  "version": 1,
+  "id": "army_starter_legion_500",
+  "name": "Legion - 500 Patrol",
+  "faction": "legion",
+  "points_limit": 500,
+  "homebrew": false,
+  "units": [
+    {
+      "id": "squad_1",
+      "name": "Armored Commander 1",
+      "unit_id": "legion_commander",
+      "count": 1,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_2",
+      "name": "Legion Trooper 2",
+      "unit_id": "legion_trooper",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_3",
+      "name": "Legion Heavy 3",
+      "unit_id": "legion_heavy",
+      "count": 3,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_4",
+      "name": "Legion Breach Squad 4",
+      "unit_id": "legion_assault",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    },
+    {
+      "id": "squad_5",
+      "name": "Legion Trooper 5",
+      "unit_id": "legion_trooper",
+      "count": 5,
+      "upgrades": {},
+      "cosmetic": ""
+    }
+  ],
+  "dependencies": [],
+  "profiles": {}
+}

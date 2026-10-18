@@ -41,7 +41,7 @@ static func pending(board: Battlefield, manager: GameManager, log: BattleLog) ->
 	var field := "charged" if manager.phase == 3 else "moved" if manager.phase == 1 else "melee" if manager.phase == 4 else "ranged"
 	for unit: TableUnit in board.units.get_children():
 		if unit.team != manager.active_team or unit.living_models().is_empty(): continue
-		if int(state.get(str(unit.name), {}).get(field, 0)) > 0: continue
+		if int(state.get(str(unit.name), {}).get(field, 0)) > 0 and not (board.scenario.get("strict_armies",false) and manager.phase in [2,4]): continue
 		if manager.phase == 3 and int(manager.charges.get(str(unit.name), {}).get("round", 0)) == manager.round_number: continue
 		if manager.phase == 3:
 			var rules: Dictionary = board.scenario.get("rules", {}).get("charge", {})

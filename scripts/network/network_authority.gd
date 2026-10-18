@@ -11,6 +11,7 @@ static func validate_request(game: Node3D, message: Dictionary, team: int, commi
 	if not ScenarioDefinition.integer(message.get("sequence"), 0, 1000000) or int(message.sequence) != game.battle_log.sequence: return "Table changed. Try again after synchronization."
 	var command: String = message.command
 	var args: Dictionary = message.args
+	if game.manager.missions.get("finished",false):return "This battle is complete. Save the replay or start a rematch."
 	if command in AssistanceService.COMMANDS: return AssistanceService.validate(game, command, args, team)
 	if command == "action": return validate_action(game, args.get("record"), team, committed)
 	if game.interaction.session != null or game.interaction.dragging != null or game.interaction.drag_object != null: return "Confirm or cancel movement first"

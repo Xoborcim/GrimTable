@@ -21,7 +21,7 @@ func frames() -> void:
 func run() -> void:
 	check(ContentRegistry.validate().is_empty(), "All content definitions validate: " + str(ContentRegistry.validate()))
 	check(ContentRegistry.catalog().factions.size() == 4, "Four original factions")
-	check(ContentRegistry.catalog().units.size() == 16, "Sixteen unit archetypes")
+	check(ContentRegistry.catalog().units.size() == 24, "Twenty-four unit archetypes")
 	check(ContentRegistry.catalog().weapons.size() == 12, "Twelve reusable weapon definitions")
 	check(not AppSettings.new().auto_allocate_damage and not AppSettings.new().auto_remove_defeated, "Tabletop automation defaults OFF")
 	for pair in [[8, 4, 2], [5, 4, 3], [4, 4, 4], [3, 4, 5], [2, 4, 6], [1, 10, 6]]:
